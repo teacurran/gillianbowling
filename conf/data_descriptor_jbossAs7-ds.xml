@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema"
+			 xmlns:xsd="http://docs.jboss.org/ironjacamar/schema/datasources_1_1.xsd">
+	<datasource jndi-name="java:jboss/datasources/@db.source.main.schema@" pool-name="@db.source.main.schema@"
+				enabled="true" jta="true" use-java-context="true" use-ccm="true">
+		<connection-url>
+			@db.source.main.url@
+		</connection-url>
+		<driver>
+			@db.source.main.driver@
+		</driver>
+		<pool>
+			<min-pool-size>
+				5
+			</min-pool-size>
+			<max-pool-size>
+				20
+			</max-pool-size>
+			<prefill>
+				true
+			</prefill>
+			<use-strict-min>
+				false
+			</use-strict-min>
+			<flush-strategy>
+				FailingConnectionOnly
+			</flush-strategy>
+		</pool>
+		<security>
+			<user-name>
+				@db.source.main.username@
+			</user-name>
+			<password>
+				@db.source.main.password@
+			</password>
+		</security>
+	</datasource>
+
+</datasources>

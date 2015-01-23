@@ -1,0 +1,162 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+				xmlns:s="http://jboss.com/products/seam/taglib"
+				xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:f="http://java.sun.com/jsf/core"
+				xmlns:h="http://java.sun.com/jsf/html"
+				xmlns:a4j="http://richfaces.org/a4j"
+				xmlns:rich="http://richfaces.org/rich"
+				template="layout/template.xhtml">
+
+	<ui:define name="body">
+
+		<s:div styleClass="breadcrumbs">
+			<ul>
+				<li>
+					<s:link value="Photo List" view="/admin/PhotoList.xhtml" />
+				</li>
+				<h:outputText rendered="#{photoHome.managed}">
+					<li>
+						<s:link  value="#{photoHome.instance.id}" view="/admin/Photo.xhtml">
+							<f:param name="photoId" value="#{photoHome.instance.id}"/>
+						</s:link>
+					</li>
+					<li class="last">
+						Editing
+					</li>
+				</h:outputText>
+				<h:outputText rendered="#{not photoHome.managed}">
+					<li class="last">
+						Add
+					</li>
+				</h:outputText>
+			</ul>
+		</s:div>
+
+		<h:form id="photos" styleClass="edit" enctype="multipart/form-data">
+
+			<rich:panel>
+				<f:facet name="header">#{photoHome.managed ? 'Edit' : 'Add'} Photo</f:facet>
+
+				<s:decorate id="idField" template="layout/display.xhtml">
+					<ui:define name="label">Id</ui:define>
+					<h:outputText value="#{photoHome.instance.id}" rendered="#{photoHome.managed}"/>
+					<h:outputText value="New" rendered="#{!photoHome.managed}"/>
+				</s:decorate>
+
+				<s:decorate id="categoryIdField" template="layout/edit.xhtml">
+					<ui:define name="label">Category</ui:define>
+					<h:selectOneListbox id="category" value="#{photoHome.instance.category}" styleClass="clientSelectBox" size="1" required="true" immediate="true">
+						<s:selectItems value="#{categoryList.resultList}" var="_cat" label="#{_cat.nameWithParent}" noSelectionLabel="please choose..."/>
+						<s:convertEntity />
+					</h:selectOneListbox>
+				</s:decorate>
+
+				<s:decorate id="featuredField" template="layout/edit.xhtml">
+					<ui:define name="label">Homepage</ui:define>
+					<h:selectBooleanCheckbox id="featured" value="#{photoHome.instance.featured}" />
+				</s:decorate>
+
+				<s:decorate id="orientationField" template="layout/edit.xhtml">
+					<ui:define name="label">Orientation</ui:define>
+					<h:selectOneListbox id="orientation" value="#{photoHome.instance.orientation}" styleClass="clientSelectBox" size="1" required="true" immediate="true">
+						<f:selectItem itemValue="1" itemLabel="Horizontal"/>
+						<f:selectItem itemValue="2" itemLabel="Vertical"/>
+					</h:selectOneListbox>
+				</s:decorate>
+
+				<s:decorate id="descriptionField" template="layout/edit.xhtml">
+					<ui:define name="label">Description</ui:define>
+					<rich:editor configuration="richtext"
+						id="editor" width="400" height="300"
+						value="#{photoHome.instance.description}">
+					</rich:editor>
+
+				</s:decorate>
+
+				<s:decorate id="rankField" template="layout/edit.xhtml">
+					<ui:define name="label">Rank</ui:define>
+					<h:inputText id="rank"
+								 value="#{photoHome.instance.rank}">
+						<a4j:support event="onblur" reRender="rankField" bypassUpdates="true" ajaxSingle="true"/>
+					</h:inputText>
+				</s:decorate>
+
+				<s:decorate id="newFileField" template="layout/edit.xhtml">
+					<ui:define name="label">File Upload</ui:define>
+
+					<s:fileUpload data="#{photoHome.newFile}" fileName="#{photoHome.newFileName}"
+								  accept="images/png,images/jpg,images/gif,application/pdf" rendered="true"/>
+				</s:decorate>
+
+				<a4j:outputPanel id="imageContainer" rendered="#{not empty photoHome.instance.fileName}">
+					<s:decorate id="image" template="layout/display.xhtml">
+						<ui:define name="label">Image</ui:define>
+						<img src="#{request.contextPath}/media/150x/#{photoHome.instance.fileName}" class="image" alt="#{photoHome.instance.description}"/>
+					</s:decorate>
+				</a4j:outputPanel>
+
+				<div style="clear:both">
+					<span class="required">*</span>
+					required fields
+				</div>
+
+			</rich:panel>
+
+			<div class="actionButtons">
+
+				<h:commandButton id="save"
+						value="Save"
+						action="#{photoHome.save}"/>
+
+				<a4j:commandButton id="delete"
+						value="Delete"
+						rendered="#{photoHome.managed}"
+						onclick="#{rich:component('deleteModal')}.show()"
+					/>
+
+				<s:button id="cancelEdit"
+						value="Cancel"
+						propagation="end"
+						view="/admin/Photos.xhtml"
+						rendered="#{photoHome.managed}"/>
+
+				<s:button id="cancelAdd"
+						value="Cancel"
+						propagation="end"
+						view="/admin/#{empty photoFrom ? 'PhotoList' : photoFrom}.xhtml"
+						rendered="#{!photoHome.managed}"/>
+
+			</div>
+		</h:form>
+
+		<rich:modalPanel id="deleteModal" minHeight="300" minWidth="455" height="300" width="500" zindex="2000">
+			<f:facet name="header">
+				<h:outputText value="Delete Photo"/>
+			</f:facet>
+			<f:facet name="controls">
+				<h:panelGroup>
+					<h:graphicImage value="/admin/img/modal_close.png" styleClass="hidelink" id="hideDeleteModal"/>
+					<rich:componentControl for="deleteModal" attachTo="hideDeleteModal" operation="hide" event="onclick"/>
+				</h:panelGroup>
+			</f:facet>
+			<h:form id="deleteForm" styleClass="edit">
+				<div style="clear:both">
+					<b>Are you sure you wish to delete this Photo?</b>
+				</div>
+
+				<div style="clear:both">
+				</div>
+
+				<rich:spacer height="20"/>
+
+				<div class="actionButtons">
+					<h:commandButton id="delete" value="yes, delete" action="#{photoHome.remove}" immediate="true"/>
+				</div>
+			</h:form>
+		</rich:modalPanel>
+
+	</ui:define>
+
+</ui:composition>

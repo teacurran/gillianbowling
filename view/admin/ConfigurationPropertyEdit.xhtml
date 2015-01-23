@@ -1,0 +1,102 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+				xmlns:s="http://jboss.com/products/seam/taglib"
+				xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:f="http://java.sun.com/jsf/core"
+				xmlns:h="http://java.sun.com/jsf/html"
+				xmlns:a4j="http://richfaces.org/a4j"
+				xmlns:rich="http://richfaces.org/rich"
+				template="layout/template.xhtml">
+
+	<ui:define name="body">
+
+		<h:form id="configurationProperty" styleClass="edit">
+
+			<rich:panel>
+				<f:facet
+						name="header">#{configurationPropertyHome.managed ? 'Edit' : 'Add'} Configuration property</f:facet>
+
+
+				<s:decorate id="codeField" template="layout/edit.xhtml">
+					<ui:define name="label">Code</ui:define>
+					<h:inputText id="code"
+								 required="true"
+								 size="100"
+								 maxlength="100"
+								 value="#{configurationPropertyHome.instance.code}">
+						<a4j:support event="onblur" reRender="codeField" bypassUpdates="true" ajaxSingle="true"/>
+					</h:inputText>
+				</s:decorate>
+
+
+				<s:decorate id="defaultValueField" template="layout/edit.xhtml">
+					<ui:define name="label">Default value</ui:define>
+					<h:inputTextarea id="defaultValue"
+									 cols="80"
+									 rows="3"
+									 value="#{configurationPropertyHome.instance.defaultValue}"/>
+				</s:decorate>
+
+				<s:decorate id="typeField" template="layout/edit.xhtml">
+					<ui:define name="label">Type</ui:define>
+					<h:selectOneListbox id="type" value="#{configurationPropertyHome.instance.type}" styleClass="dropdown" size="1">
+						<f:selectItem itemValue="String" itemLabel="String"/>
+						<f:selectItem itemValue="Integer" itemLabel="Integer"/>
+						<a4j:support event="onblur" reRender="typeField" bypassUpdates="true" ajaxSingle="true"/>
+					</h:selectOneListbox>
+				</s:decorate>
+
+				<s:decorate id="valueField" template="layout/edit.xhtml">
+					<ui:define name="label">Value</ui:define>
+					<h:inputTextarea id="value"
+									 cols="80"
+									 rows="3"
+									 value="#{configurationPropertyHome.instance.value}"/>
+				</s:decorate>
+
+
+				<div style="clear:both">
+					<span class="required">*</span>
+					required fields
+				</div>
+
+			</rich:panel>
+
+			<div class="actionButtons">
+
+				<h:commandButton id="save"
+								 value="Save"
+								 action="#{configurationPropertyHome.persist}"
+								 disabled="#{!configurationPropertyHome.wired}"
+								 rendered="#{!configurationPropertyHome.managed}"/>
+
+				<h:commandButton id="update"
+								 value="Save"
+								 action="#{configurationPropertyHome.update}"
+								 rendered="#{configurationPropertyHome.managed}"/>
+
+				<h:commandButton id="delete"
+								 value="Delete"
+								 action="#{configurationPropertyHome.remove}"
+								 immediate="true"
+								 rendered="#{configurationPropertyHome.managed}"/>
+
+				<s:button id="cancelEdit"
+						  value="Cancel"
+						  propagation="end"
+						  view="/admin/ConfigurationProperty.xhtml"
+						  rendered="#{configurationPropertyHome.managed}"/>
+
+				<s:button id="cancelAdd"
+						  value="Cancel"
+						  propagation="end"
+						  view="/admin/#{empty configurationPropertyFrom ? 'ConfigurationPropertyList' : configurationPropertyFrom}.xhtml"
+						  rendered="#{!configurationPropertyHome.managed}"/>
+
+			</div>
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

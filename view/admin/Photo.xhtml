@@ -1,0 +1,69 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+				xmlns:s="http://jboss.com/products/seam/taglib"
+				xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:f="http://java.sun.com/jsf/core"
+				xmlns:h="http://java.sun.com/jsf/html"
+				xmlns:rich="http://richfaces.org/rich"
+				template="layout/template.xhtml">
+
+	<ui:define name="body">
+
+		<rich:panel>
+			<f:facet name="header">Photo Details</f:facet>
+
+			<s:decorate id="id" template="layout/display.xhtml">
+				<ui:define name="label">Id</ui:define>
+				<h:outputText value="#{photoHome.instance.id}"/>
+			</s:decorate>
+
+			<s:decorate id="categoryId" template="layout/display.xhtml">
+				<ui:define name="label">Category</ui:define>
+				<h:outputText value="#{photoHome.instance.category.nameWithParent}"/>
+			</s:decorate>
+
+			<s:decorate id="description" template="layout/display.xhtml">
+				<ui:define name="label">Description</ui:define>
+				<h:outputText value="#{photoHome.instance.description}"/>
+			</s:decorate>
+
+			<s:decorate id="fileName" template="layout/display.xhtml">
+				<ui:define name="label">File name</ui:define>
+				<h:outputText value="#{photoHome.instance.fileName}"/>
+			</s:decorate>
+
+			<s:decorate id="height" template="layout/display.xhtml">
+				<ui:define name="label">Height</ui:define>
+				<h:outputText value="#{photoHome.instance.height}"/>
+			</s:decorate>
+
+			<s:decorate id="rank" template="layout/display.xhtml">
+				<ui:define name="label">Rank</ui:define>
+				<h:outputText value="#{photoHome.instance.rank}"/>
+			</s:decorate>
+
+			<s:decorate id="width" template="layout/display.xhtml">
+				<ui:define name="label">Width</ui:define>
+				<h:outputText value="#{photoHome.instance.width}"/>
+			</s:decorate>
+
+			<div style="clear:both"/>
+
+		</rich:panel>
+
+		<div class="actionButtons">
+
+			<s:button view="/admin/PhotoEdit.xhtml"
+					  id="edit"
+					  value="Edit"/>
+
+			<s:button view="/admin/#{empty photoFrom ? 'PhotoList' : photoFrom}.xhtml"
+					  id="done"
+					  value="Done"/>
+
+		</div>
+
+	</ui:define>
+
+</ui:composition>

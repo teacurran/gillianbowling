@@ -1,0 +1,1476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="b320dd84-0b6e-43bf-8a8f-1330a52d8b39" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/ajax_spinner.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/bird.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/breadcrumb_background.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/breadcrumb_background_blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/breadcrumb_background_blue2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/breadcrumb_background_blue3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/breadcrumb_background_blue4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/breadcrumb_background_blue5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/breadcrumb_background_blue6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/breadcrumb_background_fade.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/breadcrumb_background_white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/btnmanageroles.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/btnmanageusers.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/btnnewpermission.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/btnnewrole.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/btnnewuser.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/bubble_stem.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/dtpick.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/error.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/expand_arrow_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/expand_arrow_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/false.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gbowlingportfolio.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/jboss-local-jdbc.rar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/jboss-xa-jdbc.rar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/jms-ra.rar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/manytoone.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/modal_close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/msgerror.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/msginfo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/msgwarn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/nav_about.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/nav_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/nav_collaboration.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/nav_collaborations.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/nav_collections.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/nav_dagger.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/nav_fashion.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/images/nav_photography.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/onetomany.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/seamlogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/img/true.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/Authenticator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/gillianbowling/model/Category.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/Category.page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/Category.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/CategoryEdit.page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/CategoryEdit.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/CategoryHome.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/CategoryList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/CategoryList.page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/CategoryList.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/CategoryList.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/Configuration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/gillianbowling/model/ConfigurationProperty.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/ConfigurationProperty.page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/ConfigurationProperty.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/ConfigurationPropertyEdit.page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/ConfigurationPropertyEdit.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/ConfigurationPropertyHome.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/ConfigurationPropertyList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/ConfigurationPropertyList.page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/ConfigurationPropertyList.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/gillianbowling/Constants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/EntityHome.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/scripts/FilosofiaItalic.font.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/Home.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/approachingpi/servlet/ImageServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/gillianbowling/model/Photo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/Photo.page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/Photo.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/PhotoEdit.page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/PhotoEdit.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/PhotoHome.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/PhotoList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/PhotoList.page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/PhotoList.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/approachingpi/jpa/PluralNamingStrategy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/RequestUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/gillianbowling/Util.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/ViewCategory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/about.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deployers/aspect-deployer-beans.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/blog.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/conf/bootstrap-beans.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build-dev.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build-prod.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/commons-logging.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/components-dev.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/components-prod.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/components-test.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/WEB-INF/components.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/messaging/connection-factories-service.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/scripts/cufon-yui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/data_descriptor_jbossAs7-ds.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/debug-glassfish-gbowlingportfolio.launch" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/debug-jboss-gbowlingportfolio.launch" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nbproject/debug-jboss.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/templates/default.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deployed-jars.list" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/messaging/destinations-service.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/layout/display.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/layout/edit.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deployers/ejb-deployer-beans.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deployers/ejb3-deployers-beans.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/ejb3-interceptors-aop.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/error.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/error.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/explode.launch" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/WEB-INF/faces-config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/fashion.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/gbowlingportfolio-dev-ds.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/gbowlingportfolio-prod-ds.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gbowlingportfolio.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectFilesBackup/gbowlingportfolio.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gbowlingportfolio.ipr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gbowlingportfolio.iws" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gbowlingportfolio.launch" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/gbowlingportfolio_20100707.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/gbowlingportfolio_20100921.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/glassfish-build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/glassfish-readme.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hibernate-console.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/home.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/home.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/hsqldb-ds.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/messaging/hsqldb-persistence-service.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nbproject/ide-file-targets.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/import-dev.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/import-prod.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/import-test.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/scripts/iscroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deployers/jboss-aspect-library-beans.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/conf/jboss-service.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/WEB-INF/jboss-web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/conf/jbossjta-properties.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deployers/jca-deployers-beans.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/messaging/jms-ds.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/jndi.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/messaging/legacy-service.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/log4j.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/conf/login-config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/login.page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/login.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/styles/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/layout/menu.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/messages_bg.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/messages_de.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/messages_en.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/messages_fr.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/messages_it.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/messages_tr.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/conf/props/messaging-roles.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/messaging/messaging-service.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/conf/props/messaging-users.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deployers/metadata-beans.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/META-INF/orm.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/WEB-INF/pages.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/META-INF/persistence-dev.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/META-INF/persistence-prod.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/META-INF/persistence-test.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/META-INF/persistence.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/photography.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nbproject/project.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/readme.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/remoting-service.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deploy/messaging/remoting-service.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/richtext.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/styles/screen.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seam-gen.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/seam-gen.reveng.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/seam.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/deployers/security-deployer-beans.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/security.drl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/layout/sort.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/layout/template.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/stylesheet/theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/stylesheet/theme.xcss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/scripts/twitter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/admin/stylesheet/useradmin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/validate.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/view.page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/view.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    </list>
+    <list id="14d98b0a-9606-4c70-b8ae-230460702905" name="later" comment="" />
+    <ignored path="$USER_HOME$/.griffon/" />
+    <ignored path="$USER_HOME$/.grails/" />
+    <ignored path="$PROJECT_DIR$/.settings/" />
+    <ignored path="$PROJECT_DIR$/dist/" />
+    <ignored path="$PROJECT_DIR$/exploded-archives/" />
+    <ignored path="$PROJECT_DIR$/nbproject/" />
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/test-build/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <ui_properties converted="true" />
+    <breakpoint_any converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <breakpoint_rules converted="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="gbowlingportfolio" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Authenticator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hot/com/gillianbowling/action/Authenticator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hibernate-console.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hibernate-console.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+              <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seam-gen.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seam-gen.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+              <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gbowlingportfolio-prod-ds.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/gbowlingportfolio-prod-ds.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24907748" vertical-offset="0" max-vertical-offset="542">
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/hot/com/gillianbowling/action/Authenticator.java" />
+        <option value="$PROJECT_DIR$/hibernate-console.properties" />
+        <option value="$PROJECT_DIR$/seam-gen.properties" />
+        <option value="$PROJECT_DIR$/resources/gbowlingportfolio-prod-ds.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ModuleEditorState">
+    <option name="LAST_EDITED_MODULE_NAME" />
+    <option name="LAST_EDITED_TAB_NAME" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="1023" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state />
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource ProjectPane="true" />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gbowlingportfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gbowlingportfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gbowlingportfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gbowlingportfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gbowlingportfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gbowlingportfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gillianbowling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gbowlingportfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gillianbowling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gbowlingportfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gillianbowling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gbowlingportfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gillianbowling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gbowlingportfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gillianbowling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Favorites" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+    <option name="myDjangoConsoleState">
+      <PyConsoleSettings />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/view" />
+      <recent name="$PROJECT_DIR$/src/main/com/gillianbowling" />
+      <recent name="$PROJECT_DIR$/view/admin" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JBoss Server.jboss5">
+    <configuration default="false" name="Default" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console" temporary="true">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" value="" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="DOMAIN" value="" />
+        <option name="PRESERVE" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="PASSWORD" value="adminadmin" />
+      </server-settings>
+      <predefined_log_file id="Glassfish" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JBossConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="SERVER" value="" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="" />
+        <option name="USERNAME" value="" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="JBoss" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Glassfish 3.0-b74b" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+      <deployment />
+      <server-settings>
+        <option name="DOMAIN" value="" />
+        <option name="PRESERVE" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="PASSWORD" value="adminadmin" />
+      </server-settings>
+      <predefined_log_file id="Glassfish" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="/bin/asadmin" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value=" start-domain --debug" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="/bin/asadmin" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value=" stop-domain" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="/bin/asadmin" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value=" start-domain" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="/bin/asadmin" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value=" stop-domain" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method />
+    </configuration>
+    <configuration default="false" name="jboss5" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 5.1.0.GA" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/gbowlingportfolio/" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Xms128m -Xmx512m -XX:MaxPermSize=256m" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <artifact name="gbowlingportfolio:Web exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" value="default" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="" />
+        <option name="USERNAME" value="" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="JBoss" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53085" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="/bin/run.sh" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="/bin/shutdown.sh" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value=" -s jnp://localhost:2147483647 -S" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="/bin/run.sh" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="/bin/shutdown.sh" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value=" -s jnp://localhost:2147483647 -S" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="false" name="JBoss 7.1.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 7.1.1.Final" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/gbowlingportfolio/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="gbowlingportfolio:Web exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="" />
+        <option name="USERNAME" value="" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="JBoss" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50982" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="gbowlingportfolio:Web exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="false" name="Jboss Running" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 6" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/gbowlingportfolio/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="gbowlingportfolio:Web exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/gbowlingportfolio" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_gbowlingportfolio11af5a87" />
+      </server-settings>
+      <log_file path="$USER_HOME$/Library/Caches/IntelliJIdea90/tomcat/Unnamed_gbowlingportfolio11af5a87/logs/localhost*" checked="true" skipped="true" show_all="false" alias="Tomcat Log" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58703" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="%IDEA_RUN:TOMCAT_HOME%/bin/catalina.sh" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value=" run" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="%IDEA_RUN:TOMCAT_HOME%/bin/catalina.sh" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value=" stop" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="%IDEA_RUN:TOMCAT_HOME%/bin/catalina.sh" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value=" run" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="%IDEA_RUN:TOMCAT_HOME%/bin/catalina.sh" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value=" stop" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="GlassFish Server.Unnamed" />
+      <item index="1" class="java.lang.String" itemvalue="JBoss Server.jboss5" />
+      <item index="2" class="java.lang.String" itemvalue="JBoss Server.JBoss 7.1.1.Final" />
+      <item index="3" class="java.lang.String" itemvalue="Remote.Jboss Running" />
+      <item index="4" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
+    </list>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b320dd84-0b6e-43bf-8a8f-1330a52d8b39" name="Default" comment="" />
+      <changelist id="14d98b0a-9606-4c70-b8ae-230460702905" name="later" comment="" />
+      <created>1274201137633</created>
+      <option name="number" value="Default" />
+      <updated>1274201137633</updated>
+      <workItem from="1421984478507" duration="211000" />
+      <workItem from="1421984975229" duration="36000" />
+      <workItem from="1421985123202" duration="206000" />
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="453000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="1023" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27267158" sideWeight="0.46548116" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27389705" sideWeight="0.73221755" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38577586" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2722833" sideWeight="0.6129707" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4064516" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Seam" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969324" sideWeight="0.4192872" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46861926" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4213362" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="-5" y="489" width="1630" height="274" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24355829" sideWeight="0.7633508" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JavaRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JavaRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="&#10;" />
+    <MESSAGE value="added cufon font&#10;" />
+    <MESSAGE value="rank on categories." />
+    <MESSAGE value="better image scaling&#10;" />
+    <MESSAGE value="changes to how homepage photos are randomized, fixed issue with twitter client." />
+    <option name="LAST_COMMIT_MESSAGE" value="changes to how homepage photos are randomized, fixed issue with twitter client." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <targetFilters>
+        <filter targetName="init" isVisible="true" />
+        <filter targetName="compilemodel" isVisible="true" />
+        <filter targetName="groovy.compilemodel" isVisible="false" />
+        <filter targetName="compileactions" isVisible="true" />
+        <filter targetName="groovy.compileactions" isVisible="false" />
+        <filter targetName="groovy.copyactions" isVisible="false" />
+        <filter targetName="copyclasses" isVisible="true" />
+        <filter targetName="compile" isVisible="true" />
+        <filter targetName="war" isVisible="true" />
+        <filter targetName="clear-profile-artifacts" isVisible="true" />
+        <filter targetName="stage" isVisible="false" />
+        <filter targetName="stage-view" isVisible="false" />
+        <filter targetName="archive" isVisible="true" />
+        <filter targetName="datasource" isVisible="false" />
+        <filter targetName="explode" isVisible="true" />
+        <filter targetName="explode-view" isVisible="false" />
+        <filter targetName="unexplode" isVisible="true" />
+        <filter targetName="reexplode" isVisible="true" />
+        <filter targetName="check-deployed" isVisible="true" />
+        <filter targetName="restart-exploded" isVisible="true" />
+        <filter targetName="restart-deployed" isVisible="true" />
+        <filter targetName="restart" isVisible="true" />
+        <filter targetName="deploy" isVisible="true" />
+        <filter targetName="undeploy" isVisible="true" />
+        <filter targetName="redeploy" isVisible="true" />
+        <filter targetName="clean" isVisible="true" />
+        <filter targetName="compiletest" isVisible="true" />
+        <filter targetName="groovy.compiletest" isVisible="true" />
+        <filter targetName="copytestclasses" isVisible="true" />
+        <filter targetName="buildtest" isVisible="true" />
+        <filter targetName="test" isVisible="true" />
+        <filter targetName="javadoc" isVisible="false" />
+        <filter targetName="validate" isVisible="true" />
+        <filter targetName="purge" isVisible="true" />
+        <filter targetName="gf-init" isVisible="true" />
+        <filter targetName="gf-start" isVisible="true" />
+        <filter targetName="gf-debug" isVisible="true" />
+        <filter targetName="gf-stop" isVisible="true" />
+        <filter targetName="gf-reboot" isVisible="true" />
+        <filter targetName="gf-list-components" isVisible="true" />
+        <filter targetName="gf-list-jdbc-resources" isVisible="true" />
+        <filter targetName="gf-check-datasource" isVisible="true" />
+        <filter targetName="gf-deploy-datasource" isVisible="true" />
+        <filter targetName="gf-cleanup-ear" isVisible="false" />
+        <filter targetName="gf-check-seam-exploded" isVisible="false" />
+        <filter targetName="gf-explode-seam" isVisible="false" />
+        <filter targetName="gf-explode" isVisible="true" />
+        <filter targetName="gf-restart" isVisible="false" />
+        <filter targetName="gf-reexplode" isVisible="true" />
+        <filter targetName="gf-redeploy" isVisible="true" />
+        <filter targetName="gf-hotdeploy" isVisible="true" />
+        <filter targetName="gf-stage" isVisible="true" />
+        <filter targetName="gf-archive" isVisible="true" />
+        <filter targetName="gf-deploy" isVisible="true" />
+        <filter targetName="gf-unexplode" isVisible="false" />
+        <filter targetName="gf-undeploy-archive" isVisible="true" />
+        <filter targetName="gf-undeploy-datasource" isVisible="true" />
+        <filter targetName="gf-undeploy" isVisible="true" />
+        <filter targetName="gf-prepare" isVisible="true" />
+        <filter targetName="gf-deploy-hibernate" isVisible="true" />
+      </targetFilters>
+      <treeView value="false" />
+      <expanded value="true" />
+    </buildFile>
+  </component>
+  <component name="atlassian-ide-plugin-workspace">
+    <option name="bambooConfiguration">
+      <BambooWorkspaceConfiguration>
+        <option name="view">
+          <BambooViewConfigurationBean />
+        </option>
+      </BambooWorkspaceConfiguration>
+    </option>
+    <option name="defaultCredentials">
+      <UserCfgBean />
+    </option>
+  </component>
+  <component name="atlassian-ide-plugin-workspace-issues">
+    <option name="filtersMap">
+      <map>
+        <entry>
+          <key>
+            <ServerIdImpl>
+              <option name="id" value="3ba65134-ea57-455c-9163-ce2277ba3813" />
+            </ServerIdImpl>
+          </key>
+          <value>
+            <JiraCustomFilterMap />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="view">
+      <JiraViewConfigurationBean>
+        <option name="viewFilterId" value="" />
+      </JiraViewConfigurationBean>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/view/home.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="570">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/view.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="480">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hot/com/gillianbowling/action/ViewCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="675">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/default.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="3090">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/scripts/twitter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4080" max-vertical-offset="6075">
+          <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hot/com/gillianbowling/action/Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/gillianbowling/model/Photo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2280">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/PhotoEdit.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="2520">
+          <caret line="69" column="67" selection-start-line="69" selection-start-column="67" selection-end-line="69" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/persistence-dev.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="435">
+          <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/persistence-prod.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="420">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hot/com/gillianbowling/action/CategoryHome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="59" column="57" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gbowlingportfolio.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build-prod.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6923077" vertical-offset="0" max-vertical-offset="0">
+          <caret line="114" column="74" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/default.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="3090">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/scripts/twitter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4080" max-vertical-offset="6075">
+          <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/PhotoEdit.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="2520">
+          <caret line="69" column="67" selection-start-line="69" selection-start-column="67" selection-end-line="69" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/persistence-dev.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36044362" vertical-offset="0" max-vertical-offset="541">
+          <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hot/com/gillianbowling/action/ViewCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="675">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/view.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="480">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/home.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="570">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/gillianbowling/model/Photo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2280">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/persistence-prod.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55452865" vertical-offset="0" max-vertical-offset="541">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hot/com/gillianbowling/action/Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3585953" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gbowlingportfolio_20100921.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hot/com/gillianbowling/action/Authenticator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hibernate-console.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seam-gen.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/gbowlingportfolio-prod-ds.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24907748" vertical-offset="0" max-vertical-offset="542">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>gbowlingportfolio:Web exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>JPA</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>gbowlingportfolio</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>deployed_jars</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
