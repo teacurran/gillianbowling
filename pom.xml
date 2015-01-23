@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+		 xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.wirelust.gillianbowling</groupId>
+	<artifactId>gillianbowling-parent</artifactId>
+	<name>gillianbowling-parent</name>
+	<version>1.0</version>
+
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+		<version.mysql.connector>5.1.28</version.mysql.connector>
+		<version.findbugs.maven>2.5.4</version.findbugs.maven>
+
+	</properties>
+
+	<modules>
+		<module>gillianbowling</module>
+		<module>gillianbowling-db</module>
+	</modules>
+
+</project>

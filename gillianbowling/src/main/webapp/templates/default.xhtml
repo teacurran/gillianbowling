@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:a4j="http://richfaces.org/a4j"
+        xmlns:s="http://jboss.com/products/seam/taglib"
+        contentType="text/html">
+<html>
+<head>
+	<title>==| Gillian Bowling |==</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<link rel="alternate" type="application/rss+xml" title="Gillian Bowling RSS Feed" href="http://gillianbowling.com/blog/feed/" />
+	<link rel="alternate" type="application/atom+xml" title="Gillian Bowling Atom Feed" href="http://gillianbowling.com/blog/feed/atom/" />
+	<link rel="pingback" href="http://gillianbowling.com/blog/xmlrpc.php" />
+
+	<a4j:loadStyle src="/styles/main.css"/>
+	<a4j:loadScript src="/scripts/iscroll.js" />
+	<a4j:loadScript src="/scripts/cufon-yui.js" />
+	<a4j:loadScript src="/scripts/FilosofiaItalic.font.js" />
+	<a4j:loadScript src="/scripts/twitter.js" />
+	<ui:insert name="head"/>
+
+	<script type="text/javascript">
+		var isiPad = false;
+
+		function loaded() {
+			//document.addEventListener('touchmove', function(e){ e.preventDefault(); });
+			//myScroll = new iScroll('scroller');
+
+			isiPad = navigator.userAgent.match(/iPad/i) != null;
+		
+			if (isiPad) {
+				jQuery('#header').css({
+					'height': '93px'
+				});
+
+				jQuery('#twitter').css({
+					'top': '3px',
+					'left': '575px'
+				});
+			}
+
+
+			if (jQuery.browser.safari) {
+				setTimeout(function(){
+					new iScroll(document.getElementById('scroller'));
+				}, 100);
+			}
+
+			getTwitters('twitterContent', {
+				id: 'gillianbowling',
+				count: 20,
+				enableLinks: true,
+				ignoreReplies: false,
+				clearContents: true,
+				template: '%text%&lt;br/&gt;&lt;span class="time"&gt;&lt;a href="http://twitter.com/%user_screen_name%/statuses/%id%/"&gt;%time%&lt;/a&gt;&lt;/span&gt;'
+			});
+
+			<ui:insert name="onload"/>
+		}
+
+		var twitterExpanded = false;
+		function expandTwitter() {
+
+			if (!twitterExpanded) {
+				jQuery("#twitterBubble").animate({
+						height: "542px"
+					}, {
+						duration: 750,
+						complete: function() {
+							jQuery("#twitterExpand").attr("src", "#{request.contextPath}/images/expand_arrow_up.png");
+							jQuery("#twitterExpand").css({
+								'left': '275px'
+							});
+							jQuery(this).css({
+								'overflow': 'auto',
+								'scrollbars': 'auto'
+							});
+							twitterExpanded=true;
+						}
+					});
+			} else {
+				jQuery("#twitterBubble").css({
+					'overflow': 'hidden',
+					'scrollbars': 'none'
+				});
+				jQuery("#twitterExpand").attr("src", "#{request.contextPath}/images/expand_arrow_down.png");
+				jQuery("#twitterExpand").css({
+					'left': '295px'
+				});
+				jQuery("#twitterBubble").animate({
+					height: "30px"
+				}, {
+					duration: 750,
+					complete: function() {
+						twitterExpanded=false;
+					}
+				});
+			}
+		}
+
+		var currentOpenNav;
+		function openNav(navId) {
+			if (currentOpenNav) {
+				jQuery("#nav_" + currentOpenNav).slideUp(200, function() {
+					if (jQuery("#nav_" + navId).length > 0) {
+						jQuery("#nav_" + navId).slideDown(300);
+						currentOpenNav = navId;
+					}
+				});
+			} else {
+				if (jQuery("#nav_" + navId).length > 0) {
+					jQuery("#nav_" + navId).slideDown(300);
+					currentOpenNav = navId;
+				}
+			}
+		}
+
+		Cufon.replace('.horiz', { fontFamily: 'FilosofiaItalic' });
+		Cufon.replace('.vert', { fontFamily: 'FilosofiaItalic' });
+
+		//document.addEventListener('DOMContentLoaded', loaded);
+
+		<ui:insert name="javascript"/>
+
+	</script>
+
+
+</head>
+<body onload="loaded()">
+
+	<div id="header">
+		<div id="twitter">
+			<div id="bubble">
+				<div id="twitterBubble">
+					<div id="twitterContent">
+					</div>
+					<div id="twitterBottom">
+						<a href="http://twitter.com/gillianbowling" target="_blank">Follow me on Twitter</a>
+					</div>
+				</div>
+				<a href="javascript:expandTwitter()"><h:graphicImage value="/images/expand_arrow_down.png" alt="expand arrow down" id="twitterExpand"/></a>
+				<h:graphicImage value="/images/bubble_stem.png" alt="bubble stem" id="bubbleStem"/>
+			</div>
+			<h:graphicImage value="/images/bird.png" alt="bird" id="bird"/>
+		</div>
+	</div>
+
+	<div class="content">
+		<ui:insert name="content">
+			[Template content will be inserted here]
+		</ui:insert>
+	</div>
+
+	<div class="footer">
+		<div class="separater"></div>
+		<div class="logoBox">
+			<s:link view="/home.xhtml"><h:graphicImage value="/images/logo.png" height="55" width="376" alt="Gillian Bowling"/></s:link>
+		</div>
+		<div class="nav">
+			<ul>
+				<a4j:repeat value="#{categoryList.topLevelCats}" var="_cat">
+					<h:outputText rendered="#{not empty _cat.children}">
+						<li><a href="javascript:openNav('#{_cat.code}')">#{_cat.name}</a>
+							<ul id="nav_#{_cat.code}">
+								<a4j:repeat value="#{_cat.children}" var="_child">
+									<li><s:link view="/view.xhtml" value="#{_child.name}" propagation="none">
+										<f:param name="c" value="#{_child.code}"/>
+									</s:link></li>
+								</a4j:repeat>
+							</ul>
+						</li>
+					</h:outputText>
+					<h:outputText rendered="#{empty _cat.children}">
+						<li><s:link view="/view.xhtml" value="#{_cat.name}" propagation="none"><f:param name="c" value="#{_cat.code}"/></s:link></li>
+					</h:outputText>
+				</a4j:repeat>
+				<li><s:link view="/blog.xhtml" value="blog"/>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+        <script type="text/javascript"> 
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script> 
+        <script type="text/javascript"> 
+                try {
+                        var pageTracker = _gat._getTracker("UA-8328658-6");
+                        pageTracker._trackPageview();
+                } catch(err) {}
+        </script>
+</body>
+</html>
+
+</f:view>
