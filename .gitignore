@@ -18,6 +18,7 @@ thumbs.db
 .idea
 *.iml
 *.ids
+*.iws
 nbproject
 build/
 nbbuild/
