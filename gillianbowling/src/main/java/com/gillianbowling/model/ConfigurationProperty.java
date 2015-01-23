@@ -22,65 +22,74 @@ import javax.validation.constraints.NotNull;
 @Cacheable
 @Table(name = "ConfigurationProperty", uniqueConstraints = @UniqueConstraint(columnNames = "code"))
 @NamedQueries({
-	@NamedQuery(name = ConfigurationProperty.NAMED_QUERY_GET_ALL,
-			query = "SELECT c FROM ConfigurationProperty c",
+		@NamedQuery(name = ConfigurationProperty.NAMED_QUERY_GET_ALL,
+			query = "SELECT c " +
+					"FROM ConfigurationProperty c",
 			hints = {
-				@QueryHint(name = "org.hibernate.cacheable", value = "true"),
-				@QueryHint(name = "org.hibernate.cacheRegion", value = "configurationPropertyQueries")
-			}),
-    @NamedQuery(name = ConfigurationProperty.NAMED_QUERY_GET_BY_ID,
-            query = "SELECT c FROM ConfigurationProperty c WHERE id  = :id",
-            hints = {
-                @QueryHint(name = "org.hibernate.cacheable", value = "true"),
-                @QueryHint(name = "org.hibernate.cacheRegion", value = "configurationPropertyQueries")
-            }),
-    @NamedQuery(name = ConfigurationProperty.NAMED_QUERY_GET_BY_CODE,
-            query = "SELECT c FROM ConfigurationProperty c WHERE code  = :code",
-            hints = {
-                @QueryHint(name = "org.hibernate.cacheable", value = "true"),
-                @QueryHint(name = "org.hibernate.cacheRegion", value = "configurationPropertyQueries")
-            })
+					@QueryHint(name = "org.hibernate.cacheable", value = "true"),
+					@QueryHint(name = "org.hibernate.cacheRegion", value = "configurationPropertyQueries")
+			}
+		),
 
+		@NamedQuery(name = ConfigurationProperty.NAMED_QUERY_GET_BY_ID,
+			query = "SELECT c " +
+					"FROM ConfigurationProperty c " +
+					"WHERE id  = :id",
+			hints = {
+					@QueryHint(name = "org.hibernate.cacheable", value = "true"),
+					@QueryHint(name = "org.hibernate.cacheRegion", value = "configurationPropertyQueries")
+			}
+		),
+
+		@NamedQuery(name = ConfigurationProperty.NAMED_QUERY_GET_BY_CODE,
+			query = "SELECT c " +
+					"FROM ConfigurationProperty c " +
+					"WHERE code  = :code",
+			hints = {
+					@QueryHint(name = "org.hibernate.cacheable", value = "true"),
+					@QueryHint(name = "org.hibernate.cacheRegion", value = "configurationPropertyQueries")
+			}
+		)
 })
 public class ConfigurationProperty implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	public static final String NAMED_QUERY_GET_ALL = "configurationProperty.getAll";
-    public static final String NAMED_QUERY_GET_BY_CODE = "configurationProperty.getByKey";
-    public static final String NAMED_QUERY_GET_BY_ID = "configurationProperty.getById";
+	public static final String NAMED_QUERY_GET_BY_CODE = "configurationProperty.getByKey";
+	public static final String NAMED_QUERY_GET_BY_ID = "configurationProperty.getById";
 
-    private Integer id;
+	private Integer id;
 	private String code;
 	private String type;
 	private String value;
 	private String defaultValue;
-    private Long version; // for optimistic locking
+	private Long version; // for optimistic locking
 
 	public ConfigurationProperty() {
-    }
+	}
 
-    @Transient
-    public Object getValueAsObject() {
-    	Object result = this.value;
-	    if ("string".equals(this.type)) {
-		    return value;
-	    }
-	    if ("int".equals(this.type)) {
-		    try {
+	@Transient
+	public Object getValueAsObject() {
+		Object result = this.value;
+		if ("string".equals(this.type)) {
+			return value;
+		}
+		if ("int".equals(this.type)) {
+			try {
 				return Integer.parseInt(value);
-		    } catch (Exception e) {
+			} catch (Exception e) {
 				return null;
-		    }
-	    }
-	    if ("boolean".equals(this.type)) {
-		    try {
-			    return Boolean.parseBoolean(value);
-		    } catch (Exception e) {
-			    return false;
-		    }
-	    }
-    	return result;
-    }
+			}
+		}
+		if ("boolean".equals(this.type)) {
+			try {
+				return Boolean.parseBoolean(value);
+			} catch (Exception e) {
+				return false;
+			}
+		}
+		return result;
+	}
 
 	@Id
 	@GeneratedValue(strategy = AUTO)
@@ -95,7 +104,7 @@ public class ConfigurationProperty implements Serializable {
 		return this.code;
 	}
 
-    @Column(name = "type", length = 100)
+	@Column(name = "type", length = 100)
 	public String getType() {
 		return type;
 	}
@@ -120,18 +129,23 @@ public class ConfigurationProperty implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public void setCode(String code) {
 		this.code = code;
 	}
+
 	public void setType(String type) {
 		this.type = type;
 	}
+
 	public void setValue(String value) {
 		this.value = value;
 	}
+
 	public void setDefaultValue(String defaultValue) {
 		this.defaultValue = defaultValue;
 	}
+
 	public void setVersion(Long version) {
 		this.version = version;
 	}
@@ -217,19 +231,15 @@ public class ConfigurationProperty implements Serializable {
 	 */
 	@Override
 	public String toString() {
-	    final String TAB = "    ";
+		final String TAB = "    ";
 
-	    StringBuilder retValue = new StringBuilder();
+		StringBuilder retValue = new StringBuilder();
 
-	    retValue.append("ConfigurationProperty ( ")
-	        .append("id = ").append(this.id).append(TAB)
-	        .append("name = ").append(this.code).append(TAB)
-	        .append("type = ").append(this.type).append(TAB)
-	        .append("value = ").append(this.value).append(TAB)
-	        .append("defaultValue = ").append(this.defaultValue).append(TAB)
-	        .append("version = ").append(this.version).append(TAB)
-	        .append(" )");
+		retValue.append("ConfigurationProperty ( ").append("id = ").append(this.id).append(TAB).append("name = ")
+				.append(this.code).append(TAB).append("type = ").append(this.type).append(TAB).append("value = ")
+				.append(this.value).append(TAB).append("defaultValue = ").append(this.defaultValue).append(TAB).append
+				("version = ").append(this.version).append(TAB).append(" )");
 
-	    return retValue.toString();
+		return retValue.toString();
 	}
 }

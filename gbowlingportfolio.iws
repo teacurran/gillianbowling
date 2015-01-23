@@ -1,153 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="b320dd84-0b6e-43bf-8a8f-1330a52d8b39" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/ajax_spinner.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/bird.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/breadcrumb_background.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/breadcrumb_background_blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/breadcrumb_background_blue2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/breadcrumb_background_blue3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/breadcrumb_background_blue4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/breadcrumb_background_blue5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/breadcrumb_background_blue6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/breadcrumb_background_fade.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/breadcrumb_background_white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/btnmanageroles.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/btnmanageusers.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/btnnewpermission.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/btnnewrole.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/btnnewuser.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/bubble_stem.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/dtpick.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/error.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/expand_arrow_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/expand_arrow_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/false.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/manytoone.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/modal_close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/msgerror.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/msginfo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/msgwarn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/nav_about.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/nav_blog.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/nav_collaboration.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/nav_collaborations.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/nav_collections.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/nav_dagger.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/nav_fashion.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/images/nav_photography.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/onetomany.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/seamlogo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/img/true.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Authenticator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/Authenticator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Category.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/Category.page.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/Category.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/CategoryEdit.page.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/CategoryEdit.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/CategoryHome.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/CategoryList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/CategoryList.page.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/CategoryList.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/CategoryList.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/CategoryManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/data/repositories/CategoryRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Configuration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/Configuration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/ConfigurationManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/ConfigurationProperty.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/ConfigurationProperty.page.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/ConfigurationProperty.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/ConfigurationPropertyEdit.page.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/ConfigurationPropertyEdit.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/ConfigurationPropertyHome.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/ConfigurationPropertyList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/ConfigurationPropertyList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/ConfigurationPropertyList.page.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/ConfigurationPropertyList.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/EntityHome.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/EntityManagerProducer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/scripts/FilosofiaItalic.font.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Home.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/Home.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/approachingpi/servlet/ImageServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Photo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/Photo.page.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/Photo.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/PhotoEdit.page.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/PhotoEdit.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/PhotoHome.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/PhotoList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/PhotoList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/PhotoList.page.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/PhotoList.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/PhotoManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/approachingpi/jpa/PluralNamingStrategy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling-db/src/main/resources/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/RequestUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/RequestUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/ResourceBundlerProducer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/locales/UTF8ResourceBundleControl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/Util.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/ViewCategory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/ViewCategory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/about.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/blog.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling-db/src/main/resources/scripts/bootstrap.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/scripts/cufon-yui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/templates/default.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling-db/src/main/resources/environments/development.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/layout/display.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/layout/edit.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/error.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/error.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/fashion.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/home.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/home.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/scripts/iscroll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/login.page.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/login.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/styles/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/layout/menu.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/photography.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling-db/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/styles/screen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/layout/sort.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/layout/template.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/stylesheet/theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/stylesheet/theme.xcss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/scripts/twitter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/stylesheet/useradmin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/view.page.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/view.xhtml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/Authenticator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/CategoryHome.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/CategoryList.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/Configuration.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/ConfigurationPropertyHome.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/ConfigurationPropertyList.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/EntityHome.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/Home.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/PhotoHome.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/PhotoList.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/RequestUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/action/ViewCategory.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hot/com/approachingpi/servlet/ImageServlet.java" afterPath="$PROJECT_DIR$/src/hot/com/approachingpi/servlet/ImageServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/gbowlingportfolio-prod-ds.xml" afterPath="$PROJECT_DIR$/resources/gbowlingportfolio-prod-ds.xml" />
+    <list default="true" id="b320dd84-0b6e-43bf-8a8f-1330a52d8b39" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/web/filter/AuthFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/qualifiers/ClasspathResource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/data/repositories/ConfigurationPropertyRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/web/filter/FacesAjaxAwareUserFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/qualifiers/Localization.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/data/repositories/PhotoRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/ResourceBundleProducer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/WEB-INF/beans.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling-db/src/main/resources/db/scripts/bootstrap.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling-db/src/main/resources/db/environments/development.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/resources/META-INF/persistence.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/WEB-INF/shiro.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/WEB-INF/web.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gillianbowling-db/src/main/resources/environments/development.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gillianbowling-db/src/main/resources/scripts/bootstrap.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/ResourceBundlerProducer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/ConfigurationPropertyList.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/PhotoList.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/RequestUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nbproject/debug-jboss.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nbproject/ide-file-targets.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nbproject/project.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projectFilesBackup/gbowlingportfolio.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/gbowlingportfolio-dev-ds.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/gbowlingportfolio-prod-ds.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/import-dev.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/import-prod.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/import-test.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/messages_bg.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/messages_de.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/messages_en.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/messages_fr.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/messages_it.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/messages_tr.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/richtext.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/seam-gen.reveng.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/seam.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/approachingpi/servlet/ImageServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/Authenticator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/CategoryHome.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/CategoryList.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/Configuration.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/ConfigurationPropertyHome.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/ConfigurationPropertyList.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/EntityHome.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/Home.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/PhotoHome.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/PhotoList.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/RequestUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hot/com/gillianbowling/services/ViewCategory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/approachingpi/jpa/PluralNamingStrategy.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/gillianbowling/Constants.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/gillianbowling/Util.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/gillianbowling/model/Category.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/gillianbowling/model/ConfigurationProperty.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/gillianbowling/model/Photo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/view/admin/ConfigurationProperty.page.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/view/admin/ConfigurationProperty.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/view/admin/ConfigurationPropertyEdit.page.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/view/admin/ConfigurationPropertyEdit.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/view/admin/ConfigurationPropertyList.page.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/view/admin/ConfigurationPropertyList.xhtml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Category.java" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Category.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/CategoryManager.java" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/CategoryManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Configuration.java" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Configuration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/ConfigurationProperty.java" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/ConfigurationProperty.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Home.java" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Home.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/approachingpi/servlet/ImageServlet.java" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/approachingpi/servlet/ImageServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Photo.java" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Photo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/PhotoManager.java" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/PhotoManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/ViewCategory.java" afterPath="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/ViewCategory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gbowlingportfolio.iml" afterPath="$PROJECT_DIR$/gbowlingportfolio.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gbowlingportfolio.ipr" afterPath="$PROJECT_DIR$/gbowlingportfolio.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gbowlingportfolio.iws" afterPath="$PROJECT_DIR$/gbowlingportfolio.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hibernate-console.properties" afterPath="$PROJECT_DIR$/hibernate-console.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seam-gen.properties" afterPath="$PROJECT_DIR$/seam-gen.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gillianbowling/pom.xml" afterPath="$PROJECT_DIR$/gillianbowling/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gillianbowling-db/pom.xml" afterPath="$PROJECT_DIR$/gillianbowling-db/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/stylesheet/useradmin.css" afterPath="$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/stylesheet/useradmin.css" />
     </list>
     <list id="14d98b0a-9606-4c70-b8ae-230460702905" name="later" comment="" />
     <ignored path="$USER_HOME$/.griffon/" />
@@ -169,12 +103,33 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="ChangesViewManager" flattened_view="false" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_TOOLBAR" value="true" />
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - gbowlingportfolio@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="gbowlingportfolio" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="DebuggerManager">
     <ui_properties converted="true" />
@@ -218,10 +173,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Authenticator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Authenticator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Authenticator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6052632" vertical-offset="334" max-vertical-offset="615">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
               <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -230,23 +185,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/CategoryManager.java">
+      <file leaf-file-name="AuthFilter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/web/filter/AuthFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="2805">
-              <caret line="30" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="2.537594" vertical-offset="0" max-vertical-offset="795">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigurationPropertyList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/ConfigurationPropertyList.java">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state vertical-scroll-proportion="-5.4" vertical-offset="165" max-vertical-offset="720">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="development.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gillianbowling-db/src/main/resources/db/environments/development.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1050">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.6" vertical-offset="30" max-vertical-offset="765">
+              <caret line="3" column="45" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -255,7 +228,7 @@
       <file leaf-file-name="Configuration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Configuration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1230" max-vertical-offset="1335">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1230" max-vertical-offset="1350">
               <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -325,28 +298,42 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/gillianbowling-db/pom.xml" />
-        <option value="$PROJECT_DIR$/gillianbowling/pom.xml" />
-        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Photo.java" />
-        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/ConfigurationProperty.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/action/Authenticator.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/action/CategoryHome.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/action/CategoryList.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/EntityManagerProducer.java" />
-        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/ResourceBundlerProducer.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/locales/UTF8ResourceBundleControl.java" />
-        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Category.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/data/repositories/CategoryRepository.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/action/CategoryManager.java" />
-        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Configuration.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/ConfigurationPropertyHome.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/ConfigurationManager.java" />
-        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/CategoryManager.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/ConfigurationManager.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/PhotoHome.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/data/repositories/ConfigurationPropertyRepository.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/ConfigurationProperty.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/ConfigurationPropertyList.java" />
+        <option value="$PROJECT_DIR$/gillianbowling-db/src/main/resources/scripts/bootstrap.sql" />
+        <option value="$PROJECT_DIR$/gillianbowling-db/src/main/resources/environments/development.properties" />
+        <option value="$PROJECT_DIR$/gillianbowling-db/src/main/resources/db/environments/development.properties" />
+        <option value="$PROJECT_DIR$/resources/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/gillianbowling-db/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/data/repositories/PhotoRepository.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/PhotoList.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Authenticator.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/web/filter/AuthFilter.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/qualifiers/Localization.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/qualifiers/ClasspathResource.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/ResourceBundlerProducer.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/ResourceBundleProducer.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/approachingpi/servlet/ImageServlet.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Configuration.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Photo.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Category.java" />
+        <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/ViewCategory.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/PhotoManager.java" />
         <option value="$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Authenticator.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -359,6 +346,13 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$M2_HOME$" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -406,7 +400,18 @@
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
-      <profile-state />
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
     </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -427,17 +432,16 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="false" />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages />
+      <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource ProjectPane="true" />
+      <autoscrollToSource ProjectPane="false" />
+      <autoscrollFromSource ProjectPane="false" />
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -466,16 +470,13 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="gbowlingportfolio" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -632,7 +633,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -650,7 +651,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gillianbowling/target/gillianbowling-exploded.war" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -663,13 +664,19 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gillianbowling/src/main/webapp/WEB-INF" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/view" />
       <recent name="$PROJECT_DIR$/src/main/com/gillianbowling" />
       <recent name="$PROJECT_DIR$/view/admin" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gillianbowling.data.repositories" />
+    </key>
   </component>
-  <component name="RunManager" selected="JBoss Server.jboss5">
+  <component name="RunManager" selected="JBoss Server.wildfly 8.2">
     <configuration default="false" name="Default" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console" temporary="true">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" value="" />
@@ -733,6 +740,28 @@
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -889,6 +918,85 @@
       <extension name="coverage" enabled="false" merge="false" runner="idea" />
       <method />
     </configuration>
+    <configuration default="false" name="wildfly 8.2" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="wildfly-8.2.0.Final" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/gbowlingportfolio/" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Xms128m -Xmx512m -XX:MaxPermSize=256m" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="gillianbowling:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" />
+        <option name="USERNAME" value="" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="JBoss" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53085" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="Make" enabled="false" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="gillianbowling:war exploded" />
+        </option>
+      </method>
+    </configuration>
     <configuration default="false" name="Unnamed" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Glassfish 3.0-b74b" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
       <deployment />
@@ -938,83 +1046,6 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method />
-    </configuration>
-    <configuration default="false" name="jboss5" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 5.1.0.GA" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER" value="false" />
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/gbowlingportfolio/" />
-      <option name="COMMON_VM_ARGUMENTS" value="-Xms128m -Xmx512m -XX:MaxPermSize=256m" />
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
-      <deployment>
-        <artifact name="gbowlingportfolio:Web exploded">
-          <settings />
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="SERVER" value="default" />
-        <option name="BINDING_SET_NAME" value="" />
-        <option name="DOMAIN" value="false" />
-        <option name="SERVER_GROUP" value="" />
-        <option name="USERNAME" value="" />
-        <option name="PASSWORD" value="" />
-      </server-settings>
-      <predefined_log_file id="JBoss" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" runner="idea" />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="53085" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="/bin/run.sh" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="/bin/shutdown.sh" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value=" -s jnp://localhost:2147483647 -S" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="/bin/run.sh" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="/bin/shutdown.sh" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value=" -s jnp://localhost:2147483647 -S" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="Make" enabled="false" />
-      </method>
     </configuration>
     <configuration default="false" name="JBoss 7.1.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 7.1.1.Final" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/gbowlingportfolio/" />
@@ -1087,9 +1118,7 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="gbowlingportfolio:Web exploded" />
-        </option>
+        <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
     <configuration default="false" name="Jboss Running" type="Remote" factoryName="Remote">
@@ -1163,8 +1192,8 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="GlassFish Server.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="JBoss Server.jboss5" />
+      <item index="0" class="java.lang.String" itemvalue="JBoss Server.wildfly 8.2" />
+      <item index="1" class="java.lang.String" itemvalue="GlassFish Server.Unnamed" />
       <item index="2" class="java.lang.String" itemvalue="JBoss Server.JBoss 7.1.1.Final" />
       <item index="3" class="java.lang.String" itemvalue="Remote.Jboss Running" />
       <item index="4" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
@@ -1187,21 +1216,30 @@
       <option name="number" value="Default" />
       <updated>1274201137633</updated>
       <workItem from="1417746147678" duration="8647000" />
-      <workItem from="1417805407448" duration="1288000" />
-      <workItem from="1421985907793" duration="87000" />
+      <workItem from="1417805407448" duration="1797000" />
+      <workItem from="1420327203467" duration="8964000" />
+      <workItem from="1420343885384" duration="7881000" />
+      <workItem from="1421985907793" duration="399000" />
+      <workItem from="1421986665382" duration="140000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="started converting to EE6 project">
+      <created>1421986117615</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1421986117615</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10022000" />
+    <option name="totallyTimeSpent" value="10474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1218,32 +1256,32 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2722833" sideWeight="0.6129707" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Seam" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969324" sideWeight="0.4192872" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46861926" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42030847" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="-5" y="489" width="1630" height="274" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24355829" sideWeight="0.7633508" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JavaRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="JavaRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40690377" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="JavaRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Seam" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969324" sideWeight="0.4192872" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="JavaRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1267,7 +1305,8 @@
     <MESSAGE value="better image scaling&#10;" />
     <MESSAGE value="changes to how homepage photos are randomized, fixed issue with twitter client." />
     <MESSAGE value="started converting to EE6 project" />
-    <option name="LAST_COMMIT_MESSAGE" value="started converting to EE6 project" />
+    <MESSAGE value="converting to EE6 project" />
+    <option name="LAST_COMMIT_MESSAGE" value="converting to EE6 project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1377,6 +1416,32 @@
     </option>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/webapp/CategoryList.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="390">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/CategoryList.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2520">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/PhotoManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1605" max-vertical-offset="2370">
+          <caret line="128" column="14" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/PhotoManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1605" max-vertical-offset="2370">
@@ -1389,156 +1454,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Category.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="930" max-vertical-offset="1710">
-          <caret line="98" column="26" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Authenticator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="615">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/CategoryManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2820">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/data/repositories/CategoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="300">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/EntityManagerProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="555">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/ResourceBundlerProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1260">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/locales/UTF8ResourceBundleControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1800">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hot/com/gillianbowling/services/ViewCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="675">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/templates/default.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="3090">
-          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/scripts/twitter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4080" max-vertical-offset="6075">
-          <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hot/com/gillianbowling/services/Home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/gillianbowling/model/Photo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2280">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/PhotoEdit.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="2520">
-          <caret line="69" column="67" selection-start-line="69" selection-start-column="67" selection-end-line="69" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/persistence-dev.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="435">
-          <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/persistence-prod.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="420">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hot/com/gillianbowling/services/CategoryHome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="59" column="57" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gbowlingportfolio.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build-dev.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build-prod.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.6923077" vertical-offset="0" max-vertical-offset="0">
           <caret line="114" column="74" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1849#1850#0" expanded="true" />
+            <element signature="e#1871#1872#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1575,13 +1496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="420">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hot/com/gillianbowling/services/ViewCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="675">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1599,67 +1513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/gillianbowling/model/Photo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2280">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hot/com/gillianbowling/services/Home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.6" vertical-offset="445" max-vertical-offset="1170">
-          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling-db/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-          <caret line="13" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="9705">
-          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Photo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2415">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/ConfigurationProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3255">
-          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/EntityManagerProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/locales/UTF8ResourceBundleControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1800">
@@ -1667,73 +1520,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="930" max-vertical-offset="1710">
-          <caret line="98" column="26" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/ResourceBundlerProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1260">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/data/repositories/CategoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1230" max-vertical-offset="1335">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/Category.page.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/webapp/CategoryList.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="46" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/CategoryList.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2520">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/CategoryManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="2805">
-          <caret line="30" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/ConfigurationManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+        <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="780">
           <caret line="37" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1741,6 +1538,188 @@
             <element signature="e#797#798#0" expanded="true" />
             <element signature="e#831#832#0" expanded="true" />
             <element signature="e#850#851#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/webapp/CategoryList.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="390">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/CategoryList.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2520">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/data/repositories/CategoryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/data/repositories/ConfigurationPropertyRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="12" column="80" selection-start-line="12" selection-start-column="80" selection-end-line="12" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling-db/src/main/resources/db/scripts/bootstrap.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.9" vertical-offset="500" max-vertical-offset="1305">
+          <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling-db/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/codehaus/mojo/buildnumber-maven-plugin/1.2/buildnumber-maven-plugin-1.2.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6150">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/data/repositories/PhotoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/webapp/admin/PhotoList.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.269231" vertical-offset="491" max-vertical-offset="3075">
+          <caret line="54" column="61" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/webapp/about.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/security.drl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/qualifiers/Localization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/qualifiers/ClasspathResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4" vertical-offset="0" max-vertical-offset="750">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/ResourceBundleProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+          <caret line="29" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/approachingpi/servlet/ImageServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="6330">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1230" max-vertical-offset="1350">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1635">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#1849#1850#0" expanded="true" />
+            <element signature="e#1871#1872#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/ConfigurationProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="3765">
+          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/ViewCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="690">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/model/Photo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0" vertical-offset="774" max-vertical-offset="2595">
+          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1814#1815#0" expanded="true" />
+            <element signature="e#1836#1837#0" expanded="true" />
+            <element signature="e#2051#2052#0" expanded="true" />
+            <element signature="e#2125#2126#0" expanded="true" />
+            <element signature="e#2240#2241#0" expanded="true" />
+            <element signature="e#2316#2317#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1755,21 +1734,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/ConfigurationPropertyList.java">
+    <entry file="file://$PROJECT_DIR$/resources/WEB-INF/components.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1860">
+          <caret line="25" column="60" selection-start-line="0" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/webapp/WEB-INF/beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4364641" vertical-offset="7139" max-vertical-offset="7875">
+          <caret line="497" column="19" selection-start-line="497" selection-start-column="19" selection-end-line="497" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/producers/EntityManagerProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/WEB-INF/jboss-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.807692" vertical-offset="1361" max-vertical-offset="2085">
+          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/webapp/WEB-INF/shiro.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
           <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4" vertical-offset="165" max-vertical-offset="720">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling-db/src/main/resources/db/environments/development.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6" vertical-offset="30" max-vertical-offset="765">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/Authenticator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6052632" vertical-offset="334" max-vertical-offset="615">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/services/manager/CategoryManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="2865">
+          <caret line="30" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gillianbowling/src/main/java/com/gillianbowling/web/filter/AuthFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.537594" vertical-offset="0" max-vertical-offset="795">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1779,11 +1856,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>gbowlingportfolio:Web exploded</last-edited>
+          <last-edited>gillianbowling:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.32844827" />
                 <option value="0.5" />
               </list>
             </option>
@@ -1792,11 +1869,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Invalid</last-edited>
+          <last-edited>Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.32844827" />
               </list>
             </option>
           </splitter-proportions>
@@ -1808,7 +1885,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.32844827" />
               </list>
             </option>
           </splitter-proportions>
@@ -1820,7 +1897,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.32844827" />
               </list>
             </option>
           </splitter-proportions>
@@ -1828,12 +1905,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>gillianbowling</last-edited>
+          <last-edited>Web|gillianbowling</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
-                <option value="0.6" />
+                <option value="0.32844827" />
               </list>
             </option>
           </splitter-proportions>
@@ -1841,11 +1917,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>deployed_jars</last-edited>
+          <last-edited>Maven: xml-apis:xml-apis:1.0.b2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.32844827" />
               </list>
             </option>
           </splitter-proportions>

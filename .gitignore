@@ -17,6 +17,7 @@ thumbs.db
 # IDEs
 .idea
 *.iml
+*.ids
 nbproject
 build/
 nbbuild/

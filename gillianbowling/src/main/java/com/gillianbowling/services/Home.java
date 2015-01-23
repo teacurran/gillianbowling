@@ -1,27 +1,24 @@
 package com.gillianbowling.services;
 
 import com.gillianbowling.model.*;
-import org.jboss.seam.ScopeType;
-import org.jboss.seam.annotations.In;
-import org.jboss.seam.annotations.Name;
-import org.jboss.seam.annotations.Scope;
-import org.jboss.seam.framework.EntityQuery;
 
+import javax.faces.bean.ViewScoped;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Name("home")
-@Scope(ScopeType.PAGE)
+@ViewScoped
 public class Home implements Serializable {
 
-	@In(create=true)
+	@Inject
 	ViewCategory viewCategory;
 
-	@In
-	EntityManager entityManager;
+	@Inject
+	transient EntityManager entityManager;
 
 	int randomNumber	= 0;
 	List<Photo> photos = null;
@@ -42,7 +39,12 @@ public class Home implements Serializable {
 			// flip a coin. show a horizontal image 25% of the time.
 			boolean hasHoriz = false;
 			if (((int) (Math.random() * 4)) == 0) {
-				Query query = entityManager.createNativeQuery("SELECT p.* FROM photos p WHERE p.featured = 1 AND p.orientation=1 AND p.category_id IS NOT NULL ORDER BY rand() LIMIT 1", Photo.class);
+				Query query = entityManager.createNativeQuery("SELECT p.* " +
+						"FROM photos p " +
+						"WHERE p.featured = 1 " +
+						"AND p.orientation=1 " +
+						"AND p.category_id IS NOT NULL " +
+						"ORDER BY rand() LIMIT 1", Photo.class);
 				List<Photo> results = (List<Photo>)query.getResultList();
 
 				if (results != null && results.size() > 0) {
@@ -51,7 +53,11 @@ public class Home implements Serializable {
 				}
 			}
 
-			Query query = entityManager.createNativeQuery("SELECT p.* FROM photos p WHERE p.featured = 1 AND p.orientation=2 AND p.category_id IS NOT NULL ORDER BY rand() LIMIT 3", Photo.class);
+			Query query = entityManager.createNativeQuery("SELECT p.* " +
+					"FROM photos p " +
+					"WHERE p.featured = 1 " +
+					"AND p.orientation=2 " +
+					"AND p.category_id IS NOT NULL ORDER BY rand() LIMIT 3", Photo.class);
 			List<Photo> results = (List<Photo>)query.getResultList();
 
 			for (Photo photo : results) {

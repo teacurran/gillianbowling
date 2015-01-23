@@ -1,17 +1,12 @@
 package com.approachingpi.servlet;
 
 import com.gillianbowling.services.Configuration;
-import org.icepdf.core.exceptions.PDFException;
-import org.icepdf.core.exceptions.PDFSecurityException;
-import org.icepdf.core.pobjects.Document;
-import org.icepdf.core.pobjects.Page;
-import org.icepdf.core.util.GraphicsRenderingHints;
-import org.jboss.seam.Component;
-import org.jboss.seam.log.Log;
-import org.jboss.seam.log.Logging;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import sun.awt.image.BufferedImageGraphicsConfig;
 
 import javax.imageio.ImageIO;
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +27,10 @@ import java.util.Map;
 
 public class ImageServlet extends HttpServlet {
 
-	private static final Log log = Logging.getLog(ImageServlet.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ImageServlet.class);
+
+	@Inject
+	Configuration configuration;
 
 	public ImageServlet() {
 
@@ -40,8 +38,6 @@ public class ImageServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-
-		Configuration config = (Configuration) Component.getInstance("configuration", true);
 
 		String pathInfo = (req.getPathInfo() == null) ? "" : req.getPathInfo();
 
@@ -86,7 +82,7 @@ public class ImageServlet extends HttpServlet {
 				}
 			}
 
-			String fileUri = config.getString("media.dir");
+			String fileUri = configuration.getString("media.dir");
 			if (!fileUri.endsWith(File.separator)) {
 				fileUri = fileUri + File.separator;
 			}
@@ -109,7 +105,12 @@ public class ImageServlet extends HttpServlet {
 				resize = false;
 			}
 
-			log.debug("file:{0}, width:{1}, height:{2}, maxWidthOrheight:{3}", fileUri, requestedWidth, requestedHeight, maxWidthOrHeight);
+			LOGGER.debug("file:{}, width:{}, height:{}, maxWidthOrheight:{}", new String[]{
+					fileUri,
+					Integer.toString(requestedWidth),
+					Integer.toString(requestedHeight),
+					Integer.toString(maxWidthOrHeight)
+				});
 			System.out.println(fileUri);
 			System.out.println("width:" + requestedWidth);
 			System.out.println("height:" + requestedHeight);
@@ -123,7 +124,7 @@ public class ImageServlet extends HttpServlet {
 
 				File fileOutput = file;
 				if (resize) {
-					String fileUriSized = config.getString("media.cache.dir");
+					String fileUriSized = configuration.getString("media.cache.dir");
 					if (fileUriSized.endsWith(File.separator)) {
 						fileUriSized = fileUriSized.substring(0, fileUriSized.length() - 1);
 					}
@@ -133,12 +134,12 @@ public class ImageServlet extends HttpServlet {
 
 						if (i == pathSplit.length - 2) {
 
-							log.debug("checking for folder:{0}", fileUriSized);
+							LOGGER.debug("checking for folder:{}", fileUriSized);
 							File currentPathFile = new File(fileUriSized);
 							if (!currentPathFile.exists()) {
-								log.debug("creating folder:{0}", fileUriSized);
+								LOGGER.debug("creating folder:{}", fileUriSized);
 								if (!currentPathFile.mkdirs()) {
-									log.error("Cannot create directory:{0}", fileUriSized);
+									LOGGER.error("Cannot create directory:{}", fileUriSized);
 								}
 							}
 						}
@@ -154,48 +155,38 @@ public class ImageServlet extends HttpServlet {
 					if (fileSized.exists()) {
 						fileOutput = fileSized;
 					} else {
-						if (".pdf".equalsIgnoreCase(fileExtension)) {
+						BufferedImage imageOriginal = ImageIO.read(file);
 
-							if (this.generateImageFromPdf(file, fileSized, requestedWidth, requestedHeight, 90, config)) {
-								fileOutput = fileSized;
+						int width = imageOriginal.getWidth(null);
+						int height = imageOriginal.getHeight(null);
+
+						if (requestedWidth == 0 && requestedHeight == 0 && maxWidthOrHeight > 0) {
+							if (height > width) {
+								requestedHeight = maxWidthOrHeight;
 							} else {
-								// todo: handle some exception here.
-								fileOutput = file;
+								requestedWidth = maxWidthOrHeight;
 							}
+						}
 
+						if (requestedWidth > width) {
+							requestedWidth = width;
+						}
+						if (requestedHeight > height) {
+							requestedHeight = height;
+						}
+
+						String imageFormat = "JPG";
+						if (".gif".equalsIgnoreCase(fileExtensionOutput)) {
+							imageFormat = "GIF";
+						} else if (".png".equalsIgnoreCase(fileExtensionOutput)) {
+							imageFormat = "PNG";
+						}
+
+						if (this.generateImage(imageOriginal, fileSized, requestedWidth, requestedHeight, 100,
+								imageFormat, configuration)) {
+							fileOutput = fileSized;
 						} else {
-							BufferedImage imageOriginal = ImageIO.read(file);
-
-							int width = imageOriginal.getWidth(null);
-							int height = imageOriginal.getHeight(null);
-
-							if (requestedWidth == 0 && requestedHeight == 0 && maxWidthOrHeight > 0) {
-								if (height > width) {
-									requestedHeight = maxWidthOrHeight;
-								} else {
-									requestedWidth = maxWidthOrHeight;
-								}
-							}
-
-							if (requestedWidth > width) {
-								requestedWidth = width;
-							}
-							if (requestedHeight > height) {
-								requestedHeight = height;
-							}
-
-							String imageFormat = "JPG";
-							if (".gif".equalsIgnoreCase(fileExtensionOutput)) {
-								imageFormat = "GIF";
-							} else if (".png".equalsIgnoreCase(fileExtensionOutput)) {
-								imageFormat = "PNG";
-							}
-
-							if (this.generateImage(imageOriginal, fileSized, requestedWidth, requestedHeight, 100, imageFormat, config)) {
-								fileOutput = fileSized;
-							} else {
-								fileOutput = file;
-							}
+							fileOutput = file;
 						}
 					}
 				}
@@ -296,32 +287,6 @@ public class ImageServlet extends HttpServlet {
 		return true;
 	}
 
-	public boolean generateImageFromPdf(File file, File scaledFile, int new_width, int new_height, int quality, Configuration config) throws IOException {
-		Document document = new Document();
-
-		try {
-			document.setFile(file.getAbsolutePath());
-		} catch (PDFException ex) {
-			log.error("Error parsing PDF document", ex);
-		} catch (PDFSecurityException ex) {
-			log.error("Error encryption not supported", ex);
-		} catch (FileNotFoundException ex) {
-			log.error("Error file not found ", ex);
-		} catch (IOException ex) {
-			log.error("Error IOException ", ex);
-		}
-
-		Image pdfImage = document.getPageImage(0, GraphicsRenderingHints.SCREEN, Page.BOUNDARY_CROPBOX, 0f, 1f);
-
-		BufferedImage bufferedImage = new BufferedImage(pdfImage.getWidth(null), pdfImage.getHeight(null), BufferedImage.TYPE_INT_RGB);
-		// Copy image to buffered image
-		Graphics g = bufferedImage.createGraphics();
-		// Paint the image onto the buffered image
-		g.drawImage(pdfImage, 0, 0, null);
-		g.dispose();
-
-		return generateImage(bufferedImage, scaledFile, new_width, new_height, quality, "JPG", config);
-	}
 
 	public BufferedImage resize(BufferedImage image, int width, int height) {
 		int type = image.getType() == 0 ? BufferedImage.TYPE_INT_ARGB : image.getType();

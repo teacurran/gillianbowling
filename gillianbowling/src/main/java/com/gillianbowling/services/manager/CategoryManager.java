@@ -111,14 +111,18 @@ public class CategoryManager {
 			File uploadDirFile = new File(uploadDir);
 			if (!uploadDirFile.exists()) {
 				LOGGER.debug("Creating product directory:#0", uploadDir);
-				uploadDirFile.mkdirs();
+ 				if (!uploadDirFile.mkdirs()) {
+					LOGGER.error("unable to mkdirs:{}", uploadDir);
+				};
 			}
 
 			String uploadFileDir = uploadDir + File.pathSeparator + getCategory().getId();
 			File uploadFileFile = new File(uploadFileDir);
 			if (!uploadFileFile.exists()) {
 				LOGGER.debug("Creating product directory:#0", uploadFileDir);
-				uploadFileFile.mkdirs();
+				if (!uploadFileFile.mkdirs()) {
+					LOGGER.error("unable to mkdirs:{}", uploadFileDir);
+				}
 			}
 
 			LOGGER.debug("saving image at:#0", uploadFileDir + newPhoto.getFileName());
@@ -133,16 +137,16 @@ public class CategoryManager {
 			em.merge(newPhoto);
 			em.flush();
 		} catch (Exception ex) {
-			//java.util.logging.Logger.getLogger(UploadFile.class.getName()).log(Level.SEVERE, null, ex);
-			ex.printStackTrace();
+			LOGGER.error("Exception saving file", ex);
 			em.remove(newPhoto);
 			em.flush();
 		} finally {
-			try {
-				fos.close();
-			} catch (IOException ex) {
-				//java.util.logging.Logger.getLogger(UploadFile.class.getName()).log(Level.SEVERE, null, ex);
-				ex.printStackTrace();
+			if (fos != null) {
+				try {
+					fos.close();
+				} catch (IOException ex) {
+					LOGGER.error("unable to close file output stream", ex);
+				}
 			}
 		}
 		this.photos = null;

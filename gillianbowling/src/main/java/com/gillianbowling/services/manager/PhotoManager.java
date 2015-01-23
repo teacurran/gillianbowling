@@ -28,7 +28,7 @@ public class PhotoManager {
 	Configuration configuration;
 
 	Boolean newRecord = false;
-	Integer id;
+	Integer id = null;
 	InputStream newFile;
 	String newFileName = null;
 	Photo photo;

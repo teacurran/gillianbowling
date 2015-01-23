@@ -1,6 +1,7 @@
 package com.gillianbowling.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -28,7 +29,7 @@ import static javax.persistence.GenerationType.AUTO;
 					"ORDER BY a.rank"
 	)
 })
-public class Category {
+public class Category implements Serializable {
 
 	public static final String NAMED_QUERY_ALL = "Category.all";
 	public static final String NAMED_QUERY_TOP_LEVEL = "Category.getTopLevel";

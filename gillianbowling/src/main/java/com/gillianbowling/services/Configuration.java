@@ -1,5 +1,6 @@
 package com.gillianbowling.services;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -14,7 +15,7 @@ import org.slf4j.LoggerFactory;
 
 @Named
 @Stateless
-public class Configuration {
+public class Configuration implements Serializable {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(Configuration.class);
 
