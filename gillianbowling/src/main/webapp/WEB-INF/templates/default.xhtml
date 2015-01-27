@@ -1,14 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<f:view xmlns="http://www.w3.org/1999/xhtml"
-        xmlns:ui="http://java.sun.com/jsf/facelets"
-        xmlns:f="http://java.sun.com/jsf/core"
-        xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:a4j="http://richfaces.org/a4j"
-        xmlns:s="http://jboss.com/products/seam/taglib"
-        contentType="text/html">
-<html>
-<head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html">
+
+<ui:insert name="viewMetadata"/>
+<h:head>
 	<title>==| Gillian Bowling |==</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
@@ -16,11 +17,11 @@
 	<link rel="alternate" type="application/atom+xml" title="Gillian Bowling Atom Feed" href="http://gillianbowling.com/blog/feed/atom/" />
 	<link rel="pingback" href="http://gillianbowling.com/blog/xmlrpc.php" />
 
-	<a4j:loadStyle src="/styles/main.css"/>
-	<a4j:loadScript src="/scripts/iscroll.js" />
-	<a4j:loadScript src="/scripts/cufon-yui.js" />
-	<a4j:loadScript src="/scripts/FilosofiaItalic.font.js" />
-	<a4j:loadScript src="/scripts/twitter.js" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/styles/main.css" />
+	<script type="text/javascript" src="#{request.contextPath}/scripts/iscroll.js"></script>
+	<script type="text/javascript" src="#{request.contextPath}/scripts/cufon-yui.js"></script>
+	<script type="text/javascript" src="#{request.contextPath}/scripts/FilosofiaItalic.font.js"></script>
+	<script type="text/javascript" src="#{request.contextPath}/scripts/twitter.js"></script>
 	<ui:insert name="head"/>
 
 	<script type="text/javascript">
@@ -58,8 +59,6 @@
 				clearContents: true,
 				template: '%text%&lt;br/&gt;&lt;span class="time"&gt;&lt;a href="http://twitter.com/%user_screen_name%/statuses/%id%/"&gt;%time%&lt;/a&gt;&lt;/span&gt;'
 			});
-
-			<ui:insert name="onload"/>
 		}
 
 		var twitterExpanded = false;
@@ -124,12 +123,10 @@
 
 		//document.addEventListener('DOMContentLoaded', loaded);
 
-		<ui:insert name="javascript"/>
-
 	</script>
 
 
-</head>
+</h:head>
 <body onload="loaded()">
 
 	<div id="header">
@@ -158,27 +155,27 @@
 	<div class="footer">
 		<div class="separater"></div>
 		<div class="logoBox">
-			<s:link view="/home.xhtml"><h:graphicImage value="/images/logo.png" height="55" width="376" alt="Gillian Bowling"/></s:link>
+			<p:link outcome="/home.xhtml"><h:graphicImage value="/images/logo.png" height="55" width="376" alt="Gillian Bowling"/></p:link>
 		</div>
 		<div class="nav">
 			<ul>
-				<a4j:repeat value="#{categoryList.topLevelCats}" var="_cat">
-					<h:outputText rendered="#{not empty _cat.children}">
+				<ui:repeat value="#{categoryManager.topLevelCats}" var="_cat">
+					<h:panelGroup rendered="#{not empty _cat.children}">
 						<li><a href="javascript:openNav('#{_cat.code}')">#{_cat.name}</a>
 							<ul id="nav_#{_cat.code}">
-								<a4j:repeat value="#{_cat.children}" var="_child">
-									<li><s:link view="/view.xhtml" value="#{_child.name}" propagation="none">
+								<ui:repeat value="#{_cat.children}" var="_child">
+									<li><p:link view="/view.xhtml" value="#{_child.name}" propagation="none">
 										<f:param name="c" value="#{_child.code}"/>
-									</s:link></li>
-								</a4j:repeat>
+									</p:link></li>
+								</ui:repeat>
 							</ul>
 						</li>
-					</h:outputText>
-					<h:outputText rendered="#{empty _cat.children}">
-						<li><s:link view="/view.xhtml" value="#{_cat.name}" propagation="none"><f:param name="c" value="#{_cat.code}"/></s:link></li>
-					</h:outputText>
-				</a4j:repeat>
-				<li><s:link view="/blog.xhtml" value="blog"/>
+					</h:panelGroup>
+					<h:panelGroup rendered="#{empty _cat.children}">
+						<li><p:link outcome="/view.xhtml" value="#{_cat.name}" propagation="none"><f:param name="c" value="#{_cat.code}"/></p:link></li>
+					</h:panelGroup>
+				</ui:repeat>
+				<li><p:link view="/blog.xhtml" value="blog"/>
 				</li>
 			</ul>
 		</div>
@@ -195,6 +192,6 @@
                 } catch(err) {}
         </script>
 </body>
-</html>
 
 </f:view>
+</html>

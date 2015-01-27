@@ -23,8 +23,9 @@ import static javax.persistence.GenerationType.AUTO;
 	),
 
 	@NamedQuery(name = Category.NAMED_QUERY_TOP_LEVEL,
-			query = "SELECT a " +
+			query = "SELECT distinct(a) " +
 					"FROM Category a " +
+					"LEFT JOIN FETCH a.children " +
 					"WHERE a.parent IS NULL " +
 					"ORDER BY a.rank"
 	)

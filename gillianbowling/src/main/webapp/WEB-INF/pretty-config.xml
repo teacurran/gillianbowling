@@ -1,0 +1,18 @@
+<pretty-config xmlns="http://ocpsoft.org/schema/rewrite-config-prettyfaces"
+			   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			   xsi:schemaLocation="http://ocpsoft.org/schema/rewrite-config-prettyfaces
+                      http://ocpsoft.org/xml/ns/prettyfaces/rewrite-config-prettyfaces.xsd">
+
+	<!-- fileUpload - possible that this is just temporary -->
+	<url-mapping id="fileupload">
+		<pattern value="/fileupload"/>
+		<view-id value="/pages/fileupload.xhtml"/>
+	</url-mapping>
+
+	<url-mapping id="home">
+		<pattern value="/" />
+		<view-id value="/home.xhtml" />
+		<action inheritable="true">#{home.chooseRandom}</action>
+	</url-mapping>
+
+</pretty-config>

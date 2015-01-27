@@ -42,6 +42,7 @@ public class CategoryManager {
 	Integer id;
 	Category category;
 	List<Category> list;
+	List<Category> topLevelCategories;
 	boolean newRecord = false;
 
 	public List<Category> getList() {
@@ -49,6 +50,14 @@ public class CategoryManager {
 			list = categoryRepository.findAll();
 		}
 		return list;
+	}
+
+	public List<Category> getTopLevelCats() {
+		if (topLevelCategories == null) {
+			TypedQuery query = em.createNamedQuery(Category.NAMED_QUERY_TOP_LEVEL, Category.class);
+			topLevelCategories = query.getResultList();
+		}
+		return topLevelCategories;
 	}
 
 	@Transactional
