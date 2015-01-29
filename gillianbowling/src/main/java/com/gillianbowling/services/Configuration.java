@@ -20,7 +20,7 @@ public class Configuration implements Serializable {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Configuration.class);
 
 	@Inject
-	protected EntityManager em;
+	transient EntityManager em;
 
 	public void set(String key, String value) {
 		LOGGER.debug("Attempting to set property (#0) value (#1)", key, value);

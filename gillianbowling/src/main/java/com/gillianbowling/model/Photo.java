@@ -140,7 +140,7 @@ public class Photo implements java.io.Serializable {
 				&& this.getHeight() > 0
 				&& this.getWidth() > 0) {
 			double scaleX = (double)height / (double)this.getHeight();
-			int returnValue = new Double(scaleX * this.getWidth()).intValue();
+			int returnValue = (int)(scaleX * this.getWidth());
 			if (returnValue > 0) {
 				return returnValue;
 			}

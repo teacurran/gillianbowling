@@ -2,6 +2,7 @@ package com.gillianbowling.services;
 
 import com.gillianbowling.data.repositories.PhotoRepository;
 import com.gillianbowling.model.*;
+import org.hibernate.Hibernate;
 
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
@@ -20,7 +21,7 @@ public class Home implements Serializable {
 	transient EntityManager entityManager;
 
 	@Inject
-	PhotoRepository photoRepository;
+	transient PhotoRepository photoRepository;
 
 	int randomNumber	= 0;
 	List<Photo> photos = null;
@@ -50,7 +51,7 @@ public class Home implements Serializable {
 
 			List<Photo> vertPhotos = photoRepository.find3RandomFeatured(Photo.ORIENTATION_VERTICAL, (hasHoriz) ? 1: 3);
 			for (Photo photo : vertPhotos) {
-				photo.getCategory();
+				Hibernate.initialize(photo.getCategory());
 				photos.add(photo);
 			}
 		}

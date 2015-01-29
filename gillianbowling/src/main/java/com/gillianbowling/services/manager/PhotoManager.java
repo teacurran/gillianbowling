@@ -157,4 +157,12 @@ public class PhotoManager {
 	public void setNewFileName(String newFileName) {
 		this.newFileName = newFileName;
 	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 }
