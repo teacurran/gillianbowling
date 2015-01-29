@@ -3,7 +3,7 @@
 	  xmlns:ui="http://java.sun.com/jsf/facelets"
 	  xmlns:h="http://java.sun.com/jsf/html"
 	  xmlns:f="http://java.sun.com/jsf/core"
-	  xmlns:p="http://primefaces.org/ui">
+		>
 
 <ui:define name="metadata">
 	<f:metadata>
@@ -17,16 +17,16 @@
 		<div id="scroller" style="width:#{categoryManager.getTotalWidth(450, 10)}px; height:450px; padding:0;">
 			<div id="scrollerContent" style="width:#{categoryManager.getTotalWidth(450, 10)}px; height:450px; padding:0;">
 				<ui:repeat value="#{categoryManager.category.photos}" var="_photo">
-					<h:outputText rendered="#{not empty _photo.fileName}"><img
+					<h:panelGroup rendered="#{not empty _photo.fileName}"><img
 							src="#{request.contextPath}/media/x450/#{_photo.fileName}" class="image"
 							alt="#{_photo.description}" height="450"
-							width="#{_photo.getScaledWidth(450, 600, 338)}"/></h:outputText>
-					<h:outputText rendered="#{empty _photo.fileName and _photo.orientation == 1}">
+							width="#{_photo.getScaledWidth(450, 600, 338)}"/></h:panelGroup>
+					<h:panelGroup rendered="#{empty _photo.fileName and _photo.orientation == 1}">
 						<div class="horiz"><h:outputText value="#{_photo.description}" escape="false"/></div>
-					</h:outputText>
-					<h:outputText rendered="#{empty _photo.fileName and _photo.orientation == 2}">
+					</h:panelGroup>
+					<h:panelGroup rendered="#{empty _photo.fileName and _photo.orientation == 2}">
 						<div class="vert"><h:outputText value="#{_photo.description}" escape="false"/></div>
-					</h:outputText>
+					</h:panelGroup>
 				</ui:repeat>
 			</div>
 		</div>

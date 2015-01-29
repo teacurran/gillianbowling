@@ -1,27 +1,30 @@
 package com.gillianbowling.services.manager;
 
-import com.gillianbowling.Constants;
-import com.gillianbowling.data.repositories.CategoryRepository;
-import com.gillianbowling.model.*;
-import com.gillianbowling.services.Configuration;
-import org.hibernate.Hibernate;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.faces.bean.ViewScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
+import com.gillianbowling.Constants;
+import com.gillianbowling.data.repositories.CategoryRepository;
+import com.gillianbowling.model.Category;
+import com.gillianbowling.model.Photo;
+import com.gillianbowling.services.Configuration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Named
-public class CategoryManager {
+@ViewScoped
+public class CategoryManager implements Serializable {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(CategoryManager.class);
 
@@ -81,11 +84,6 @@ public class CategoryManager {
 			}
 		}
 
-		if (category != null) {
-			Hibernate.initialize(category.getChildren());
-			Hibernate.initialize(category.getPhotos());
-		}
-
 		return category;
 	}
 
@@ -93,7 +91,7 @@ public class CategoryManager {
 		TypedQuery<Category> query = em.createNamedQuery(Category.NAMED_QUERY_TOP_LEVEL, Category.class);
 		List<Category> results = query.getResultList();
 
-		List<Category> returnList = new ArrayList<Category>();
+		List<Category> returnList = new ArrayList<>();
 		for (Category ag : results) {
 			if (!ag.equals(getCategory())) {
 				returnList.add(ag);
@@ -144,7 +142,7 @@ public class CategoryManager {
 			File file = new File(uploadFileDir + newPhoto.getFileName());
 			fos = new FileOutputStream(file);
 			byte[] b=new byte[102400];
-			int readCnt=0;
+			int readCnt;
 			while((readCnt= newPhotoFile.read(b))!= -1){
 				fos.write(b, 0, readCnt);
 				fos.flush();
@@ -199,7 +197,7 @@ public class CategoryManager {
 			rank++;
 			photo.setRank(rank);
 		}
-		if (getCategory() == null) {
+		if (getCategory() != null) {
 			getCategory().setPhotos(photos);
 		}
 	}

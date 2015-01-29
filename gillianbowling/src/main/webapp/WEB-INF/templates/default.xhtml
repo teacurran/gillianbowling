@@ -21,102 +21,9 @@
 	<script type="text/javascript" src="#{request.contextPath}/scripts/iscroll.js"></script>
 	<script type="text/javascript" src="#{request.contextPath}/scripts/cufon-yui.js"></script>
 	<script type="text/javascript" src="#{request.contextPath}/scripts/FilosofiaItalic.font.js"></script>
+	<script type="text/javascript" src="#{request.contextPath}/scripts/app.js"></script>
+
 	<ui:insert name="head"/>
-
-	<script type="text/javascript">
-		var isiPad = false;
-
-		function loaded() {
-			//document.addEventListener('touchmove', function(e){ e.preventDefault(); });
-			//myScroll = new iScroll('scroller');
-
-			isiPad = navigator.userAgent.match(/iPad/i) != null;
-		
-			if (isiPad) {
-				jQuery('#header').css({
-					'height': '93px'
-				});
-
-				jQuery('#twitter').css({
-					'top': '3px',
-					'left': '575px'
-				});
-			}
-
-
-			if (jQuery.browser.safari) {
-				setTimeout(function(){
-					new iScroll(document.getElementById('scroller'));
-				}, 100);
-			}
-		}
-
-		var twitterExpanded = false;
-		function expandTwitter() {
-
-			var twitterExpand = jQuery("#twitterExpand");
-			var twitterBubble = jQuery("#twitterBubble");
-			if (!twitterExpanded) {
-				jQuery("#twitterBubble").animate({
-						height: "542px"
-					}, {
-						duration: 750,
-						complete: function() {
-							twitterExpand.attr("src", "#{request.contextPath}/images/expand_arrow_up.png");
-							twitterExpand.css({
-								'left': '275px'
-							});
-							jQuery(this).css({
-								'overflow': 'auto',
-								'scrollbars': 'auto'
-							});
-							twitterExpanded=true;
-						}
-					});
-			} else {
-				twitterBubble.css({
-					'overflow': 'hidden',
-					'scrollbars': 'none'
-				});
-				twitterExpand.attr("src", "#{request.contextPath}/images/expand_arrow_down.png");
-				twitterExpand.css({
-					'left': '295px'
-				});
-				twitterBubble.animate({
-					height: "30px"
-				}, {
-					duration: 750,
-					complete: function() {
-						twitterExpanded=false;
-					}
-				});
-			}
-		}
-
-		var currentOpenNav;
-		function openNav(navId) {
-			if (currentOpenNav) {
-				jQuery("#nav_" + currentOpenNav).slideUp(200, function() {
-					if (jQuery("#nav_" + navId).length > 0) {
-						jQuery("#nav_" + navId).slideDown(300);
-						currentOpenNav = navId;
-					}
-				});
-			} else {
-				if (jQuery("#nav_" + navId).length > 0) {
-					jQuery("#nav_" + navId).slideDown(300);
-					currentOpenNav = navId;
-				}
-			}
-		}
-
-		Cufon.replace('.horiz', { fontFamily: 'FilosofiaItalic' });
-		Cufon.replace('.vert', { fontFamily: 'FilosofiaItalic' });
-
-		//document.addEventListener('DOMContentLoaded', loaded);
-
-	</script>
-
 
 </h:head>
 <body onload="loaded()">
@@ -158,7 +65,7 @@
 						<li><a href="javascript:openNav('#{_cat.code}')">#{_cat.name}</a>
 							<ul id="nav_#{_cat.code}">
 								<ui:repeat value="#{_cat.children}" var="_child">
-									<li><p:link view="/view.xhtml" value="#{_child.name}" propagation="none">
+									<li><p:link outcome="/view.xhtml" value="#{_child.name}" propagation="none">
 										<f:param name="c" value="#{_child.code}"/>
 									</p:link></li>
 								</ui:repeat>
@@ -175,16 +82,17 @@
 		</div>
 	</div>
 
-        <script type="text/javascript"> 
-                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        </script> 
-        <script type="text/javascript"> 
-                try {
-                        var pageTracker = _gat._getTracker("UA-8328658-6");
-                        pageTracker._trackPageview();
-                } catch(err) {}
-        </script>
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-8328658-6");
+			pageTracker._trackPageview();
+		} catch (err) {
+		}
+	</script>
 </body>
 
 </f:view>
