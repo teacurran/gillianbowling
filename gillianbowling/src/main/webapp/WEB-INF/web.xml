@@ -58,8 +58,8 @@
 	</context-param>
 
 	<filter>
-	    <filter-name>PrimeFaces FileUpload Filter</filter-name>
-	    <filter-class>org.primefaces.webapp.filter.FileUploadFilter</filter-class>
+		<filter-name>PrimeFaces FileUpload Filter</filter-name>
+		<filter-class>org.primefaces.webapp.filter.FileUploadFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>PrimeFaces FileUpload Filter</filter-name>
@@ -67,22 +67,22 @@
 	</filter-mapping>
 	<!-- Shiro -->
 
-    <listener>
-        <listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
-    </listener>
+	<listener>
+		<listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
+	</listener>
 
-    <filter>
-        <filter-name>shiroFilter</filter-name>
-        <filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>shiroFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-        <dispatcher>REQUEST</dispatcher>
-        <dispatcher>FORWARD</dispatcher>
-        <dispatcher>INCLUDE</dispatcher>
-        <dispatcher>ERROR</dispatcher>
-    </filter-mapping>
+	<filter>
+		<filter-name>shiroFilter</filter-name>
+		<filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>shiroFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+	</filter-mapping>
 
 	<servlet>
 		<servlet-name>Faces Servlet</servlet-name>
@@ -111,8 +111,8 @@
 	</session-config>
 
 	<error-page>
-    	<exception-type>javax.faces.application.ViewExpiredException</exception-type>
-    	<location>/home/login.xhtml</location>
+		<exception-type>javax.faces.application.ViewExpiredException</exception-type>
+		<location>/home/login.xhtml</location>
 	</error-page>
 
 
@@ -120,14 +120,5 @@
 		<servlet-name>Dynamic Image Servlet</servlet-name>
 		<url-pattern>/media/*</url-pattern>
 	</servlet-mapping>
-
-	<security-constraint>
-		<display-name>Restrict raw XHTML Documents</display-name>
-		<web-resource-collection>
-			<web-resource-name>XHTML</web-resource-name>
-			<url-pattern>*.xhtml</url-pattern>
-		</web-resource-collection>
-		<auth-constraint/>
-	</security-constraint>
 
 </web-app>

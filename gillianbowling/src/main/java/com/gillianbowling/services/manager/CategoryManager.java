@@ -4,7 +4,6 @@ import com.gillianbowling.Constants;
 import com.gillianbowling.data.repositories.CategoryRepository;
 import com.gillianbowling.model.*;
 import com.gillianbowling.services.Configuration;
-import org.apache.deltaspike.jpa.api.transaction.Transactional;
 import org.hibernate.Hibernate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,13 +54,12 @@ public class CategoryManager {
 
 	public List<Category> getTopLevelCats() {
 		if (topLevelCategories == null) {
-			TypedQuery query = em.createNamedQuery(Category.NAMED_QUERY_TOP_LEVEL, Category.class);
+			TypedQuery<Category> query = em.createNamedQuery(Category.NAMED_QUERY_TOP_LEVEL, Category.class);
 			topLevelCategories = query.getResultList();
 		}
 		return topLevelCategories;
 	}
 
-	@Transactional
 	public Category getCategory() {
 		if (category == null) {
 			if (code != null) {
@@ -189,7 +187,7 @@ public class CategoryManager {
 			return null;
 		}
 		if (photos == null) {
-			photos = new ArrayList<Photo>(getCategory().getPhotos());
+			photos = new ArrayList<>(getCategory().getPhotos());
 		}
 		return photos;
 	}
@@ -208,12 +206,12 @@ public class CategoryManager {
 
 	public int getTotalWidth(int height, int padding) {
 		int totalWidth = 0;
-//		List<Photo> results = getResultList();
-//		if (results != null) {
-//			for (Photo photo : results) {
-//				totalWidth += photo.getScaledWidth(height, 600, 338) + padding;
-//			}
-//		}
+		List<Photo> results = getPhotos();
+		if (results != null) {
+			for (Photo photo : results) {
+				totalWidth += photo.getScaledWidth(height, 600, 338) + padding;
+			}
+		}
 		return totalWidth;
 	}
 

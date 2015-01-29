@@ -36,7 +36,7 @@ body {
 	top: -10px;
 }
 
-#bubbleStem {
+.bubbleStem {
 	position: relative;
 	top: -3px;
 	left: 32px;
@@ -152,7 +152,7 @@ body {
 	float: left;
 }
 
-#twitter {
+.twitter {
 	/* border: solid 1px red; */
 	width: 220px;
 	height: 100px;
@@ -162,7 +162,7 @@ body {
 	z-index: 1000;
 }
 
-#twitterBubble {
+.twitterBubble {
 	border: solid 1px black;
 	height: 30px;
 	width: 300px;
@@ -177,10 +177,10 @@ body {
 	opacity: 0.9;
 }
 
-#twitterContent {
+.twitterContent {
 }
 
-#twitterContent ul {
+.twitterContent ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -188,7 +188,7 @@ body {
 	overflow: hidden;
 }
 
-#twitterContent ul li {
+.twitterContent ul li {
 	margin: 0;
 	font-size: 12px;
 	border-bottom: solid 1px #DDDDDD;
@@ -196,17 +196,18 @@ body {
 	margin-bottom: 4px;
 }
 
-#twitterContent ul li .time {
+.twitterContent ul li .time {
 	padding: 0 0 0 10px;
 	font-size: 10px;
 }
 
-#twitterExpand {
+.twitterExpand {
 	position: relative;
 	top: -20px;
 	left: 295px;
 }
 
-#twitterBottom {
+.twitterHeadline {
 	font-size: 14px;
+	height: 40px;
 }

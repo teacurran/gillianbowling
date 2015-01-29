@@ -21,7 +21,6 @@
 	<script type="text/javascript" src="#{request.contextPath}/scripts/iscroll.js"></script>
 	<script type="text/javascript" src="#{request.contextPath}/scripts/cufon-yui.js"></script>
 	<script type="text/javascript" src="#{request.contextPath}/scripts/FilosofiaItalic.font.js"></script>
-	<script type="text/javascript" src="#{request.contextPath}/scripts/twitter.js"></script>
 	<ui:insert name="head"/>
 
 	<script type="text/javascript">
@@ -50,28 +49,21 @@
 					new iScroll(document.getElementById('scroller'));
 				}, 100);
 			}
-
-			getTwitters('twitterContent', {
-				id: 'gillianbowling',
-				count: 20,
-				enableLinks: true,
-				ignoreReplies: false,
-				clearContents: true,
-				template: '%text%&lt;br/&gt;&lt;span class="time"&gt;&lt;a href="http://twitter.com/%user_screen_name%/statuses/%id%/"&gt;%time%&lt;/a&gt;&lt;/span&gt;'
-			});
 		}
 
 		var twitterExpanded = false;
 		function expandTwitter() {
 
+			var twitterExpand = jQuery("#twitterExpand");
+			var twitterBubble = jQuery("#twitterBubble");
 			if (!twitterExpanded) {
 				jQuery("#twitterBubble").animate({
 						height: "542px"
 					}, {
 						duration: 750,
 						complete: function() {
-							jQuery("#twitterExpand").attr("src", "#{request.contextPath}/images/expand_arrow_up.png");
-							jQuery("#twitterExpand").css({
+							twitterExpand.attr("src", "#{request.contextPath}/images/expand_arrow_up.png");
+							twitterExpand.css({
 								'left': '275px'
 							});
 							jQuery(this).css({
@@ -82,15 +74,15 @@
 						}
 					});
 			} else {
-				jQuery("#twitterBubble").css({
+				twitterBubble.css({
 					'overflow': 'hidden',
 					'scrollbars': 'none'
 				});
-				jQuery("#twitterExpand").attr("src", "#{request.contextPath}/images/expand_arrow_down.png");
-				jQuery("#twitterExpand").css({
+				twitterExpand.attr("src", "#{request.contextPath}/images/expand_arrow_down.png");
+				twitterExpand.css({
 					'left': '295px'
 				});
-				jQuery("#twitterBubble").animate({
+				twitterBubble.animate({
 					height: "30px"
 				}, {
 					duration: 750,
@@ -130,17 +122,19 @@
 <body onload="loaded()">
 
 	<div id="header">
-		<div id="twitter">
-			<div id="bubble">
-				<div id="twitterBubble">
-					<div id="twitterContent">
-					</div>
-					<div id="twitterBottom">
+		<div class="twitter">
+			<div class="bubble">
+				<div class="twitterBubble" id="twitterBubble">
+					<div class="twitterHeadline">
 						<a href="http://twitter.com/gillianbowling" target="_blank">Follow me on Twitter</a>
 					</div>
+					<div class="twitterContent">
+						<a class="twitter-timeline" href="https://twitter.com/gillianbowling" data-widget-id="560920934497132544">Tweets by @gillianbowling</a>
+						<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
 				</div>
-				<a href="javascript:expandTwitter()"><h:graphicImage value="/images/expand_arrow_down.png" alt="expand arrow down" id="twitterExpand"/></a>
-				<h:graphicImage value="/images/bubble_stem.png" alt="bubble stem" id="bubbleStem"/>
+				<a href="javascript:expandTwitter()"><h:graphicImage value="/images/expand_arrow_down.png" alt="expand arrow down" styleClass="twitterExpand" id="twitterExpand"/></a>
+				<h:graphicImage value="/images/bubble_stem.png" alt="bubble stem" styleClass="bubbleStem"/>
 			</div>
 			<h:graphicImage value="/images/bird.png" alt="bird" id="bird"/>
 		</div>

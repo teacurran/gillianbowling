@@ -10,13 +10,19 @@
 	</url-mapping>
 
 	<url-mapping id="home">
+		<pattern value="/home" />
+		<view-id value="/home.xhtml" />
+		<action inheritable="true">#{home.chooseRandom}</action>
+	</url-mapping>
+
+	<url-mapping id="home2">
 		<pattern value="/" />
 		<view-id value="/home.xhtml" />
 		<action inheritable="true">#{home.chooseRandom}</action>
 	</url-mapping>
 
 	<url-mapping id="viewCategory">
-		<pattern value="/view/#{code}" />
+		<pattern value="/view/#{c}" />
 		<view-id value="/view.xhtml" />
 	</url-mapping>
 
