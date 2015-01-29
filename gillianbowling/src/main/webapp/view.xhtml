@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-				xmlns:ui="http://java.sun.com/jsf/facelets"
-				xmlns:f="http://java.sun.com/jsf/core"
-				xmlns:h="http://java.sun.com/jsf/html"
-				xmlns:a4j="http://richfaces.org/a4j"
-				xmlns:rich="http://richfaces.org/rich"
-				template="/templates/default.xhtml">
-<ui:define name="content">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
 
 
-	<div id="scroller" style="width:#{viewCategory.getTotalWidth(450, 10)}px; height:450px; padding:0;">
-		<div id="scrollerContent" style="width:#{viewCategory.getTotalWidth(450, 10)}px; height:450px; padding:0;">
-			<a4j:repeat value="#{viewCategory.resultList}" var="_photo">
-				<h:outputText rendered="#{not empty _photo.fileName}"><img src="#{request.contextPath}/media/x450/#{_photo.fileName}" class="image" alt="#{_photo.description}" height="450" width="#{_photo.getScaledWidth(450, 600, 338)}"/></h:outputText>
-				<h:outputText rendered="#{empty _photo.fileName and _photo.orientation == 1}">
-					<div class="horiz"><h:outputText value="#{_photo.description}" escape="false"/></div>
-				</h:outputText>
-				<h:outputText rendered="#{empty _photo.fileName and _photo.orientation == 2}">
-					<div class="vert"><h:outputText value="#{_photo.description}" escape="false"/></div>
-				</h:outputText>
-			</a4j:repeat>
+		<div id="scroller" style="width:#{viewCategory.getTotalWidth(450, 10)}px; height:450px; padding:0;">
+			<div id="scrollerContent" style="width:#{viewCategory.getTotalWidth(450, 10)}px; height:450px; padding:0;">
+				<ui:repeat value="#{viewCategory.resultList}" var="_photo">
+					<h:outputText rendered="#{not empty _photo.fileName}"><img
+							src="#{request.contextPath}/media/x450/#{_photo.fileName}" class="image"
+							alt="#{_photo.description}" height="450"
+							width="#{_photo.getScaledWidth(450, 600, 338)}"/></h:outputText>
+					<h:outputText rendered="#{empty _photo.fileName and _photo.orientation == 1}">
+						<div class="horiz"><h:outputText value="#{_photo.description}" escape="false"/></div>
+					</h:outputText>
+					<h:outputText rendered="#{empty _photo.fileName and _photo.orientation == 2}">
+						<div class="vert"><h:outputText value="#{_photo.description}" escape="false"/></div>
+					</h:outputText>
+				</ui:repeat>
+			</div>
 		</div>
-	</div>
-</ui:define>
+	</ui:define>
 </ui:composition>
+</html>
