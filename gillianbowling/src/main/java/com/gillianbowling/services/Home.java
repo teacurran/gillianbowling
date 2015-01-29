@@ -1,5 +1,6 @@
 package com.gillianbowling.services;
 
+import com.gillianbowling.data.repositories.PhotoRepository;
 import com.gillianbowling.model.*;
 
 import javax.faces.bean.ViewScoped;
@@ -7,7 +8,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +17,10 @@ import java.util.List;
 public class Home implements Serializable {
 
 	@Inject
-	ViewCategory viewCategory;
+	transient EntityManager entityManager;
 
 	@Inject
-	transient EntityManager entityManager;
+	PhotoRepository photoRepository;
 
 	int randomNumber	= 0;
 	List<Photo> photos = null;
@@ -36,41 +36,22 @@ public class Home implements Serializable {
 	public List<Photo> getPhotos() {
 
 		if (photos == null) {
-			photos = new ArrayList<Photo>();
+			photos = new ArrayList<>();
 
 			// flip a coin. show a horizontal image 25% of the time.
 			boolean hasHoriz = false;
 			if (((int) (Math.random() * 4)) == 0) {
-				Query query = entityManager.createNativeQuery("SELECT p.* " +
-						"FROM photos p " +
-						"WHERE p.featured = 1 " +
-						"AND p.orientation=1 " +
-						"AND p.category_id IS NOT NULL " +
-						"ORDER BY rand() LIMIT 1", Photo.class);
-				List<Photo> results = (List<Photo>)query.getResultList();
-
-				if (results != null && results.size() > 0) {
-					photos.add(results.get(0));
+				List<Photo> horizPhotos = photoRepository.find3RandomFeatured(Photo.ORIENTATION_HORIZONTAL, 1);
+				if (horizPhotos != null && !horizPhotos.isEmpty()) {
+					photos.add(horizPhotos.get(0));
 					hasHoriz = true;
 				}
 			}
 
-			Query query = entityManager.createNativeQuery("SELECT p.* " +
-					"FROM photos p " +
-					"WHERE p.featured = 1 " +
-					"AND p.orientation=2 " +
-					"AND p.category_id IS NOT NULL ORDER BY rand() LIMIT 3", Photo.class);
-			List<Photo> results = (List<Photo>)query.getResultList();
-
-			for (Photo photo : results) {
-				if (hasHoriz && photos.size() < 2) {
-					photo.getCategory();
-					photos.add(photo);
-					break;
-				} else {
-					photo.getCategory();
-					photos.add(photo);
-				}
+			List<Photo> vertPhotos = photoRepository.find3RandomFeatured(Photo.ORIENTATION_VERTICAL, (hasHoriz) ? 1: 3);
+			for (Photo photo : vertPhotos) {
+				photo.getCategory();
+				photos.add(photo);
 			}
 		}
 

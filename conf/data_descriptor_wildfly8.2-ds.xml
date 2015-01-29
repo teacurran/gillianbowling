@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema"
+			 xmlns:xsd="http://docs.jboss.org/ironjacamar/schema/datasources_1_1.xsd">
+	<datasource jndi-name="java:/gbowlingportfolio-ds" pool-name="gbowlingportfolio-pool" enabled="true" use-java-context="true" jta="true">
+		<connection-url>jdbc:mysql://localhost:3306/gbowlingportfolio</connection-url>
+
+		<driver>mysql-connector-java-5.1.28-bin.jar</driver>
+		<security>
+			<user-name>root</user-name>
+			<password>root</password>
+		</security>
+		<validation>
+			<check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
+			<validate-on-match>false</validate-on-match>
+			<background-validation>true</background-validation>
+			<background-validation-millis>60000</background-validation-millis>
+			<use-fast-fail>true</use-fast-fail>
+		</validation>
+	</datasource>
+</datasources>

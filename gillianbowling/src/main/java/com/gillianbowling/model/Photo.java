@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -20,10 +22,24 @@ import static javax.persistence.GenerationType.AUTO;
 
 @Entity
 @Table(name = "photos")
+@NamedNativeQueries({
+	@NamedNativeQuery(name = Photo.NATIVE_QUERY_RAND_FEATURED,
+		query="SELECT p.* " +
+				"FROM photos p " +
+				"WHERE p.featured = 1 " +
+				"AND p.orientation = :orientation " +
+				"AND p.category_id IS NOT NULL " +
+				"ORDER BY rand() LIMIT :limit",
+		resultClass = Photo.class
+	)
+})
+
 public class Photo implements java.io.Serializable {
 
 	public static final int ORIENTATION_HORIZONTAL	= 1;
 	public static final int ORIENTATION_VERTICAL	= 2;
+
+	public static final String NATIVE_QUERY_RAND_FEATURED = "Photo.3RandFeatured";
 
 	private int id;
 	private Integer orientation;
