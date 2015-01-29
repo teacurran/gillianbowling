@@ -15,4 +15,9 @@
 		<action inheritable="true">#{home.chooseRandom}</action>
 	</url-mapping>
 
+	<url-mapping id="viewCategory">
+		<pattern value="/view/#{code}" />
+		<view-id value="/view.xhtml" />
+	</url-mapping>
+
 </pretty-config>

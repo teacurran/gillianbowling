@@ -11,4 +11,6 @@ import org.apache.deltaspike.data.api.Repository;
 @Repository
 public abstract class CategoryRepository extends AbstractEntityRepository<Category, Integer> {
 
+	public abstract Category findAnyByCode(String code);
+
 }

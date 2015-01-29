@@ -44,6 +44,7 @@ public class CategoryManager {
 	List<Category> list;
 	List<Category> topLevelCategories;
 	boolean newRecord = false;
+	String code;
 
 	public List<Category> getList() {
 		if (list == null) {
@@ -63,15 +64,22 @@ public class CategoryManager {
 	@Transactional
 	public Category getCategory() {
 		if (category == null) {
-			if (id == null) {
-				category = new Category();
-				newRecord = true;
-			} else {
-				category = em.find(Category.class, id);
+			if (code != null) {
+				category = categoryRepository.findAnyByCode(code);
 
 				if (category == null) {
 					id = null;
 				}
+
+			} else if (id != null) {
+				category = categoryRepository.findBy(id);
+
+				if (category == null) {
+					id = null;
+				}
+			} else {
+				category = new Category();
+				newRecord = true;
 			}
 		}
 
@@ -198,5 +206,22 @@ public class CategoryManager {
 		}
 	}
 
+	public int getTotalWidth(int height, int padding) {
+		int totalWidth = 0;
+//		List<Photo> results = getResultList();
+//		if (results != null) {
+//			for (Photo photo : results) {
+//				totalWidth += photo.getScaledWidth(height, 600, 338) + padding;
+//			}
+//		}
+		return totalWidth;
+	}
 
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
 }

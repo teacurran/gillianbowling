@@ -4,13 +4,19 @@
 	  xmlns:h="http://java.sun.com/jsf/html"
 	  xmlns:f="http://java.sun.com/jsf/core"
 	  xmlns:p="http://primefaces.org/ui">
+
+<ui:define name="metadata">
+	<f:metadata>
+		<f:viewParam name="code" value="#{categoryManager.code}"/>
+	</f:metadata>
+</ui:define>
+
 <ui:composition template="/WEB-INF/templates/default.xhtml">
 	<ui:define name="content">
 
-
-		<div id="scroller" style="width:#{viewCategory.getTotalWidth(450, 10)}px; height:450px; padding:0;">
-			<div id="scrollerContent" style="width:#{viewCategory.getTotalWidth(450, 10)}px; height:450px; padding:0;">
-				<ui:repeat value="#{viewCategory.resultList}" var="_photo">
+		<div id="scroller" style="width:#{categoryManager.getTotalWidth(450, 10)}px; height:450px; padding:0;">
+			<div id="scrollerContent" style="width:#{categoryManager.getTotalWidth(450, 10)}px; height:450px; padding:0;">
+				<ui:repeat value="#{categoryManager.category.photos}" var="_photo">
 					<h:outputText rendered="#{not empty _photo.fileName}"><img
 							src="#{request.contextPath}/media/x450/#{_photo.fileName}" class="image"
 							alt="#{_photo.description}" height="450"
