@@ -33,7 +33,7 @@
 		<version.jersey>1.17.1</version.jersey>
 		<version.mysql.connector>5.1.25</version.mysql.connector>
 		<version.resteasy>2.3.2.Final</version.resteasy>
-		<version.slf4j>1.6.6</version.slf4j>
+		<version.slf4j>1.7.10</version.slf4j>
 		<version.surefire>2.15</version.surefire>
 		<version.tomee>1.5.2</version.tomee>
 		<version.assessment>1.4-SNAPSHOT</version.assessment>

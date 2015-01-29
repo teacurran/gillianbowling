@@ -33,7 +33,6 @@ import static javax.persistence.GenerationType.AUTO;
 		resultClass = Photo.class
 	)
 })
-
 public class Photo implements java.io.Serializable {
 
 	public static final int ORIENTATION_HORIZONTAL	= 1;

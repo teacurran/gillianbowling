@@ -1,17 +1,5 @@
 package com.approachingpi.servlet;
 
-import com.gillianbowling.services.Configuration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import sun.awt.image.BufferedImageGraphicsConfig;
-
-import javax.imageio.ImageIO;
-import javax.inject.Inject;
-import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.BufferedImageOp;
@@ -19,11 +7,21 @@ import java.awt.image.ConvolveOp;
 import java.awt.image.Kernel;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import javax.imageio.ImageIO;
+import javax.inject.Inject;
+import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
+import com.gillianbowling.services.Configuration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import sun.awt.image.BufferedImageGraphicsConfig;
 
 public class ImageServlet extends HttpServlet {
 
@@ -111,15 +109,13 @@ public class ImageServlet extends HttpServlet {
 					Integer.toString(requestedHeight),
 					Integer.toString(maxWidthOrHeight)
 				});
-			System.out.println(fileUri);
-			System.out.println("width:" + requestedWidth);
-			System.out.println("height:" + requestedHeight);
+			LOGGER.debug("fileUri:{} width:{} height:{}", fileUri, requestedWidth, requestedHeight);
 
 			File file = new File(fileUri);
 			if (!file.exists()) {
 				//PrintWriter out = res.getWriter();
 				res.setStatus(HttpServletResponse.SC_NOT_FOUND);
-				System.out.println("File Not Found");
+				LOGGER.warn("File Not Found: {}", file.getAbsolutePath());
 			} else {
 
 				File fileOutput = file;
@@ -327,7 +323,7 @@ public class ImageServlet extends HttpServlet {
 				ninth, ninth, ninth
 		};
 
-		Map map = new HashMap();
+		Map<RenderingHints.Key, Object> map = new HashMap<>();
 
 		map.put(RenderingHints.KEY_INTERPOLATION,
 				RenderingHints.VALUE_INTERPOLATION_BILINEAR);
