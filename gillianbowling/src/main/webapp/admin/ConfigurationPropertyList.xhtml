@@ -14,10 +14,10 @@
 
 			<rich:simpleTogglePanel label="Configuration Property Search Filter" switchType="ajax">
 
-				<s:decorate template="layout/display.xhtml">
+				<ui:decorate template="layout/display.xhtml">
 					<ui:define name="label">Code</ui:define>
 					<h:inputText id="code" value="#{configurationPropertyList.configurationProperty.code}"/>
-				</s:decorate>
+				</ui:decorate>
 
 
 			</rich:simpleTogglePanel>
@@ -29,7 +29,7 @@
 
 		</h:form>
 
-		<rich:panel>
+		<p:panel>
 			<f:facet
 					name="header">Search Results (#{empty configurationPropertyList.resultList ? 0 : (configurationPropertyList.paginated ? configurationPropertyList.resultCount : configurationPropertyList.resultList.size)})</f:facet>
 
@@ -38,7 +38,7 @@
 				<h:outputText value="The Configuration Property search returned no results."
 							  rendered="#{empty configurationPropertyList.resultList}"/>
 
-				<rich:dataTable id="configurationPropertyList"
+				<p:dataTable id="configurationPropertyList"
 								var="_configurationProperty"
 								value="#{configurationPropertyList.resultList}"
 								rendered="#{not empty configurationPropertyList.resultList}">
@@ -92,62 +92,62 @@
 						</f:facet>
 						<h:outputText value="#{_configurationProperty.value}"/>
 					</h:column>
-					<rich:column styleClass="action">
+					<p:column styleClass="action">
 						<f:facet name="header">Action</f:facet>
-						<s:link view="/admin/#{empty from ? 'ConfigurationProperty' : from}.xhtml"
+						<p:link view="/admin/#{empty from ? 'ConfigurationProperty' : from}.xhtml"
 								value="#{empty from ? 'View' : 'Select'}"
 								propagation="#{empty from ? 'none' : 'default'}"
 								id="configurationPropertyViewId">
 							<f:param name="configurationPropertyId"
 									 value="#{_configurationProperty.id}"/>
-						</s:link>
+						</p:link>
 						#{' '}
-						<s:link view="/admin/ConfigurationPropertyEdit.xhtml"
+						<p:link view="/admin/ConfigurationPropertyEdit.xhtml"
 								value="Edit"
 								propagation="none"
 								id="configurationPropertyEdit"
 								rendered="#{empty from}">
 							<f:param name="configurationPropertyId"
 									 value="#{_configurationProperty.id}"/>
-						</s:link>
-					</rich:column>
-				</rich:dataTable>
+						</p:link>
+					</p:column>
+				</p:dataTable>
 
 			</div>
-		</rich:panel>
+		</p:panel>
 
 		<div class="tableControl">
 
-			<s:link view="/admin/ConfigurationPropertyList.xhtml"
+			<p:link view="/admin/ConfigurationPropertyList.xhtml"
 					rendered="#{configurationPropertyList.previousExists}"
 					value="#{messages.left}#{messages.left} First Page"
 					id="firstPage">
 				<f:param name="firstResult" value="0"/>
-			</s:link>
+			</p:link>
 
-			<s:link view="/admin/ConfigurationPropertyList.xhtml"
+			<p:link view="/admin/ConfigurationPropertyList.xhtml"
 					rendered="#{configurationPropertyList.previousExists}"
 					value="#{messages.left} Previous Page"
 					id="previousPage">
 				<f:param name="firstResult"
 						 value="#{configurationPropertyList.previousFirstResult}"/>
-			</s:link>
+			</p:link>
 
-			<s:link view="/admin/ConfigurationPropertyList.xhtml"
+			<p:link view="/admin/ConfigurationPropertyList.xhtml"
 					rendered="#{configurationPropertyList.nextExists}"
 					value="Next Page #{messages.right}"
 					id="nextPage">
 				<f:param name="firstResult"
 						 value="#{configurationPropertyList.nextFirstResult}"/>
-			</s:link>
+			</p:link>
 
-			<s:link view="/admin/ConfigurationPropertyList.xhtml"
+			<p:link view="/admin/ConfigurationPropertyList.xhtml"
 					rendered="#{configurationPropertyList.nextExists}"
 					value="Last Page #{messages.right}#{messages.right}"
 					id="lastPage">
 				<f:param name="firstResult"
 						 value="#{configurationPropertyList.lastFirstResult}"/>
-			</s:link>
+			</p:link>
 
 		</div>
 

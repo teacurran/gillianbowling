@@ -14,23 +14,23 @@
 
 			<rich:simpleTogglePanel label="Photos Search Filter" switchType="ajax">
 
-				<s:decorate template="layout/display.xhtml">
+				<ui:decorate template="layout/display.xhtml">
 					<ui:define name="label">Description</ui:define>
 					<h:inputText id="description" value="#{photoList.photo.description}"/>
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate template="layout/display.xhtml">
+				<ui:decorate template="layout/display.xhtml">
 					<ui:define name="label">File name</ui:define>
 					<h:inputText id="fileName" value="#{photoList.photo.fileName}"/>
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate template="layout/display.xhtml">
+				<ui:decorate template="layout/display.xhtml">
 					<ui:define name="label">Match</ui:define>
 					<h:selectOneRadio id="logic" value="#{photoList.restrictionLogicOperator}" styleClass="radio">
 						<f:selectItem itemLabel="All" itemValue="and"/>
 						<f:selectItem itemLabel="Any" itemValue="or"/>
 					</h:selectOneRadio>
-				</s:decorate>
+				</ui:decorate>
 
 			</rich:simpleTogglePanel>
 
@@ -41,7 +41,7 @@
 
 		</h:form>
 
-		<rich:panel>
+		<p:panel>
 			<f:facet
 					name="header">Photos Search Results (#{empty photoList.resultList ? 0 : (photoList.paginated ? photoList.resultCount : photoList.resultList.size)})</f:facet>
 
@@ -50,7 +50,7 @@
 				<h:outputText value="The photos search returned no results."
 							  rendered="#{empty photoList.resultList}"/>
 
-				<rich:dataTable id="photoList"
+				<p:dataTable id="photoList"
 								var="_photo"
 								value="#{photoList.resultList}"
 								rendered="#{not empty photoList.resultList}">
@@ -126,62 +126,62 @@
 						</f:facet>
 						<h:outputText value="#{_photo.width}"/>
 					</h:column>
-					<rich:column styleClass="action">
+					<p:column styleClass="action">
 						<f:facet name="header">Action</f:facet>
-						<s:link view="/admin/#{empty from ? 'Photo' : from}.xhtml"
+						<p:link view="/admin/#{empty from ? 'Photo' : from}.xhtml"
 								value="#{empty from ? 'View' : 'Select'}"
 								propagation="#{empty from ? 'none' : 'default'}"
 								id="photoViewId">
 							<f:param name="photoId"
 									 value="#{_photo.id}"/>
-						</s:link>
+						</p:link>
 						#{' '}
-						<s:link view="/admin/PhotoEdit.xhtml"
+						<p:link view="/admin/PhotoEdit.xhtml"
 								value="Edit"
 								propagation="none"
 								id="photoEdit"
 								rendered="#{empty from}">
 							<f:param name="photoId"
 									 value="#{_photo.id}"/>
-						</s:link>
-					</rich:column>
-				</rich:dataTable>
+						</p:link>
+					</p:column>
+				</p:dataTable>
 
 			</div>
-		</rich:panel>
+		</p:panel>
 
 		<div class="tableControl">
 
-			<s:link view="/admin/PhotoList.xhtml"
+			<p:link view="/admin/PhotoList.xhtml"
 					rendered="#{photoList.previousExists}"
 					value="#{messages.left}#{messages.left} First Page"
 					id="firstPage">
 				<f:param name="firstResult" value="0"/>
-			</s:link>
+			</p:link>
 
-			<s:link view="/admin/PhotoList.xhtml"
+			<p:link view="/admin/PhotoList.xhtml"
 					rendered="#{photoList.previousExists}"
 					value="#{messages.left} Previous Page"
 					id="previousPage">
 				<f:param name="firstResult"
 						 value="#{photoList.previousFirstResult}"/>
-			</s:link>
+			</p:link>
 
-			<s:link view="/admin/PhotoList.xhtml"
+			<p:link view="/admin/PhotoList.xhtml"
 					rendered="#{photoList.nextExists}"
 					value="Next Page #{messages.right}"
 					id="nextPage">
 				<f:param name="firstResult"
 						 value="#{photoList.nextFirstResult}"/>
-			</s:link>
+			</p:link>
 
-			<s:link view="/admin/PhotoList.xhtml"
+			<p:link view="/admin/PhotoList.xhtml"
 					rendered="#{photoList.nextExists}"
 					value="Last Page #{messages.right}#{messages.right}"
 					id="lastPage">
 				<f:param name="firstResult"
 						 value="#{photoList.lastFirstResult}"/>
-			</s:link>
+			</p:link>
 
 		</div>
 

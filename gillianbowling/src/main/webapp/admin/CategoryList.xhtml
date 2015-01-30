@@ -1,58 +1,47 @@
-<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-				xmlns:s="http://jboss.com/products/seam/taglib"
-				xmlns:ui="http://java.sun.com/jsf/facelets"
-				xmlns:f="http://java.sun.com/jsf/core"
-				xmlns:h="http://java.sun.com/jsf/html"
-				xmlns:rich="http://richfaces.org/rich"
-				template="layout/template.xhtml">
-
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
+<ui:composition template="layout/template.xhtml">
 	<ui:define name="body">
 
 		<h:form id="categorySearch" styleClass="edit">
 
-			<rich:simpleTogglePanel label="Category Search Filter" switchType="ajax">
+			<p:accordionPanel label="Category Search Filter" switchType="ajax">
 
-				<s:decorate template="layout/display.xhtml">
+				<ui:decorate template="layout/display.xhtml">
 					<ui:define name="label">Name</ui:define>
-					<h:inputText id="name" value="#{categoryList.category.name}"/>
-				</s:decorate>
+					<h:inputText id="name" value="#{categoryManager.category.name}"/>
+				</ui:decorate>
 
-				<s:decorate template="layout/display.xhtml">
-					<ui:define name="label">Match</ui:define>
-					<h:selectOneRadio id="logic" value="#{categoryList.restrictionLogicOperator}" styleClass="radio">
-						<f:selectItem itemLabel="All" itemValue="and"/>
-						<f:selectItem itemLabel="Any" itemValue="or"/>
-					</h:selectOneRadio>
-				</s:decorate>
-
-			</rich:simpleTogglePanel>
+			</p:accordionPanel>
 
 			<div class="actionButtons">
 				<h:commandButton id="search" value="Search" action="/admin/categoryList.xhtml"/>
-				<s:button id="reset" value="Reset" includePageParams="false"/>
+				<p:button id="reset" value="Reset" includePageParams="false"/>
 			</div>
 
 		</h:form>
 
-		<rich:panel>
+		<p:panel>
 			<f:facet
-					name="header">Category Search Results (#{empty categoryList.resultList ? 0 : (categoryList.paginated ? categoryList.resultCount : categoryList.resultList.size)})</f:facet>
+					name="header">Category Search Results (#{empty categoryManager.list ? 0 : (categoryManager.list.size)})</f:facet>
 
-			<div class="results" id="categoryList">
+			<div class="results" id="results">
 
 				<h:outputText value="The category search returned no results."
-							  rendered="#{empty categoryList.resultList}"/>
+							  rendered="#{empty categoryManager.list}"/>
 
-				<rich:dataTable id="categoryList"
+				<p:dataTable id="categoryList"
 								var="_category"
-								value="#{categoryList.resultList}"
-								rendered="#{not empty categoryList.resultList}">
+								value="#{categoryManager.list}"
+								rendered="#{not empty categoryManager.list}">
 					<h:column>
 						<f:facet name="header">
 							<ui:include src="layout/sort.xhtml">
-								<ui:param name="entityList" value="#{categoryList}"/>
+								<ui:param name="entityList" value="#{categoryManager.list}"/>
 								<ui:param name="propertyLabel" value="Id"/>
 								<ui:param name="propertyPath" value="category.id"/>
 							</ui:include>
@@ -62,7 +51,7 @@
 					<h:column>
 						<f:facet name="header">
 							<ui:include src="layout/sort.xhtml">
-								<ui:param name="entityList" value="#{categoryList}"/>
+								<ui:param name="entityList" value="#{categoryManager.list}"/>
 								<ui:param name="propertyLabel" value="Parent"/>
 								<ui:param name="propertyPath" value="category.parent.name"/>
 							</ui:include>
@@ -72,7 +61,7 @@
 					<h:column>
 						<f:facet name="header">
 							<ui:include src="layout/sort.xhtml">
-								<ui:param name="entityList" value="#{categoryList}"/>
+								<ui:param name="entityList" value="#{categoryManager.list}"/>
 								<ui:param name="propertyLabel" value="Name"/>
 								<ui:param name="propertyPath" value="category.name"/>
 							</ui:include>
@@ -82,81 +71,83 @@
 					<h:column>
 						<f:facet name="header">
 							<ui:include src="layout/sort.xhtml">
-								<ui:param name="entityList" value="#{categoryList}"/>
+								<ui:param name="entityList" value="#{categoryManager.list}"/>
 								<ui:param name="propertyLabel" value="Code"/>
 								<ui:param name="propertyPath" value="category.code"/>
 							</ui:include>
 						</f:facet>
 						<h:outputText value="#{_category.code}"/>
 					</h:column>
-					<rich:column styleClass="action">
+					<p:column styleClass="action">
 						<f:facet name="header">Action</f:facet>
-						<s:link view="/admin/#{empty categoryFrom ? 'Category' : categoryFrom}.xhtml"
+						<p:link view="/admin/#{empty categoryFrom ? 'Category' : categoryFrom}.xhtml"
 								value="#{empty categoryFrom ? 'View' : 'Select'}"
 								propagation="#{empty categoryFrom ? 'none' : 'default'}"
 								id="categoryViewId">
 							<f:param name="categoryId"
 									 value="#{_category.id}"/>
-						</s:link>
+						</p:link>
 						#{' '}
-						<s:link view="/admin/CategoryEdit.xhtml"
+						<p:link view="/admin/CategoryEdit.xhtml"
 								value="Edit"
 								propagation="none"
 								id="categoryEdit"
 								rendered="#{empty categoryFrom}">
 							<f:param name="categoryId"
 									 value="#{_category.id}"/>
-						</s:link>
-					</rich:column>
-				</rich:dataTable>
+						</p:link>
+					</p:column>
+				</p:dataTable>
 
 			</div>
-		</rich:panel>
+		</p:panel>
 
 		<div class="tableControl">
 
-			<s:link view="/admin/categoryList.xhtml"
+			<p:link view="/admin/categoryList.xhtml"
 					rendered="#{categoryList.previousExists}"
 					value="#{messages.left}#{messages.left} First Page"
 					id="firstPage">
 				<f:param name="firstResult" value="0"/>
-			</s:link>
+			</p:link>
 
-			<s:link view="/admin/categoryList.xhtml"
+			<p:link view="/admin/categoryList.xhtml"
 					rendered="#{categoryList.previousExists}"
 					value="#{messages.left} Previous Page"
 					id="previousPage">
 				<f:param name="firstResult"
 						 value="#{categoryList.previousFirstResult}"/>
-			</s:link>
+			</p:link>
 
-			<s:link view="/admin/categoryList.xhtml"
+			<p:link view="/admin/categoryList.xhtml"
 					rendered="#{categoryList.nextExists}"
 					value="Next Page #{messages.right}"
 					id="nextPage">
 				<f:param name="firstResult"
 						 value="#{categoryList.nextFirstResult}"/>
-			</s:link>
+			</p:link>
 
-			<s:link view="/admin/categoryList.xhtml"
+			<p:link view="/admin/categoryList.xhtml"
 					rendered="#{categoryList.nextExists}"
 					value="Last Page #{messages.right}#{messages.right}"
 					id="lastPage">
 				<f:param name="firstResult"
 						 value="#{categoryList.lastFirstResult}"/>
-			</s:link>
+			</p:link>
 
 		</div>
 
-		<s:div styleClass="actionButtons" rendered="#{empty from}">
-			<s:button view="/admin/CategoryEdit.xhtml"
+		<h:panelGroup styleClass="actionButtons" rendered="#{empty from}">
+			<p:button view="/admin/CategoryEdit.xhtml"
 					  id="create"
 					  propagation="none"
 					  value="Create Category">
 				<f:param name="categoryId"/>
-			</s:button>
-		</s:div>
+			</p:button>
+		</h:panelGroup>
 
 	</ui:define>
 
 </ui:composition>
+
+</html>

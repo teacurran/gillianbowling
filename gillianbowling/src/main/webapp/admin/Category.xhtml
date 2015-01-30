@@ -1,38 +1,35 @@
-<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-				xmlns:s="http://jboss.com/products/seam/taglib"
-				xmlns:ui="http://java.sun.com/jsf/facelets"
-				xmlns:f="http://java.sun.com/jsf/core"
-				xmlns:h="http://java.sun.com/jsf/html"
-				xmlns:rich="http://richfaces.org/rich"
-				template="layout/template.xhtml">
-
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
+<ui:composition template="layout/template.xhtml">
 	<ui:define name="body">
 
-		<rich:panel>
+		<p:panel>
 			<f:facet name="header">Categories Details</f:facet>
 
-			<s:decorate id="id" template="layout/display.xhtml">
+			<ui:decorate id="id" template="layout/display.xhtml">
 				<ui:define name="label">Id</ui:define>
 				<h:outputText value="#{categoryManager.instance.id}"/>
-			</s:decorate>
+			</ui:decorate>
 
-			<s:decorate id="id" template="layout/display.xhtml" rendered="#{not empty categoryManager.instance.code}">
+			<ui:decorate id="id" template="layout/display.xhtml" rendered="#{not empty categoryManager.instance.code}">
 				<ui:define name="label"> </ui:define>
-				<s:link view="/view.xhtml" value="preview on site" target="_blank">
+				<p:link view="/view.xhtml" value="preview on site" target="_blank">
 					<f:param name="c" value="#{categoryManager.instance.code}"/>
-				</s:link>
-			</s:decorate>
+				</p:link>
+			</ui:decorate>
 
-			<s:decorate id="name" template="layout/display.xhtml">
+			<ui:decorate id="name" template="layout/display.xhtml">
 				<ui:define name="label">Name</ui:define>
 				<h:outputText value="#{categoryManager.instance.name}"/>
-			</s:decorate>
+			</ui:decorate>
 
 			<div style="clear:both"/>
 
-		</rich:panel>
+		</p:panel>
 
 		<div class="actionButtons">
 
@@ -49,3 +46,5 @@
 	</ui:define>
 
 </ui:composition>
+
+</html>

@@ -13,12 +13,12 @@
 
 		<h:form id="configurationProperty" styleClass="edit">
 
-			<rich:panel>
+			<p:panel>
 				<f:facet
 						name="header">#{configurationPropertyHome.managed ? 'Edit' : 'Add'} Configuration property</f:facet>
 
 
-				<s:decorate id="codeField" template="layout/edit.xhtml">
+				<ui:decorate id="codeField" template="layout/edit.xhtml">
 					<ui:define name="label">Code</ui:define>
 					<h:inputText id="code"
 								 required="true"
@@ -27,33 +27,33 @@
 								 value="#{configurationPropertyHome.instance.code}">
 						<a4j:support event="onblur" reRender="codeField" bypassUpdates="true" ajaxSingle="true"/>
 					</h:inputText>
-				</s:decorate>
+				</ui:decorate>
 
 
-				<s:decorate id="defaultValueField" template="layout/edit.xhtml">
+				<ui:decorate id="defaultValueField" template="layout/edit.xhtml">
 					<ui:define name="label">Default value</ui:define>
 					<h:inputTextarea id="defaultValue"
 									 cols="80"
 									 rows="3"
 									 value="#{configurationPropertyHome.instance.defaultValue}"/>
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="typeField" template="layout/edit.xhtml">
+				<ui:decorate id="typeField" template="layout/edit.xhtml">
 					<ui:define name="label">Type</ui:define>
 					<h:selectOneListbox id="type" value="#{configurationPropertyHome.instance.type}" styleClass="dropdown" size="1">
 						<f:selectItem itemValue="String" itemLabel="String"/>
 						<f:selectItem itemValue="Integer" itemLabel="Integer"/>
 						<a4j:support event="onblur" reRender="typeField" bypassUpdates="true" ajaxSingle="true"/>
 					</h:selectOneListbox>
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="valueField" template="layout/edit.xhtml">
+				<ui:decorate id="valueField" template="layout/edit.xhtml">
 					<ui:define name="label">Value</ui:define>
 					<h:inputTextarea id="value"
 									 cols="80"
 									 rows="3"
 									 value="#{configurationPropertyHome.instance.value}"/>
-				</s:decorate>
+				</ui:decorate>
 
 
 				<div style="clear:both">
@@ -61,7 +61,7 @@
 					required fields
 				</div>
 
-			</rich:panel>
+			</p:panel>
 
 			<div class="actionButtons">
 

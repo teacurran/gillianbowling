@@ -9,6 +9,12 @@
 		<view-id value="/pages/fileupload.xhtml"/>
 	</url-mapping>
 
+	<url-mapping id="admin_login">
+		<pattern value="/admin/login" />
+		<view-id value="/admin/login.xhtml" />
+	</url-mapping>
+
+
 	<url-mapping id="home">
 		<pattern value="/home" />
 		<view-id value="/home.xhtml" />

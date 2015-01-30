@@ -1,37 +1,33 @@
-<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-				xmlns:s="http://jboss.com/products/seam/taglib"
-				xmlns:ui="http://java.sun.com/jsf/facelets"
-				xmlns:f="http://java.sun.com/jsf/core"
-				xmlns:h="http://java.sun.com/jsf/html"
-				xmlns:a4j="http://richfaces.org/a4j"
-				xmlns:rich="http://richfaces.org/rich"
-				template="layout/template.xhtml">
-
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
+<ui:composition template="layout/template.xhtml">
 	<ui:define name="body">
 
 		<h:form id="category" styleClass="edit">
 
-			<rich:panel>
+			<p:panel>
 				<f:facet name="header">#{categoryManager.managed ? 'Edit' : 'Add'} Category</f:facet>
 
 
-				<s:decorate id="idField" template="layout/edit.xhtml" rendered="#{categoryManager.managed}">
+				<ui:decorate id="idField" template="layout/edit.xhtml" rendered="#{categoryManager.managed}">
 					<ui:define name="label">Id</ui:define>
 					<h:outputText value="#{categoryManager.instance.id}"/>
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="parentField" template="layout/edit.xhtml">
+				<ui:decorate id="parentField" template="layout/edit.xhtml">
 					<ui:define name="label">Parent</ui:define>
 					<h:selectOneListbox id="brandName" value="#{categoryManager.instance.parent}" styleClass="clientSelectBox" size="1" required="false" immediate="true">
-						<s:selectItems value="#{categoryManager.availableParents}" var="_cat" label="#{_cat.name}" noSelectionLabel="please choose..."/>
+						<f:selectItems value="#{categoryManager.availableParents}" var="_cat" label="#{_cat.name}" noSelectionLabel="please choose..."/>
 						<s:convertEntity/>
 					</h:selectOneListbox>
 					Leaving blank will make this Category available as a parent.
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="nameField" template="layout/edit.xhtml">
+				<ui:decorate id="nameField" template="layout/edit.xhtml">
 					<ui:define name="label">Name</ui:define>
 					<h:inputText id="name"
 								 size="100"
@@ -39,9 +35,9 @@
 								 value="#{categoryManager.instance.name}" required="true">
 						<a4j:support event="onblur" reRender="nameField" bypassUpdates="true" ajaxSingle="true"/>
 					</h:inputText>
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="codeField" template="layout/edit.xhtml">
+				<ui:decorate id="codeField" template="layout/edit.xhtml">
 					<ui:define name="label">Code</ui:define>
 					<h:inputText id="code"
 								 size="100"
@@ -49,9 +45,9 @@
 								 value="#{categoryManager.instance.code}" required="true">
 						<a4j:support event="onblur" reRender="codeField" bypassUpdates="true" ajaxSingle="true"/>
 					</h:inputText>
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="rankField" template="layout/edit.xhtml">
+				<ui:decorate id="rankField" template="layout/edit.xhtml">
 					<ui:define name="label">Rank</ui:define>
 					<h:inputText id="rank"
 								 size="5"
@@ -59,12 +55,12 @@
 								 value="#{categoryManager.instance.rank}">
 						<a4j:support event="onblur" reRender="rankField" bypassUpdates="true" ajaxSingle="true"/>
 					</h:inputText>
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="photoSortField" template="layout/edit.xhtml">
+				<ui:decorate id="photoSortField" template="layout/edit.xhtml">
 					<ui:define name="label">Photo Sorting</ui:define>
 					<rich:orderingList value="#{categoryManager.photos}" var="_photo" listHeight="500" listWidth="300">
-						<rich:column  width="180">
+						<p:column  width="180">
 							<f:facet name="header">
 								<h:outputText value="Content" />
 							</f:facet>
@@ -72,17 +68,17 @@
 								<img src="#{request.contextPath}/media/50x/#{_photo.fileName}" class="image" alt="#{_photo.description}"/>
 							</h:outputText>
 							<h:outputText rendered="#{empty _photo.fileName}" value="Text Block"/>
-						</rich:column>
+						</p:column>
 						<s:convertEntity/>
 					</rich:orderingList>
-				</s:decorate>
+				</ui:decorate>
 
 				<div style="clear:both">
 					<span class="required">*</span>
 					required fields
 				</div>
 
-			</rich:panel>
+			</p:panel>
 
 			<div class="actionButtons">
 
@@ -121,3 +117,5 @@
 	</ui:define>
 
 </ui:composition>
+
+</html>

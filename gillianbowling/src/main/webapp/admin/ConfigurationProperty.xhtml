@@ -10,33 +10,33 @@
 
 	<ui:define name="body">
 
-		<rich:panel>
+		<p:panel>
 			<f:facet name="header">Configuration property Details</f:facet>
 
 
-			<s:decorate id="code" template="layout/display.xhtml">
+			<ui:decorate id="code" template="layout/display.xhtml">
 				<ui:define name="label">Code</ui:define>
 				<h:outputText value="#{configurationPropertyHome.instance.code}"/>
-			</s:decorate>
+			</ui:decorate>
 
-			<s:decorate id="defaultValue" template="layout/display.xhtml">
+			<ui:decorate id="defaultValue" template="layout/display.xhtml">
 				<ui:define name="label">Default value</ui:define>
 				<h:outputText value="#{configurationPropertyHome.instance.defaultValue}"/>
-			</s:decorate>
+			</ui:decorate>
 
-			<s:decorate id="type" template="layout/display.xhtml">
+			<ui:decorate id="type" template="layout/display.xhtml">
 				<ui:define name="label">Type</ui:define>
 				<h:outputText value="#{configurationPropertyHome.instance.type}"/>
-			</s:decorate>
+			</ui:decorate>
 
-			<s:decorate id="value" template="layout/display.xhtml">
+			<ui:decorate id="value" template="layout/display.xhtml">
 				<ui:define name="label">Value</ui:define>
 				<h:outputText value="#{configurationPropertyHome.instance.value}"/>
-			</s:decorate>
+			</ui:decorate>
 
 			<div style="clear:both"/>
 
-		</rich:panel>
+		</p:panel>
 
 		<div class="actionButtons">
 

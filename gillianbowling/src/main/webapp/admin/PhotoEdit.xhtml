@@ -14,13 +14,13 @@
 		<s:div styleClass="breadcrumbs">
 			<ul>
 				<li>
-					<s:link value="Photo List" view="/admin/PhotoList.xhtml" />
+					<p:link value="Photo List" view="/admin/PhotoList.xhtml" />
 				</li>
 				<h:outputText rendered="#{photoHome.managed}">
 					<li>
-						<s:link  value="#{photoHome.instance.id}" view="/admin/Photo.xhtml">
+						<p:link  value="#{photoHome.instance.id}" view="/admin/Photo.xhtml">
 							<f:param name="photoId" value="#{photoHome.instance.id}"/>
-						</s:link>
+						</p:link>
 					</li>
 					<li class="last">
 						Editing
@@ -36,65 +36,65 @@
 
 		<h:form id="photos" styleClass="edit" enctype="multipart/form-data">
 
-			<rich:panel>
+			<p:panel>
 				<f:facet name="header">#{photoHome.managed ? 'Edit' : 'Add'} Photo</f:facet>
 
-				<s:decorate id="idField" template="layout/display.xhtml">
+				<ui:decorate id="idField" template="layout/display.xhtml">
 					<ui:define name="label">Id</ui:define>
 					<h:outputText value="#{photoHome.instance.id}" rendered="#{photoHome.managed}"/>
 					<h:outputText value="New" rendered="#{!photoHome.managed}"/>
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="categoryIdField" template="layout/edit.xhtml">
+				<ui:decorate id="categoryIdField" template="layout/edit.xhtml">
 					<ui:define name="label">Category</ui:define>
 					<h:selectOneListbox id="category" value="#{photoHome.instance.category}" styleClass="clientSelectBox" size="1" required="true" immediate="true">
 						<s:selectItems value="#{categoryList.resultList}" var="_cat" label="#{_cat.nameWithParent}" noSelectionLabel="please choose..."/>
 						<s:convertEntity />
 					</h:selectOneListbox>
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="featuredField" template="layout/edit.xhtml">
+				<ui:decorate id="featuredField" template="layout/edit.xhtml">
 					<ui:define name="label">Homepage</ui:define>
 					<h:selectBooleanCheckbox id="featured" value="#{photoHome.instance.featured}" />
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="orientationField" template="layout/edit.xhtml">
+				<ui:decorate id="orientationField" template="layout/edit.xhtml">
 					<ui:define name="label">Orientation</ui:define>
 					<h:selectOneListbox id="orientation" value="#{photoHome.instance.orientation}" styleClass="clientSelectBox" size="1" required="true" immediate="true">
 						<f:selectItem itemValue="1" itemLabel="Horizontal"/>
 						<f:selectItem itemValue="2" itemLabel="Vertical"/>
 					</h:selectOneListbox>
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="descriptionField" template="layout/edit.xhtml">
+				<ui:decorate id="descriptionField" template="layout/edit.xhtml">
 					<ui:define name="label">Description</ui:define>
 					<rich:editor configuration="richtext"
 						id="editor" width="400" height="300"
 						value="#{photoHome.instance.description}">
 					</rich:editor>
 
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="rankField" template="layout/edit.xhtml">
+				<ui:decorate id="rankField" template="layout/edit.xhtml">
 					<ui:define name="label">Rank</ui:define>
 					<h:inputText id="rank"
 								 value="#{photoHome.instance.rank}">
 						<a4j:support event="onblur" reRender="rankField" bypassUpdates="true" ajaxSingle="true"/>
 					</h:inputText>
-				</s:decorate>
+				</ui:decorate>
 
-				<s:decorate id="newFileField" template="layout/edit.xhtml">
+				<ui:decorate id="newFileField" template="layout/edit.xhtml">
 					<ui:define name="label">File Upload</ui:define>
 
 					<s:fileUpload data="#{photoHome.newFile}" fileName="#{photoHome.newFileName}"
 								  accept="images/png,images/jpg,images/gif,application/pdf" rendered="true"/>
-				</s:decorate>
+				</ui:decorate>
 
 				<a4j:outputPanel id="imageContainer" rendered="#{not empty photoHome.instance.fileName}">
-					<s:decorate id="image" template="layout/display.xhtml">
+					<ui:decorate id="image" template="layout/display.xhtml">
 						<ui:define name="label">Image</ui:define>
 						<img src="#{request.contextPath}/media/150x/#{photoHome.instance.fileName}" class="image" alt="#{photoHome.instance.description}"/>
-					</s:decorate>
+					</ui:decorate>
 				</a4j:outputPanel>
 
 				<div style="clear:both">
@@ -102,7 +102,7 @@
 					required fields
 				</div>
 
-			</rich:panel>
+			</p:panel>
 
 			<div class="actionButtons">
 
