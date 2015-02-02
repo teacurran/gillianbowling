@@ -1,7 +1,7 @@
 package com.gillianbowling.data.repositories;
 
-import com.gillianbowling.model.Category;
-import com.gillianbowling.model.ConfigurationProperty;
+import com.gillianbowling.data.model.Category;
+import com.gillianbowling.data.model.ConfigurationProperty;
 import org.apache.deltaspike.data.api.AbstractEntityRepository;
 import org.apache.deltaspike.data.api.Repository;
 

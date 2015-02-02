@@ -1,10 +1,9 @@
-package com.gillianbowling.model;
+package com.gillianbowling.data.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import static javax.persistence.GenerationType.AUTO;
 
@@ -16,7 +15,7 @@ import static javax.persistence.GenerationType.AUTO;
 @Entity
 @NamedQueries( {
 	@NamedQuery(
-		name = com.gillianbowling.model.Category.NAMED_QUERY_ALL,
+		name = Category.NAMED_QUERY_ALL,
 		query = "SELECT a " +
 				"FROM Category a " +
 				"ORDER BY a.name"
@@ -30,15 +29,10 @@ import static javax.persistence.GenerationType.AUTO;
 					"ORDER BY a.rank"
 	)
 })
-public class Category implements Serializable {
+public class Category extends GeneratedIdEntity implements Serializable {
 
 	public static final String NAMED_QUERY_ALL = "Category.all";
 	public static final String NAMED_QUERY_TOP_LEVEL = "Category.getTopLevel";
-
-	@Id
-	@GeneratedValue(strategy = AUTO)
-	@Column(name = "id", unique = true, nullable = false)
-	int id;
 
 	@Column(length=100)
 	String name;
@@ -60,15 +54,10 @@ public class Category implements Serializable {
 	@Column
 	Integer rank;
 
-	public int getId() {
-		return id;
-	}
-
 	public String getName() {
 		return name;
 	}
 
-	@Transient
 	public String getNameWithParent() {
 		if (getParent() != null) {
 			return getParent().getName() + " - " + getName();
@@ -100,10 +89,6 @@ public class Category implements Serializable {
 
 	public List<Category> getChildren() {
 		return children;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public void setCode(String code) {

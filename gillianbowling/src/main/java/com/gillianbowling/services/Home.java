@@ -1,14 +1,13 @@
 package com.gillianbowling.services;
 
 import com.gillianbowling.data.repositories.PhotoRepository;
-import com.gillianbowling.model.*;
+import com.gillianbowling.data.model.*;
 import org.hibernate.Hibernate;
 
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;

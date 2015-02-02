@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.faces.bean.ViewScoped;
+import javax.faces.convert.Converter;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
@@ -16,8 +17,8 @@ import javax.persistence.TypedQuery;
 
 import com.gillianbowling.Constants;
 import com.gillianbowling.data.repositories.CategoryRepository;
-import com.gillianbowling.model.Category;
-import com.gillianbowling.model.Photo;
+import com.gillianbowling.data.model.Category;
+import com.gillianbowling.data.model.Photo;
 import com.gillianbowling.services.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -220,4 +221,13 @@ public class CategoryManager implements Serializable {
 	public void setCode(String code) {
 		this.code = code;
 	}
+
+	/**
+	 * @return
+	 * 		Converter instance.
+	 */
+	public Converter getConverter() {
+		return new GenericEntityConverter<>(InterestLevel.class, em);
+	}
+
 }

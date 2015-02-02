@@ -9,7 +9,7 @@ import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 
-import com.gillianbowling.model.ConfigurationProperty;
+import com.gillianbowling.data.model.ConfigurationProperty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

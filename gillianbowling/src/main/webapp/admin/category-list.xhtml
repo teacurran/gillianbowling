@@ -3,7 +3,8 @@
 	  xmlns:ui="http://java.sun.com/jsf/facelets"
 	  xmlns:h="http://java.sun.com/jsf/html"
 	  xmlns:f="http://java.sun.com/jsf/core"
-	  xmlns:p="http://primefaces.org/ui">
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:fn="http://java.sun.com/jsp/jstl/functions">
 <ui:composition template="layout/template.xhtml">
 	<ui:define name="body">
 
@@ -27,7 +28,7 @@
 
 		<p:panel>
 			<f:facet
-					name="header">Category Search Results (#{empty categoryManager.list ? 0 : (categoryManager.list.size)})</f:facet>
+					name="header">Category Search Results (#{empty categoryManager.list ? 0 : fn:length(categoryManager.list)})</f:facet>
 
 			<div class="results" id="results">
 
@@ -38,64 +39,41 @@
 								var="_category"
 								value="#{categoryManager.list}"
 								rendered="#{not empty categoryManager.list}">
-					<h:column>
+
+					<p:column sortBy="#{_category.id}">
 						<f:facet name="header">
-							<ui:include src="layout/sort.xhtml">
-								<ui:param name="entityList" value="#{categoryManager.list}"/>
-								<ui:param name="propertyLabel" value="Id"/>
-								<ui:param name="propertyPath" value="category.id"/>
-							</ui:include>
+							<h:outputText value="Id" />
 						</f:facet>
-						<h:outputText value="#{_category.id}"/>
-					</h:column>
-					<h:column>
+						<h:link value="#{_category.id}" outcome="/admin/category-edit.xhtml">
+							<f:param name="id" value="#{_category.id}" />
+						</h:link>
+					</p:column>
+
+					<p:column sortBy="#{_category.parent.name}">
 						<f:facet name="header">
-							<ui:include src="layout/sort.xhtml">
-								<ui:param name="entityList" value="#{categoryManager.list}"/>
-								<ui:param name="propertyLabel" value="Parent"/>
-								<ui:param name="propertyPath" value="category.parent.name"/>
-							</ui:include>
+							<h:outputText value="Parent" />
 						</f:facet>
-						<h:outputText value="#{_category.parent.name}" rendered="#{not empty _category.parent}"/>
-					</h:column>
-					<h:column>
+						<h:link value="#{_category.parent.name}" outcome="/admin/category-edit.xhtml">
+							<f:param name="id" value="#{_category.id}" />
+						</h:link>
+					</p:column>
+
+					<p:column sortBy="#{_category.name}">
 						<f:facet name="header">
-							<ui:include src="layout/sort.xhtml">
-								<ui:param name="entityList" value="#{categoryManager.list}"/>
-								<ui:param name="propertyLabel" value="Name"/>
-								<ui:param name="propertyPath" value="category.name"/>
-							</ui:include>
+							<h:outputText value="Name" />
 						</f:facet>
-						<h:outputText value="#{_category.name}"/>
-					</h:column>
-					<h:column>
+						<h:link value="#{_category.name}" outcome="/admin/category-edit.xhtml">
+							<f:param name="id" value="#{_category.id}" />
+						</h:link>
+					</p:column>
+
+					<p:column sortBy="#{_category.code}">
 						<f:facet name="header">
-							<ui:include src="layout/sort.xhtml">
-								<ui:param name="entityList" value="#{categoryManager.list}"/>
-								<ui:param name="propertyLabel" value="Code"/>
-								<ui:param name="propertyPath" value="category.code"/>
-							</ui:include>
+							<h:outputText value="Code" />
 						</f:facet>
-						<h:outputText value="#{_category.code}"/>
-					</h:column>
-					<p:column styleClass="action">
-						<f:facet name="header">Action</f:facet>
-						<p:link view="/admin/#{empty categoryFrom ? 'Category' : categoryFrom}.xhtml"
-								value="#{empty categoryFrom ? 'View' : 'Select'}"
-								propagation="#{empty categoryFrom ? 'none' : 'default'}"
-								id="categoryViewId">
-							<f:param name="categoryId"
-									 value="#{_category.id}"/>
-						</p:link>
-						#{' '}
-						<p:link view="/admin/CategoryEdit.xhtml"
-								value="Edit"
-								propagation="none"
-								id="categoryEdit"
-								rendered="#{empty categoryFrom}">
-							<f:param name="categoryId"
-									 value="#{_category.id}"/>
-						</p:link>
+						<h:link value="#{_category.code}" outcome="/admin/category-edit.xhtml">
+							<f:param name="id" value="#{_category.id}" />
+						</h:link>
 					</p:column>
 				</p:dataTable>
 

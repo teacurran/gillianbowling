@@ -1,4 +1,4 @@
-package com.gillianbowling.model;
+package com.gillianbowling.data.model;
 
 import static javax.persistence.GenerationType.AUTO;
 
@@ -51,14 +51,13 @@ import javax.validation.constraints.NotNull;
 			}
 		)
 })
-public class ConfigurationProperty implements Serializable {
+public class ConfigurationProperty extends GeneratedIdEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	public static final String NAMED_QUERY_GET_ALL = "configurationProperty.getAll";
 	public static final String NAMED_QUERY_GET_BY_CODE = "configurationProperty.getByKey";
 	public static final String NAMED_QUERY_GET_BY_ID = "configurationProperty.getById";
 
-	private Integer id;
 	private String code;
 	private String type;
 	private String value;
@@ -91,13 +90,6 @@ public class ConfigurationProperty implements Serializable {
 		return result;
 	}
 
-	@Id
-	@GeneratedValue(strategy = AUTO)
-	@Column(name = "id", unique = true, nullable = false)
-	public Integer getId() {
-		return this.id;
-	}
-
 	@Column(name = "code", length = 100, unique = true, nullable = false)
 	@NotNull
 	public String getCode() {
@@ -124,10 +116,6 @@ public class ConfigurationProperty implements Serializable {
 	@NotNull
 	public Long getVersion() {
 		return version;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
 	}
 
 	public void setCode(String code) {

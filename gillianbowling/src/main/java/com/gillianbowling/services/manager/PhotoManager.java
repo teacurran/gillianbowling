@@ -10,7 +10,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 
-import com.gillianbowling.model.Photo;
+import com.gillianbowling.data.model.Photo;
 import com.gillianbowling.services.Configuration;
 import org.apache.deltaspike.jpa.api.transaction.Transactional;
 import org.slf4j.Logger;

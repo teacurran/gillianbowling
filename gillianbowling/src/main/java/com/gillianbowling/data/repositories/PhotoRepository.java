@@ -2,7 +2,7 @@ package com.gillianbowling.data.repositories;
 
 import java.util.List;
 
-import com.gillianbowling.model.Photo;
+import com.gillianbowling.data.model.Photo;
 import org.apache.deltaspike.data.api.AbstractEntityRepository;
 import org.apache.deltaspike.data.api.Query;
 import org.apache.deltaspike.data.api.QueryParam;

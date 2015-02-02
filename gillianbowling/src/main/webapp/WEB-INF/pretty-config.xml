@@ -9,6 +9,16 @@
 		<view-id value="/pages/fileupload.xhtml"/>
 	</url-mapping>
 
+	<url-mapping id="admin_category_list">
+		<pattern value="/admin/categories" />
+		<view-id value="/admin/category-list.xhtml" />
+	</url-mapping>
+
+	<url-mapping id="admin_category_edit">
+		<pattern value="/admin/categories/#{/\\d+/ id}" />
+		<view-id value="/admin/category-edit.xhtml" />
+	</url-mapping>
+
 	<url-mapping id="admin_login">
 		<pattern value="/admin/login" />
 		<view-id value="/admin/login.xhtml" />

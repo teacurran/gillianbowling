@@ -1,12 +1,10 @@
-package com.gillianbowling.model;
+package com.gillianbowling.data.model;
 
 import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
@@ -15,10 +13,7 @@ import javax.persistence.NamedNativeQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 import javax.validation.constraints.Max;
-
-import static javax.persistence.GenerationType.AUTO;
 
 @Entity
 @Table(name = "photos")
@@ -33,24 +28,50 @@ import static javax.persistence.GenerationType.AUTO;
 		resultClass = Photo.class
 	)
 })
-public class Photo implements java.io.Serializable {
+public class Photo extends GeneratedIdEntity implements java.io.Serializable {
 
 	public static final int ORIENTATION_HORIZONTAL	= 1;
 	public static final int ORIENTATION_VERTICAL	= 2;
 
 	public static final String NATIVE_QUERY_RAND_FEATURED = "Photo.3RandFeatured";
 
-	private int id;
+	@Column
 	private Integer orientation;
+
+	@Column(name = "description")
+	@Lob
 	private String description;
+
+	@Column(name = "file_name", length = 100)
+	@Max(100)
 	private String fileName;
+
+	@Column(name = "file_extension", length = 5)
+	@Max(5)
 	private String fileExtension;
+
+	@Column(name = "height")
 	private Integer height;
+
+	@Column(name = "rank")
 	private Integer rank;
+
+	@Column(name = "width")
 	private Integer width;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "date_created", length = 19)
 	private Date dateCreated;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "date_modified", length = 19)
 	private Date dateModified;
+
+	@ManyToOne(optional = false, fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	@JoinColumn(name = "category_id", nullable = false)
 	private Category category;
+
+	@Column
 	private boolean featured;
 
 	public Photo() {
@@ -70,55 +91,34 @@ public class Photo implements java.io.Serializable {
 		this.category = category;
 	}
 
-	@Id
-	@GeneratedValue(strategy = AUTO)
-	@Column(name = "id", unique = true, nullable = false)
-	public int getId() {
-		return this.id;
-	}
-
-	@ManyToOne(optional = false, fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-	@JoinColumn(name = "category_id", nullable = false)
 	public Category getCategory() {
 		return category;
 	}
 
-	@Column(name = "description")
-	@Lob
 	public String getDescription() {
 		return this.description;
 	}
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "date_created", length = 19)
 	public Date getDateCreated() {
 		return dateCreated == null ? null : new Date(dateCreated.getTime());
 	}
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "date_modified", length = 19)
 	public Date getDateModified() {
 		return dateModified == null ? null : new Date(dateModified.getTime());
 	}
 
-	@Column(name = "file_name", length = 100)
-	@Max(100)
 	public String getFileName() {
 		return this.fileName;
 	}
 
-	@Column(name = "file_extension", length = 5)
-	@Max(5)
 	public String getFileExtension() {
 		return this.fileExtension;
 	}
 
-	@Column(name = "height")
 	public Integer getHeight() {
 		return this.height;
 	}
 
-	@Column
 	public Integer getOrientation() {
 		// never return null
 		if (orientation == null) {
@@ -127,12 +127,10 @@ public class Photo implements java.io.Serializable {
 		return orientation;
 	}
 
-	@Column(name = "rank")
 	public Integer getRank() {
 		return this.rank;
 	}
 
-	@Transient
 	public int getScaledWidth(int height, int defaultScaledWidthHoriz, int defaultScaledWidthVert) {
 		if (height > 0
 				&& this.getHeight() != null
@@ -151,12 +149,10 @@ public class Photo implements java.io.Serializable {
 		return defaultScaledWidthVert;
 	}
 
-	@Transient
 	public int getScaledWidth(int height) {
 		return getScaledWidth(height, 600, 338);
 	}
 
-	@Column(name = "width")
 	public Integer getWidth() {
 		return this.width;
 	}
@@ -188,10 +184,6 @@ public class Photo implements java.io.Serializable {
 				this.fileExtension = fileName.substring(fileName.lastIndexOf(".") + 1);
 			}
 		}
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public void setHeight(Integer height) {

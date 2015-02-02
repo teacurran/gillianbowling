@@ -1,15 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' ?>
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 				xmlns:ui="http://java.sun.com/jsf/facelets"
 				xmlns:h="http://java.sun.com/jsf/html"
 				xmlns:f="http://java.sun.com/jsf/core"
-				xmlns:s="http://jboss.com/products/seam/taglib">
+				xmlns:p="http://primefaces.org/ui"
+		>
 
-	<div class="prop">
+<div class="prop">
 
-		<s:label styleClass="name #{invalid?'errors':''}">
-			<ui:insert name="label"/>
-			<s:span styleClass="required" rendered="#{required}">*</s:span>
-		</s:label>
+	<p:outputLabel styleClass="name #{invalid?'errors':''}">
+		<ui:insert name="label"/>
+		<p:outputPanel class="required" rendered="#{required}">*</p:outputPanel>
+	</p:outputLabel>
 
 		<span class="value #{invalid?'errors':''}">
 			<s:validateAll>
@@ -22,6 +24,6 @@
 			<s:message styleClass="errors"/>
 		</span>
 
-	</div>
+</div>
 
 </ui:composition>
