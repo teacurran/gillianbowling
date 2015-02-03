@@ -8,7 +8,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -20,6 +22,9 @@ import com.gillianbowling.data.repositories.CategoryRepository;
 import com.gillianbowling.data.model.Category;
 import com.gillianbowling.data.model.Photo;
 import com.gillianbowling.services.Configuration;
+import com.gillianbowling.web.coverters.GenericEntityConverter;
+import org.primefaces.event.SelectEvent;
+import org.primefaces.event.UnselectEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -227,7 +232,31 @@ public class CategoryManager implements Serializable {
 	 * 		Converter instance.
 	 */
 	public Converter getConverter() {
-		return new GenericEntityConverter<>(InterestLevel.class, em);
+		return new GenericEntityConverter<>(Category.class, em);
 	}
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public void onSelect(SelectEvent event) {
+		FacesContext context = FacesContext.getCurrentInstance();
+		context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Selected", event.getObject()
+				.toString()));
+	}
+
+	public void onUnselect(UnselectEvent event) {
+		FacesContext context = FacesContext.getCurrentInstance();
+		context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Unselected", event.getObject()
+				.toString()));
+	}
+
+	public void onReorder() {
+		FacesContext context = FacesContext.getCurrentInstance();
+		context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "List Reordered", null));
+	}
 }

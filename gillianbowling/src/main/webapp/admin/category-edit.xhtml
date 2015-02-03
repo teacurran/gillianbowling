@@ -13,111 +13,96 @@
 </ui:define>
 
 <ui:composition template="layout/template.xhtml">
+
+<ui:param name="title" value="#{categoryManager.category.name}"/>
+
+<ui:define name="breadcrumbs">
+	<p:menuitem value="Categories" outcome="/admin/category-list.xhtml"/>
+
+</ui:define>
+
 	<ui:define name="body">
 
 		<h:form id="category" styleClass="edit">
 
 			<p:panel>
-				<f:facet name="header">#{categoryManager.managed ? 'Edit' : 'Add'} Category</f:facet>
 
+				<h:panelGrid columns="3" columnClasses="label, value, message" styleClass="detail-grid">
 
-				<ui:decorate id="idField" template="layout/edit.xhtml" rendered="#{categoryManager.managed}">
-					<ui:define name="label">Id</ui:define>
-					<h:outputText value="#{categoryManager.instance.id}"/>
-				</ui:decorate>
+					<h:outputLabel for="fieldId" value="Id"/>
+					<h:outputText id="fieldId" value="#{categoryManager.category.id}"/>
+					<p:message for="fieldId"/>
 
-				<ui:decorate id="parentField" template="layout/edit.xhtml">
-					<ui:define name="label">Parent</ui:define>
-					<h:selectOneListbox id="brandName" value="#{categoryManager.instance.parent}" styleClass="clientSelectBox" size="1" required="false" immediate="true">
-						<f:selectItems value="#{categoryManager.availableParents}" var="_cat" label="#{_cat.name}" noSelectionLabel="please choose..."/>
-						<f:converter binding="#{categoryManager.converter}" />
+					<h:outputLabel for="fieldParent" value="Id"/>
+					<h:selectOneListbox id="fieldParent" value="#{categoryManager.category.parent}"
+										styleClass="clientSelectBox" size="1" required="false" immediate="true">
+						<f:selectItems value="#{categoryManager.availableParents}" var="_cat"
+									   label="#{_cat.name}" noSelectionLabel="please choose..."/>
+						<f:converter binding="#{categoryManager.converter}"/>
 					</h:selectOneListbox>
-					Leaving blank will make this Category available as a parent.
-				</ui:decorate>
+					<p:message for="fieldParent"/>
 
-				<ui:decorate id="nameField" template="layout/edit.xhtml">
-					<ui:define name="label">Name</ui:define>
-					<h:inputText id="name"
+					<h:outputLabel for="fieldName" value="Name"/>
+					<h:inputText id="fieldName"
 								 size="100"
 								 maxlength="100"
-								 value="#{categoryManager.instance.name}" required="true">
-						<a4j:support event="onblur" reRender="nameField" bypassUpdates="true" ajaxSingle="true"/>
-					</h:inputText>
-				</ui:decorate>
+								 value="#{categoryManager.category.name}" required="true"/>
+					<p:message for="fieldName"/>
 
-				<ui:decorate id="codeField" template="layout/edit.xhtml">
-					<ui:define name="label">Code</ui:define>
-					<h:inputText id="code"
+					<h:outputLabel for="fieldCode" value="Code"/>
+					<h:inputText id="fieldCode"
 								 size="100"
 								 maxlength="100"
-								 value="#{categoryManager.instance.code}" required="true">
-						<a4j:support event="onblur" reRender="codeField" bypassUpdates="true" ajaxSingle="true"/>
-					</h:inputText>
-				</ui:decorate>
+								 value="#{categoryManager.category.code}" required="true"/>
+					<p:message for="fieldCode"/>
 
-				<ui:decorate id="rankField" template="layout/edit.xhtml">
-					<ui:define name="label">Rank</ui:define>
-					<h:inputText id="rank"
+					<h:outputLabel for="fieldRank" value="Rank"/>
+					<h:inputText id="fieldRank"
 								 size="5"
 								 maxlength="10"
-								 value="#{categoryManager.instance.rank}">
-						<a4j:support event="onblur" reRender="rankField" bypassUpdates="true" ajaxSingle="true"/>
-					</h:inputText>
-				</ui:decorate>
+								 value="#{categoryManager.category.rank}"/>
+					<p:message for="fieldRank"/>
 
-				<ui:decorate id="photoSortField" template="layout/edit.xhtml">
-					<ui:define name="label">Photo Sorting</ui:define>
-					<rich:orderingList value="#{categoryManager.photos}" var="_photo" listHeight="500" listWidth="300">
-						<p:column  width="180">
-							<f:facet name="header">
-								<h:outputText value="Content" />
-							</f:facet>
+
+					<h:outputLabel for="fieldPhotoSort" value="Photo Sorting"/>
+					<p:orderList id="fieldPhotoSort" value="#{categoryManager.photos}" var="_photo"
+								 itemValue="#{_photo}"
+								 converter="#{categoryManager.converter}"
+								 controlsLocation="left">
+
+						<f:facet name="caption">Photos</f:facet>
+
+						<p:column style="width:25%">
+							<h:outputText styleClass="ui-theme ui-theme-#{theme.name}"/>
+
 							<h:outputText rendered="#{not empty _photo.fileName}">
-								<img src="#{request.contextPath}/media/50x/#{_photo.fileName}" class="image" alt="#{_photo.description}"/>
+								<img src="#{request.contextPath}/media/50x/#{_photo.fileName}" class="image"
+									 alt="#{_photo.description}"/>
 							</h:outputText>
+
+						</p:column>
+
+						<p:column style="width:75%;">
 							<h:outputText rendered="#{empty _photo.fileName}" value="Text Block"/>
 						</p:column>
-						<s:convertEntity/>
-					</rich:orderingList>
-				</ui:decorate>
+					</p:orderList>
+					<p:message for="fieldPhotoSort"/>
 
-				<div style="clear:both">
-					<span class="required">*</span>
-					required fields
-				</div>
+					<div style="clear:both">
+						<span class="required">*</span>
+						required fields
+					</div>
 
+				</h:panelGrid>
 			</p:panel>
 
 			<div class="actionButtons">
 
 				<h:commandButton id="save"
 								 value="Save"
-								 action="#{categoryManager.persist}"
-								 disabled="#{!categoryManager.wired}"
-								 rendered="#{!categoryManager.managed}"/>
+								 action="#{categoryManager.save}"
+								 />
 
-				<h:commandButton id="update"
-								 value="Save"
-								 action="#{categoryManager.update}"
-								 rendered="#{categoryManager.managed}"/>
-
-				<h:commandButton id="delete"
-								 value="Delete"
-								 action="#{categoryManager.remove}"
-								 immediate="true"
-								 rendered="#{categoryManager.managed}"/>
-
-				<s:button id="cancelEdit"
-						  value="Cancel"
-						  propagation="end"
-						  view="/admin/Category.xhtml"
-						  rendered="#{categoryManager.managed}"/>
-
-				<s:button id="cancelAdd"
-						  value="Cancel"
-						  propagation="end"
-						  view="/admin/#{empty categoryFrom ? 'CategoryList' : categoryFrom}.xhtml"
-						  rendered="#{!categoryManager.managed}"/>
 
 			</div>
 		</h:form>
