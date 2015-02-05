@@ -10,7 +10,7 @@
 
 		<h:form id="mainForm">
 
-			<p:dataTable id="categoryList"
+			<p:dataTable id="resultList"
 						 value="#{categoryManager.list}"
 						 var="_category"
 						 paginator="true"
@@ -18,7 +18,7 @@
 						 paginatorPosition="bottom"
 						 rows="20"
 						 sortBy="#{_category.name}"
-						 sortOrder="DESCENDING"
+						 sortOrder="ASCENDING"
 					>
 
 				<p:column sortBy="#{_category.id}">

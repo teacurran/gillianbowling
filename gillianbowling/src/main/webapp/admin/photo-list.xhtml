@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+<ui:composition template="layout/template.xhtml">
+	<ui:define name="body">
+
+		<h:form id="mainForm">
+
+			<p:dataTable id="resultList"
+						 value="#{photoManager.list}"
+						 var="_photo"
+						 paginator="true"
+						 paginatorAlwaysVisible="false"
+						 paginatorPosition="bottom"
+						 rows="20"
+						 sortBy="#{_photo.id}"
+						 sortOrder="DESCENDING"
+					>
+
+				<p:column sortBy="#{_photo.id}">
+					<f:facet name="header">
+						<h:outputText value="Id"/>
+					</f:facet>
+					<h:link value="#{_photo.id}" outcome="/admin/photo-edit.xhtml">
+						<f:param name="id" value="#{_photo.id}"/>
+					</h:link>
+				</p:column>
+
+				<p:column sortBy="#{_photo.category.name}">
+					<f:facet name="header">
+						<h:outputText value="Category"/>
+					</f:facet>
+					<h:outputText value="#{_photo.category.name}"/>
+				</p:column>
+
+				<p:column sortBy="#{_photo.description}">
+					<f:facet name="header">
+						<h:outputText value="Description"/>
+					</f:facet>
+					<h:outputText value="Text Block"
+								  rendered="#{empty _photo.fileName and not empty _photo.description}"/>
+				</p:column>
+
+				<p:column sortBy="#{_photo.fileName}">
+					<f:facet name="header">
+						<h:outputText value="File name"/>
+					</f:facet>
+					<p:outputPanel rendered="#{not empty _photo.fileName}">
+						<img src="#{request.contextPath}/media/100x/#{_photo.fileName}" class="image"
+							 alt="#{_photo.description}"/>
+					</p:outputPanel>
+				</p:column>
+
+				<p:column sortBy="#{_photo.rank}">
+					<f:facet name="header">
+						<h:outputText value="Rank"/>
+					</f:facet>
+					<h:outputText value="#{_photo.rank}"/>
+				</p:column>
+
+				<p:column sortBy="#{_photo.width}">
+					<f:facet name="header">
+						<h:outputText value="Width"/>
+					</f:facet>
+					<h:outputText value="#{_photo.width}"/>
+				</p:column>
+
+				<p:column sortBy="#{_photo.height}">
+					<f:facet name="header">
+						<h:outputText value="Height"/>
+					</f:facet>
+					<h:outputText value="#{_photo.height}"/>
+				</p:column>
+
+				<p:column styleClass="action">
+					<f:facet name="header">Action</f:facet>
+					<p:link view="/admin/#{empty from ? 'Photo' : from}.xhtml"
+							value="#{empty from ? 'View' : 'Select'}"
+							propagation="#{empty from ? 'none' : 'default'}"
+							id="photoViewId">
+						<f:param name="photoId"
+								 value="#{_photo.id}"/>
+					</p:link>
+					#{' '}
+					<p:link view="/admin/PhotoEdit.xhtml"
+							value="Edit"
+							propagation="none"
+							id="photoEdit"
+							rendered="#{empty from}">
+						<f:param name="photoId"
+								 value="#{_photo.id}"/>
+					</p:link>
+				</p:column>
+			</p:dataTable>
+
+			<div class="action-row">
+				<p:button outcome="/admin/photo-edit.xhtml"
+						  value="#{I18n['ui.photos.create']}" styleClass="button-detail-edit">
+				</p:button>
+			</div>
+
+		</h:form>
+	</ui:define>
+</ui:composition>
+
+</html>

@@ -9,11 +9,11 @@
 		<view-id value="/pages/fileupload.xhtml"/>
 	</url-mapping>
 
+	<!-- Categories -->
 	<url-mapping id="admin_category_list">
 		<pattern value="/admin/categories" />
 		<view-id value="/admin/category-list.xhtml" />
 	</url-mapping>
-
 	<url-mapping id="admin_category_edit">
 		<pattern value="/admin/categories/#{/\\d+/ id}" />
 		<view-id value="/admin/category-edit.xhtml" />
@@ -40,6 +40,17 @@
 	<url-mapping id="viewCategory">
 		<pattern value="/view/#{c}" />
 		<view-id value="/view.xhtml" />
+	</url-mapping>
+
+
+	<!-- Photos -->
+	<url-mapping id="admin_photo_list">
+		<pattern value="/admin/photos" />
+		<view-id value="/admin/photo-list.xhtml" />
+	</url-mapping>
+	<url-mapping id="admin_photo_edit">
+		<pattern value="/admin/photos/#{/\\d+/ id}" />
+		<view-id value="/admin/photo-edit.xhtml" />
 	</url-mapping>
 
 </pretty-config>

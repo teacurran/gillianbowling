@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import javax.faces.bean.ViewScoped;
 import javax.faces.convert.Converter;
 import javax.imageio.ImageIO;
@@ -15,6 +16,7 @@ import javax.persistence.EntityManager;
 
 import com.gillianbowling.data.model.Category;
 import com.gillianbowling.data.model.Photo;
+import com.gillianbowling.data.repositories.PhotoRepository;
 import com.gillianbowling.services.Configuration;
 import com.gillianbowling.web.coverters.GenericEntityConverter;
 import org.apache.deltaspike.jpa.api.transaction.Transactional;
@@ -33,11 +35,15 @@ public class PhotoManager implements Serializable {
 	@Inject
 	Configuration configuration;
 
+	@Inject
+	PhotoRepository photoRepository;
+
 	Boolean newRecord = false;
 	Integer id = null;
 	InputStream newFile;
 	String newFileName = null;
 	Photo photo;
+	List<Photo> list;
 
 	@Transactional
 	public Photo getPhoto() {
@@ -55,6 +61,13 @@ public class PhotoManager implements Serializable {
 		}
 
 		return photo;
+	}
+
+	public List<Photo> getList() {
+		if (list == null) {
+			list = photoRepository.findAll();
+		}
+		return list;
 	}
 
 	public String save() {
