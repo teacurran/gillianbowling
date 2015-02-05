@@ -4,20 +4,26 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.Date;
+import javax.faces.bean.ViewScoped;
+import javax.faces.convert.Converter;
 import javax.imageio.ImageIO;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 
+import com.gillianbowling.data.model.Category;
 import com.gillianbowling.data.model.Photo;
 import com.gillianbowling.services.Configuration;
+import com.gillianbowling.web.coverters.GenericEntityConverter;
 import org.apache.deltaspike.jpa.api.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Named
-public class PhotoManager {
+@ViewScoped
+public class PhotoManager implements Serializable {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(CategoryManager.class);
 
@@ -140,6 +146,14 @@ public class PhotoManager {
 				}
 			}
 		}
+	}
+
+	/**
+	 * @return
+	 * 		Converter instance.
+	 */
+	public Converter getConverter() {
+		return new GenericEntityConverter<>(Photo.class, em);
 	}
 
 	public InputStream getNewFile() {

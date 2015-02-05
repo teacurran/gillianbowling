@@ -33,13 +33,18 @@
 					<h:outputText id="fieldId" value="#{categoryManager.category.id}"/>
 					<p:message for="fieldId"/>
 
-					<h:outputLabel for="fieldParent" value="Id"/>
-					<h:selectOneListbox id="fieldParent" value="#{categoryManager.category.parent}"
-										styleClass="clientSelectBox" size="1" required="false" immediate="true">
+					<h:outputLabel for="fieldParent" value="Parent"/>
+					<p:selectOneMenu id="fieldParent"
+										  value="#{categoryManager.category.parent}"
+										  required="false"
+										  immediate="true"
+										  hideNoSelectionOption="false"
+										  >
+						<f:selectItem itemLabel="please choose..." itemValue=""/>
 						<f:selectItems value="#{categoryManager.availableParents}" var="_cat"
-									   label="#{_cat.name}" noSelectionLabel="please choose..."/>
+									   itemLabel="#{_cat.name}" noSelectionLabel="please choose..."/>
 						<f:converter binding="#{categoryManager.converter}"/>
-					</h:selectOneListbox>
+					</p:selectOneMenu>
 					<p:message for="fieldParent"/>
 
 					<h:outputLabel for="fieldName" value="Name"/>
@@ -67,24 +72,20 @@
 					<h:outputLabel for="fieldPhotoSort" value="Photo Sorting"/>
 					<p:orderList id="fieldPhotoSort" value="#{categoryManager.photos}" var="_photo"
 								 itemValue="#{_photo}"
-								 converter="#{categoryManager.converter}"
-								 controlsLocation="left">
+								 converter="#{photoManager.converter}"
+								 controlsLocation="left"
+								 styleClass="photoSorter">
 
 						<f:facet name="caption">Photos</f:facet>
 
-						<p:column style="width:25%">
-							<h:outputText styleClass="ui-theme ui-theme-#{theme.name}"/>
-
-							<h:outputText rendered="#{not empty _photo.fileName}">
+						<p:column width="180">
+							<p:panel rendered="#{not empty _photo.fileName}">
 								<img src="#{request.contextPath}/media/50x/#{_photo.fileName}" class="image"
 									 alt="#{_photo.description}"/>
-							</h:outputText>
-
+							</p:panel>
+							<h:outputText rendered="#{empty _photo.fileName}" value="#{_photo.description}"/>
 						</p:column>
 
-						<p:column style="width:75%;">
-							<h:outputText rendered="#{empty _photo.fileName}" value="Text Block"/>
-						</p:column>
 					</p:orderList>
 					<p:message for="fieldPhotoSort"/>
 
@@ -98,7 +99,7 @@
 
 			<div class="actionButtons">
 
-				<h:commandButton id="save"
+				<p:commandButton id="save"
 								 value="Save"
 								 action="#{categoryManager.save}"
 								 />

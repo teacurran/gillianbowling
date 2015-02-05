@@ -1,5 +1,7 @@
 package com.gillianbowling.services.manager;
 
+import java.io.Serializable;
+import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
@@ -8,7 +10,8 @@ import com.gillianbowling.services.Configuration;
 import org.apache.deltaspike.jpa.api.transaction.Transactional;
 
 @Named
-public class ConfigurationManager {
+@ViewScoped
+public class ConfigurationManager implements Serializable {
 
 	@Inject
 	protected EntityManager em;

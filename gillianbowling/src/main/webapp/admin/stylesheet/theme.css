@@ -188,107 +188,14 @@ select {
 	padding: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* the specificity here is necessary to override the defaults */
-/*
-.rich-panel .rich-panel-header,
-.rich-stglpanel .rich-stglpanel-header {
-	padding: 2px 3px;
-}*/
-
-.rich-panel input[type=submit], .rich-panel input[type=button],
-.rich-tabpanel input[type=submit], .rich-tabpanel input[type=button] {
-	margin-bottom: 0;
+.photoSorter  .ui-orderlist-list{
+	width: 200px;
+	height: 400px;
 }
 
-.tableControl input[type=submit], .tableControl input[type=button], .tableControl select {
-	margin: 5px 0 5px 5px;
-}
-
-/* I don't know why this is necessary, but the select is off by a pixel on the top and is padding too much on the left */
-.tableControl select {
-	margin-left: 2px;
-	position: relative;
-	top: 1px;
-}
-
-.actionButtons {
-	padding-left: 1px;
-}
-
-.actionButtons select {
-	margin: 5px 5px 5px 0;
-	vertical-align: bottom;
-}
-
-.rich-toolbar-item a {
-	text-decoration: none;
-}
-
-.rich-toolbar-item a:hover, .rich-ddmenu-label-select {
-	text-decoration: underline;
-}
-
-.rich-toolbar-item .rich-menu-item a:hover {
-	text-decoration: none;
-}
-
-.rich-datalist {
-	list-style: square;
-	margin: 6px 0 1px 0;
-	padding-left: 18px;
-}
-
-.rich-list-item {
-	padding-bottom: 4px;
-}
-
-div.info {
-	font-size: 1.2em;
-}
-
-ul.bullets {
-	list-style: square;
-}
-
-ul.bullets li {
-	padding-bottom: 2px;
-}
-
-td.action {
-	text-align: center;
-	width: 8em;
-	white-space: nowrap;
-}
-
-td.action a {
-	padding-left: 1px;
-	padding-right: 1px;
-}
-
-table.radio {
-   border: 0;
-}
-
-table.radio td {
-   padding: 0 2px;
-}
-
-table.radio input[type=radio] {
-   vertical-align: bottom;
+.detail-grid .label {
+	background-color: #f5f5f5;
+	vertical-align: top;
+	padding: 5px;
+	font-weight: bold;
 }

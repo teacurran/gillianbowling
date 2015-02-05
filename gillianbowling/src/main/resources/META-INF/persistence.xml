@@ -4,7 +4,13 @@
 	<persistence-unit name="gbowlingportfolio" transaction-type="JTA">
 		<jta-data-source>gbowlingportfolio-ds</jta-data-source>
 
-		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<class>com.gillianbowling.data.model.Category</class>
+		<class>com.gillianbowling.data.model.ConfigurationProperty</class>
+		<class>com.gillianbowling.data.model.GeneratedIdEntity</class>
+		<class>com.gillianbowling.data.model.Photo</class>
+
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+
 		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
 
 		<properties>
