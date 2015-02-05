@@ -40,9 +40,10 @@
 										  immediate="true"
 										  hideNoSelectionOption="false"
 										  >
-						<f:selectItem itemLabel="please choose..." itemValue=""/>
-						<f:selectItems value="#{categoryManager.availableParents}" var="_cat"
-									   itemLabel="#{_cat.name}" noSelectionLabel="please choose..."/>
+						<f:selectItem itemLabel="please choose..." noSelectionOption="true"/>
+						<f:selectItems value="#{categoryManager.availableParents}"
+									   var="_cat"
+									   itemLabel="#{_cat.name}"/>
 						<f:converter binding="#{categoryManager.converter}"/>
 					</p:selectOneMenu>
 					<p:message for="fieldParent"/>
