@@ -8,121 +8,65 @@
 <ui:composition template="layout/template.xhtml">
 	<ui:define name="body">
 
-		<h:form id="categorySearch" styleClass="edit">
+		<h:form id="mainForm">
 
-			<p:accordionPanel label="Category Search Filter" switchType="ajax">
+			<p:dataTable id="categoryList"
+						 value="#{categoryManager.list}"
+						 var="_category"
+						 paginator="true"
+						 paginatorAlwaysVisible="false"
+						 paginatorPosition="bottom"
+						 rows="20"
+						 sortBy="#{_category.name}"
+						 sortOrder="DESCENDING"
+					>
 
-				<ui:decorate template="layout/display.xhtml">
-					<ui:define name="label">Name</ui:define>
-					<h:inputText id="name" value="#{categoryManager.category.name}"/>
-				</ui:decorate>
+				<p:column sortBy="#{_category.id}">
+					<f:facet name="header">
+						<h:outputText value="Id"/>
+					</f:facet>
+					<h:link value="#{_category.id}" outcome="/admin/category-edit.xhtml">
+						<f:param name="id" value="#{_category.id}"/>
+					</h:link>
+				</p:column>
 
-			</p:accordionPanel>
+				<p:column sortBy="#{_category.parent.name}">
+					<f:facet name="header">
+						<h:outputText value="Parent"/>
+					</f:facet>
+					<h:link value="#{_category.parent.name}" outcome="/admin/category-edit.xhtml">
+						<f:param name="id" value="#{_category.id}"/>
+					</h:link>
+				</p:column>
 
-			<div class="actionButtons">
-				<h:commandButton id="search" value="Search" action="/admin/categoryList.xhtml"/>
-				<p:button id="reset" value="Reset" includePageParams="false"/>
+				<p:column sortBy="#{_category.name}">
+					<f:facet name="header">
+						<h:outputText value="Name"/>
+					</f:facet>
+					<h:link value="#{_category.name}" outcome="/admin/category-edit.xhtml">
+						<f:param name="id" value="#{_category.id}"/>
+					</h:link>
+				</p:column>
+
+				<p:column sortBy="#{_category.code}">
+					<f:facet name="header">
+						<h:outputText value="Code"/>
+					</f:facet>
+					<h:link value="#{_category.code}" outcome="/admin/category-edit.xhtml">
+						<f:param name="id" value="#{_category.id}"/>
+					</h:link>
+				</p:column>
+			</p:dataTable>
+
+
+			<div class="action-row">
+				<p:button outcome="/admin/category-edit.xhtml"
+						  value="#{I18n['ui.categories.create']}" styleClass="button-detail-edit">
+				</p:button>
 			</div>
 
 		</h:form>
 
-		<p:panel>
-			<f:facet
-					name="header">Category Search Results (#{empty categoryManager.list ? 0 : fn:length(categoryManager.list)})</f:facet>
-
-			<div class="results" id="results">
-
-				<h:outputText value="The category search returned no results."
-							  rendered="#{empty categoryManager.list}"/>
-
-				<p:dataTable id="categoryList"
-								var="_category"
-								value="#{categoryManager.list}"
-								rendered="#{not empty categoryManager.list}">
-
-					<p:column sortBy="#{_category.id}">
-						<f:facet name="header">
-							<h:outputText value="Id" />
-						</f:facet>
-						<h:link value="#{_category.id}" outcome="/admin/category-edit.xhtml">
-							<f:param name="id" value="#{_category.id}" />
-						</h:link>
-					</p:column>
-
-					<p:column sortBy="#{_category.parent.name}">
-						<f:facet name="header">
-							<h:outputText value="Parent" />
-						</f:facet>
-						<h:link value="#{_category.parent.name}" outcome="/admin/category-edit.xhtml">
-							<f:param name="id" value="#{_category.id}" />
-						</h:link>
-					</p:column>
-
-					<p:column sortBy="#{_category.name}">
-						<f:facet name="header">
-							<h:outputText value="Name" />
-						</f:facet>
-						<h:link value="#{_category.name}" outcome="/admin/category-edit.xhtml">
-							<f:param name="id" value="#{_category.id}" />
-						</h:link>
-					</p:column>
-
-					<p:column sortBy="#{_category.code}">
-						<f:facet name="header">
-							<h:outputText value="Code" />
-						</f:facet>
-						<h:link value="#{_category.code}" outcome="/admin/category-edit.xhtml">
-							<f:param name="id" value="#{_category.id}" />
-						</h:link>
-					</p:column>
-				</p:dataTable>
-
-			</div>
-		</p:panel>
-
-		<div class="tableControl">
-
-			<p:link view="/admin/categoryList.xhtml"
-					rendered="#{categoryList.previousExists}"
-					value="#{messages.left}#{messages.left} First Page"
-					id="firstPage">
-				<f:param name="firstResult" value="0"/>
-			</p:link>
-
-			<p:link view="/admin/categoryList.xhtml"
-					rendered="#{categoryList.previousExists}"
-					value="#{messages.left} Previous Page"
-					id="previousPage">
-				<f:param name="firstResult"
-						 value="#{categoryList.previousFirstResult}"/>
-			</p:link>
-
-			<p:link view="/admin/categoryList.xhtml"
-					rendered="#{categoryList.nextExists}"
-					value="Next Page #{messages.right}"
-					id="nextPage">
-				<f:param name="firstResult"
-						 value="#{categoryList.nextFirstResult}"/>
-			</p:link>
-
-			<p:link view="/admin/categoryList.xhtml"
-					rendered="#{categoryList.nextExists}"
-					value="Last Page #{messages.right}#{messages.right}"
-					id="lastPage">
-				<f:param name="firstResult"
-						 value="#{categoryList.lastFirstResult}"/>
-			</p:link>
-
-		</div>
-
-		<h:panelGroup styleClass="actionButtons" rendered="#{empty from}">
-			<p:button view="/admin/CategoryEdit.xhtml"
-					  id="create"
-					  propagation="none"
-					  value="Create Category">
-				<f:param name="categoryId"/>
-			</p:button>
-		</h:panelGroup>
 
 	</ui:define>
 

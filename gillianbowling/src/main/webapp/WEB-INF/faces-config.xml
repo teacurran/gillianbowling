@@ -26,5 +26,12 @@
 	</navigation-rule>
 
 
+	<application>
+		<resource-bundle>
+			<base-name>com.gillianbowling.locales.I18n</base-name>
+			<var>I18n</var>
+		</resource-bundle>
+	</application>
+
 
 </faces-config>
