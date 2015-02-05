@@ -21,8 +21,11 @@ import com.gillianbowling.Constants;
 import com.gillianbowling.data.repositories.CategoryRepository;
 import com.gillianbowling.data.model.Category;
 import com.gillianbowling.data.model.Photo;
+import com.gillianbowling.locales.I18n;
 import com.gillianbowling.services.Configuration;
 import com.gillianbowling.web.coverters.GenericEntityConverter;
+import org.apache.deltaspike.jpa.api.transaction.Transactional;
+import org.apache.deltaspike.jsf.api.message.JsfMessage;
 import org.primefaces.event.SelectEvent;
 import org.primefaces.event.UnselectEvent;
 import org.slf4j.Logger;
@@ -42,6 +45,9 @@ public class CategoryManager implements Serializable {
 
 	@Inject
 	CategoryRepository categoryRepository;
+
+	@Inject
+	private JsfMessage<I18n> messages;
 
 	InputStream newPhotoFile;
 	String newPhotoFilename = null;
@@ -235,6 +241,18 @@ public class CategoryManager implements Serializable {
 		return new GenericEntityConverter<>(Category.class, em);
 	}
 
+	/**
+	 * @return
+	 * 		String instance.
+	 */
+	@Transactional
+	public String save() {
+		category = em.merge(category);
+		messages.addInfo().categorySaved();
+		return Constants.ACTION_SUCCESS;
+	}
+
+
 	public Integer getId() {
 		return id;
 	}
@@ -247,16 +265,5 @@ public class CategoryManager implements Serializable {
 		FacesContext context = FacesContext.getCurrentInstance();
 		context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Selected", event.getObject()
 				.toString()));
-	}
-
-	public void onUnselect(UnselectEvent event) {
-		FacesContext context = FacesContext.getCurrentInstance();
-		context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Unselected", event.getObject()
-				.toString()));
-	}
-
-	public void onReorder() {
-		FacesContext context = FacesContext.getCurrentInstance();
-		context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "List Reordered", null));
 	}
 }
