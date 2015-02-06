@@ -22,12 +22,11 @@ import com.gillianbowling.data.repositories.CategoryRepository;
 import com.gillianbowling.data.model.Category;
 import com.gillianbowling.data.model.Photo;
 import com.gillianbowling.locales.I18n;
-import com.gillianbowling.services.Configuration;
+import com.gillianbowling.services.ConfigurationService;
 import com.gillianbowling.web.coverters.GenericEntityConverter;
 import org.apache.deltaspike.jpa.api.transaction.Transactional;
 import org.apache.deltaspike.jsf.api.message.JsfMessage;
 import org.primefaces.event.SelectEvent;
-import org.primefaces.event.UnselectEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,7 +40,7 @@ public class CategoryManager implements Serializable {
 	protected EntityManager em;
 
 	@Inject
-	Configuration configuration;
+	ConfigurationService configuration;
 
 	@Inject
 	CategoryRepository categoryRepository;

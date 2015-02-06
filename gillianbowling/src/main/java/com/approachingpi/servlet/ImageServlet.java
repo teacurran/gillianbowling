@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.gillianbowling.services.Configuration;
+import com.gillianbowling.services.ConfigurationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sun.awt.image.BufferedImageGraphicsConfig;
@@ -28,7 +28,7 @@ public class ImageServlet extends HttpServlet {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ImageServlet.class);
 
 	@Inject
-	Configuration configuration;
+	ConfigurationService configuration;
 
 	public ImageServlet() {
 
@@ -224,7 +224,7 @@ public class ImageServlet extends HttpServlet {
 		}
 	}
 
-	public boolean generateImage(BufferedImage image, File scaledFile, int new_width, int new_height, int quality, String format, Configuration config) throws IOException {
+	public boolean generateImage(BufferedImage image, File scaledFile, int new_width, int new_height, int quality, String format, ConfigurationService config) throws IOException {
 		double w = image.getWidth(null);
 		double h = image.getHeight(null);
 

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+<ui:composition template="layout/template.xhtml">
+	<ui:define name="body">
+
+		<h:form id="mainForm">
+
+			<p:dataTable id="resultList"
+						 value="#{configurationManager.list}"
+						 var="_item"
+						 paginator="true"
+						 paginatorAlwaysVisible="false"
+						 paginatorPosition="bottom"
+						 rows="20"
+						 sortBy="#{_item.id}"
+						 sortOrder="DESCENDING"
+					>
+
+				<p:column sortBy="#{_item.id}">
+					<f:facet name="header">
+						<h:outputText value="Id"/>
+					</f:facet>
+					<h:link value="#{_item.id}" outcome="/admin/configuration-property-edit.xhtml">
+						<f:param name="id" value="#{_item.id}"/>
+					</h:link>
+				</p:column>
+
+				<p:column sortBy="#{_item.code}">
+					<f:facet name="header">
+						<h:outputText value="Code"/>
+					</f:facet>
+					<h:outputText value="#{_item.code}"/>
+				</p:column>
+
+				<p:column sortBy="#{_item.defaultValue}">
+					<f:facet name="header">
+						<h:outputText value="Default Value"/>
+					</f:facet>
+					<h:outputText value="#{_item.defaultValue}"/>
+				</p:column>
+
+				<p:column sortBy="#{_item.type}">
+					<f:facet name="header">
+						<h:outputText value="Type"/>
+					</f:facet>
+					<h:outputText value="#{_item.type}"/>
+				</p:column>
+
+				<p:column sortBy="#{_item.value}">
+					<f:facet name="header">
+						<h:outputText value="Value"/>
+					</f:facet>
+					<h:outputText value="#{_item.value}"/>
+				</p:column>
+
+				<p:column styleClass="action">
+					<f:facet name="header">Action</f:facet>
+					<p:link view="/admin/configuration-property-view.xhtml"
+							value="view"
+							id="configurationPropertyViewId">
+						<f:param name="id" value="#{_item.id}"/>
+					</p:link>
+					#{' '}
+					<p:link view="/admin/configuration-property-edit.xhtml"
+							value="edit"
+							propagation="none"
+							id="configurationPropertyEdit">
+						<f:param name="id" value="#{_item.id}"/>
+					</p:link>
+				</p:column>
+			</p:dataTable>
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+
+</html>
