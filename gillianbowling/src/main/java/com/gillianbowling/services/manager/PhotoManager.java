@@ -15,7 +15,7 @@ import javax.inject.Named;
 import javax.persistence.EntityManager;
 
 import com.gillianbowling.data.model.Photo;
-import com.gillianbowling.data.repositories.ConfigurationPropertyRepository;
+import com.gillianbowling.data.repositories.ConfigurationRepository;
 import com.gillianbowling.data.repositories.PhotoRepository;
 import com.gillianbowling.web.coverters.GenericEntityConverter;
 import org.apache.deltaspike.jpa.api.transaction.Transactional;
@@ -32,7 +32,7 @@ public class PhotoManager implements Serializable {
 	protected EntityManager em;
 
 	@Inject
-	ConfigurationPropertyRepository configuration;
+	ConfigurationRepository configuration;
 
 	@Inject
 	PhotoRepository photoRepository;

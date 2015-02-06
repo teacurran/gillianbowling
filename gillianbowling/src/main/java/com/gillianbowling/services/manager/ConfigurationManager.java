@@ -7,8 +7,8 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 
-import com.gillianbowling.data.model.ConfigurationProperty;
-import com.gillianbowling.data.repositories.ConfigurationPropertyRepository;
+import com.gillianbowling.data.model.configuration;
+import com.gillianbowling.data.repositories.ConfigurationRepository;
 import org.apache.deltaspike.jpa.api.transaction.Transactional;
 
 @Named
@@ -19,14 +19,14 @@ public class ConfigurationManager implements Serializable {
 	protected EntityManager em;
 
 	@Inject
-	ConfigurationPropertyRepository configurationPropertyRepository;
+	ConfigurationRepository configurationPropertyRepository;
 
 	Integer id = null;
 	boolean newRecord = false;
-	private ConfigurationProperty configuration;
-	private List<ConfigurationProperty> list;
+	private com.gillianbowling.data.model.configuration configuration;
+	private List<com.gillianbowling.data.model.configuration> list;
 
-	public List<ConfigurationProperty> getList() {
+	public List<com.gillianbowling.data.model.configuration> getList() {
 		if (list == null) {
 			list = configurationPropertyRepository.findAll();
 		}
@@ -34,13 +34,13 @@ public class ConfigurationManager implements Serializable {
 	}
 
 	@Transactional
-	public ConfigurationProperty getConfigurationProperty() {
+	public com.gillianbowling.data.model.configuration getConfigurationProperty() {
 		if (configuration == null) {
 			if (id == null) {
-				configuration = new ConfigurationProperty();
+				configuration = new configuration();
 				newRecord = true;
 			} else {
-				configuration = em.find(ConfigurationProperty.class, id);
+				configuration = em.find(com.gillianbowling.data.model.configuration.class, id);
 
 				if (configuration == null) {
 					id = null;

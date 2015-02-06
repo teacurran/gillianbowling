@@ -1,14 +1,10 @@
 package com.gillianbowling.data.model;
 
-import static javax.persistence.GenerationType.AUTO;
-
 import java.io.Serializable;
 
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.QueryHint;
@@ -20,20 +16,20 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Cacheable
-@Table(name = "ConfigurationProperty", uniqueConstraints = @UniqueConstraint(columnNames = "code"))
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "code"))
 @NamedQueries({
-		@NamedQuery(name = ConfigurationProperty.NAMED_QUERY_GET_ALL,
+		@NamedQuery(name = configuration.NAMED_QUERY_GET_ALL,
 			query = "SELECT c " +
-					"FROM ConfigurationProperty c",
+					"FROM configuration c",
 			hints = {
 					@QueryHint(name = "org.hibernate.cacheable", value = "true"),
 					@QueryHint(name = "org.hibernate.cacheRegion", value = "configurationPropertyQueries")
 			}
 		),
 
-		@NamedQuery(name = ConfigurationProperty.NAMED_QUERY_GET_BY_ID,
+		@NamedQuery(name = configuration.NAMED_QUERY_GET_BY_ID,
 			query = "SELECT c " +
-					"FROM ConfigurationProperty c " +
+					"FROM configuration c " +
 					"WHERE id  = :id",
 			hints = {
 					@QueryHint(name = "org.hibernate.cacheable", value = "true"),
@@ -41,9 +37,9 @@ import javax.validation.constraints.NotNull;
 			}
 		),
 
-		@NamedQuery(name = ConfigurationProperty.NAMED_QUERY_GET_BY_CODE,
+		@NamedQuery(name = configuration.NAMED_QUERY_GET_BY_CODE,
 			query = "SELECT c " +
-					"FROM ConfigurationProperty c " +
+					"FROM configuration c " +
 					"WHERE code  = :code",
 			hints = {
 					@QueryHint(name = "org.hibernate.cacheable", value = "true"),
@@ -51,7 +47,7 @@ import javax.validation.constraints.NotNull;
 			}
 		)
 })
-public class ConfigurationProperty extends GeneratedIdEntity implements Serializable {
+public class configuration extends GeneratedIdEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	public static final String NAMED_QUERY_GET_ALL = "configurationProperty.getAll";
@@ -64,7 +60,7 @@ public class ConfigurationProperty extends GeneratedIdEntity implements Serializ
 	private String defaultValue;
 	private Long version; // for optimistic locking
 
-	public ConfigurationProperty() {
+	public configuration() {
 	}
 
 	@Transient
@@ -162,7 +158,7 @@ public class ConfigurationProperty extends GeneratedIdEntity implements Serializ
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
-		final ConfigurationProperty other = (ConfigurationProperty) obj;
+		final configuration other = (configuration) obj;
 		if (id == null) {
 			if (other.id != null) {
 				return false;

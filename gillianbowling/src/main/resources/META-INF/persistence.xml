@@ -5,7 +5,7 @@
 		<jta-data-source>gbowlingportfolio-ds</jta-data-source>
 
 		<class>com.gillianbowling.data.model.Category</class>
-		<class>com.gillianbowling.data.model.ConfigurationProperty</class>
+		<class>com.gillianbowling.data.model.configuration</class>
 		<class>com.gillianbowling.data.model.GeneratedIdEntity</class>
 		<class>com.gillianbowling.data.model.Photo</class>
 
