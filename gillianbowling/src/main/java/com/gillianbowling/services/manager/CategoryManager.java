@@ -66,6 +66,20 @@ public class CategoryManager implements Serializable {
 		return list;
 	}
 
+	public List<Category> getListWithOrderedChildren() {
+		List<Category> results = new ArrayList<>();
+		List<Category> topCats = categoryRepository.findTopLevel();
+
+		for (Category category : topCats) {
+			results.add(category);
+			for (Category child : category.getChildren()) {
+				results.add(child);
+			}
+		}
+		return results;
+
+	}
+
 	public List<Category> getTopLevelCats() {
 		if (topLevelCategories == null) {
 			TypedQuery<Category> query = em.createNamedQuery(Category.NAMED_QUERY_TOP_LEVEL, Category.class);
@@ -99,8 +113,7 @@ public class CategoryManager implements Serializable {
 	}
 
 	public List<Category> getAvailableParents() {
-		TypedQuery<Category> query = em.createNamedQuery(Category.NAMED_QUERY_TOP_LEVEL, Category.class);
-		List<Category> results = query.getResultList();
+		List<Category> results = categoryRepository.findTopLevel();
 
 		List<Category> returnList = new ArrayList<>();
 		for (Category ag : results) {

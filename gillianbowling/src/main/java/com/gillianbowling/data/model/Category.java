@@ -24,9 +24,9 @@ import static javax.persistence.GenerationType.AUTO;
 	@NamedQuery(name = Category.NAMED_QUERY_TOP_LEVEL,
 			query = "SELECT distinct(a) " +
 					"FROM Category a " +
-					"LEFT JOIN FETCH a.children " +
+					"LEFT JOIN FETCH a.children c " +
 					"WHERE a.parent IS NULL " +
-					"ORDER BY a.rank"
+					"ORDER BY a.rank, c.rank"
 	)
 })
 public class Category extends GeneratedIdEntity implements Serializable {
@@ -60,7 +60,7 @@ public class Category extends GeneratedIdEntity implements Serializable {
 
 	public String getNameWithParent() {
 		if (getParent() != null) {
-			return getParent().getName() + " - " + getName();
+			return getParent().getName() + " > " + getName();
 		}
 		return getName();
 	}

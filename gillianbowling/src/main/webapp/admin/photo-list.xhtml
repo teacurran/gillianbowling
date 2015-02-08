@@ -21,7 +21,7 @@
 				<p:panelGrid columns="2" layout="grid">
 					<p:selectOneMenu id="filterCategory" value="#{photoManager.filterCatId}">
 						<f:selectItem itemLabel="[Category]" noSelectionOption="true"/>
-						<f:selectItems value="#{categoryManager.list}" var="_cat"
+						<f:selectItems value="#{categoryManager.listWithOrderedChildren}" var="_cat"
 									   itemLabel="#{_cat.nameWithParent}"
 									   itemValue="#{_cat.id}"/>
 					</p:selectOneMenu>
