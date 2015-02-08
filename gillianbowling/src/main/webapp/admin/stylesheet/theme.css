@@ -15,6 +15,10 @@ body {
 	margin: 0px;
 }
 
+.content {
+	padding: 5px 5px 50px 5px;
+}
+
 .body {
 	padding: 30px;
 }
@@ -198,4 +202,14 @@ select {
 	vertical-align: top;
 	padding: 5px;
 	font-weight: bold;
+}
+
+.wrapper {
+	width: 95%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.ui-panel {
+	margin-bottom: 20px;
 }

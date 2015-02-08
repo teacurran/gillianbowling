@@ -2,6 +2,7 @@ package com.gillianbowling.data.repositories;
 
 import java.util.List;
 
+import com.gillianbowling.data.model.Category;
 import com.gillianbowling.data.model.Photo;
 import org.apache.deltaspike.data.api.AbstractEntityRepository;
 import org.apache.deltaspike.data.api.Query;
@@ -19,5 +20,8 @@ public abstract class PhotoRepository extends AbstractEntityRepository<Photo, In
 	public abstract List<Photo> find3RandomFeatured(
 			@QueryParam("orientation") int orientation,
 			@QueryParam("limit") int limit);
+
+
+	public abstract List<Photo> findByCategory(Category category);
 
 }

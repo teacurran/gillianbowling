@@ -21,7 +21,7 @@
 		<view-id value="/admin/category-list.xhtml" />
 	</url-mapping>
 	<url-mapping id="admin_category_edit">
-		<pattern value="/admin/categories/#{/\\d+/ id}" />
+		<pattern value="/admin/categories/#{/\\d+/ id}/edit" />
 		<view-id value="/admin/category-edit.xhtml" />
 	</url-mapping>
 
@@ -54,8 +54,12 @@
 		<pattern value="/admin/photos" />
 		<view-id value="/admin/photo-list.xhtml" />
 	</url-mapping>
+	<url-mapping id="admin_photo_view">
+		<pattern value="/admin/photos/#{/\\d+/ id}/view" />
+		<view-id value="/admin/photo-view.xhtml" />
+	</url-mapping>
 	<url-mapping id="admin_photo_edit">
-		<pattern value="/admin/photos/#{/\\d+/ id}" />
+		<pattern value="/admin/photos/#{/\\d+/ id}/edit" />
 		<view-id value="/admin/photo-edit.xhtml" />
 	</url-mapping>
 

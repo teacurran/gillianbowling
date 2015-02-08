@@ -5,10 +5,30 @@
 	  xmlns:f="http://java.sun.com/jsf/core"
 	  xmlns:p="http://primefaces.org/ui"
 	  xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+<ui:define name="metadata">
+	<f:metadata>
+		<f:viewParam name="cat" value="#{photoManager.filterCatId}"/>
+	</f:metadata>
+</ui:define>
+
 <ui:composition template="layout/template.xhtml">
 	<ui:define name="body">
 
 		<h:form id="mainForm">
+
+			<p:panel header="#{I18n['ui.filter']}" styleClass="search-criteria">
+				<p:panelGrid columns="2" layout="grid">
+					<p:selectOneMenu id="filterCategory" value="#{photoManager.filterCatId}">
+						<f:selectItem itemLabel="[Category]" noSelectionOption="true"/>
+						<f:selectItems value="#{categoryManager.list}" var="_cat"
+									   itemLabel="#{_cat.nameWithParent}"
+									   itemValue="#{_cat.id}"/>
+					</p:selectOneMenu>
+					<p:commandButton action="/admin/photo-list.xhtml?faces-redirect=true&amp;includeViewParams=true"
+									 value="filter"/>
+				</p:panelGrid>
+			</p:panel>
 
 			<p:dataTable id="resultList"
 						 value="#{photoManager.list}"
@@ -78,18 +98,11 @@
 
 				<p:column styleClass="action">
 					<f:facet name="header">Action</f:facet>
-					<p:link view="/admin/#{empty from ? 'Photo' : from}.xhtml"
-							value="#{empty from ? 'View' : 'Select'}"
-							propagation="#{empty from ? 'none' : 'default'}"
-							id="photoViewId">
+					<p:link outcome="/admin/photo-edit.xhtml" value="View" id="photoViewId">
 						<f:param name="id" value="#{_photo.id}"/>
 					</p:link>
 					#{' '}
-					<p:link view="/admin/PhotoEdit.xhtml"
-							value="Edit"
-							propagation="none"
-							id="photoEdit"
-							rendered="#{empty from}">
+					<p:link outcome="/admin/photo-edit.xhtml" value="Edit" propagation="none" id="photoEdit">
 						<f:param name="id" value="#{_photo.id}"/>
 					</p:link>
 				</p:column>

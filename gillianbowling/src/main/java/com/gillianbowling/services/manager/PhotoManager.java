@@ -14,7 +14,9 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 
+import com.gillianbowling.data.model.Category;
 import com.gillianbowling.data.model.Photo;
+import com.gillianbowling.data.repositories.CategoryRepository;
 import com.gillianbowling.data.repositories.ConfigurationRepository;
 import com.gillianbowling.data.repositories.PhotoRepository;
 import com.gillianbowling.web.coverters.GenericEntityConverter;
@@ -37,12 +39,16 @@ public class PhotoManager implements Serializable {
 	@Inject
 	PhotoRepository photoRepository;
 
+	@Inject
+	CategoryRepository categoryRepository;
+
 	Boolean newRecord = false;
 	Integer id = null;
 	InputStream newFile;
 	String newFileName = null;
 	Photo photo;
 	List<Photo> list;
+	Integer filterCatId = null;
 
 	@Transactional
 	public Photo getPhoto() {
@@ -64,7 +70,16 @@ public class PhotoManager implements Serializable {
 
 	public List<Photo> getList() {
 		if (list == null) {
-			list = photoRepository.findAll();
+			Category filterCategory = null;
+			if (filterCatId != null) {
+				filterCategory = categoryRepository.findBy(filterCatId);
+			}
+
+			if (filterCategory != null) {
+				list = photoRepository.findByCategory(filterCategory);
+			} else {
+				list = photoRepository.findAll();
+			}
 		}
 		return list;
 	}
@@ -190,5 +205,13 @@ public class PhotoManager implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public Integer getFilterCatId() {
+		return filterCatId;
+	}
+
+	public void setFilterCatId(Integer filterCatId) {
+		this.filterCatId = filterCatId;
 	}
 }
