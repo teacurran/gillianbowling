@@ -54,6 +54,7 @@ public class Category extends GeneratedIdEntity implements Serializable {
 	@Column
 	Integer rank;
 
+
 	public String getName() {
 		return name;
 	}

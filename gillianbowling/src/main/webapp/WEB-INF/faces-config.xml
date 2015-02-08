@@ -25,6 +25,17 @@
 		</navigation-case>
 	</navigation-rule>
 
+	<navigation-rule>
+		<from-view-id>/admin/photo-edit.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{photoManager.save}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/admin/category-edit.xhtml</to-view-id>
+			<redirect include-view-params="true" />
+		</navigation-case>
+	</navigation-rule>
+
+
 
 	<application>
 		<resource-bundle>

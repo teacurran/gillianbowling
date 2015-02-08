@@ -26,7 +26,6 @@
 
 		<h:form id="mainForm" styleClass="edit">
 
-
 			<p:panel id="mainFormPanel">
 				<h:panelGrid columns="2" columnClasses="label, value" styleClass="detail-grid">
 
@@ -38,12 +37,12 @@
 
 					<h:outputLabel for="fieldCategory" value="#{I18n['ui.photos.category']}"/>
 					<h:panelGroup id="fieldCategory">
-						<h:selectOneListbox id="category" value="#{photoManager.photo.category}"
-											styleClass="clientSelectBox" size="1" required="true" immediate="true">
-							<f:selectItems value="#{categoryManager.list}" var="_cat" itemLabel="#{_cat.nameWithParent}"
-										   noSelectionLabel="please choose..."/>
-							<f:converter binding="#{categoryManager.converter}"/>
-						</h:selectOneListbox>
+						<p:selectOneMenu id="category" value="#{photoManager.photo.category}" required="true"
+								converter="#{categoryManager.converter}">
+							<f:selectItem itemLabel="[ Category ]" noSelectionOption="true" itemValue="#{null}"/>
+							<f:selectItems value="#{categoryManager.listWithOrderedChildren}" var="_cat"
+										   itemLabel="#{_cat.nameWithParent}"/>
+						</p:selectOneMenu>
 					</h:panelGroup>
 
 					<h:outputLabel for="fieldFeatured" value="#{I18n['ui.photos.homepage']}"/>
@@ -65,14 +64,16 @@
 					<h:inputText id="fieldRank" value="#{photoManager.photo.rank}"/>
 
 					<h:outputLabel for="fieldNewFile" value="#{I18n['ui.photos.upload']}"/>
-					<p:fileUpload id="fieldNewFile"/>
+					<p:fileUpload id="fieldNewFile" value="#{photoManager.file}"
+								  mode="simple" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+								  skinSimple="true"/>
 
 					<h:outputLabel for="fieldPhoto" value="#{I18n['ui.photos.photo']}"/>
 					<p:outputPanel id="fieldPhoto" rendered="#{not empty photoManager.photo.fileName}">
 						<ui:decorate id="image" template="layout/display.xhtml">
 							<ui:define name="label">Image</ui:define>
-							<img src="#{request.contextPath}/media/150x/#{photoHome.instance.fileName}" class="image"
-								 alt="#{photoHome.instance.description}"/>
+							<img src="#{request.contextPath}/media/150x/#{photoManager.photo.fileName}" class="image"
+								 alt="#{photoManager.photo.description}"/>
 						</ui:decorate>
 					</p:outputPanel>
 				</h:panelGrid>
@@ -87,6 +88,7 @@
 			<div class="actionButtons">
 				<p:commandButton id="buttonSave"
 								 value="Save"
+								 update=":headerForm, :mainForm"
 								 action="#{photoManager.save}"
 						/>
 			</div>

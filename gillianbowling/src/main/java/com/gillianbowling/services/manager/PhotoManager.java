@@ -14,13 +14,17 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 
+import com.gillianbowling.Constants;
 import com.gillianbowling.data.model.Category;
 import com.gillianbowling.data.model.Photo;
 import com.gillianbowling.data.repositories.CategoryRepository;
 import com.gillianbowling.data.repositories.ConfigurationRepository;
 import com.gillianbowling.data.repositories.PhotoRepository;
+import com.gillianbowling.locales.I18n;
 import com.gillianbowling.web.coverters.GenericEntityConverter;
 import org.apache.deltaspike.jpa.api.transaction.Transactional;
+import org.apache.deltaspike.jsf.api.message.JsfMessage;
+import org.primefaces.model.UploadedFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,10 +46,12 @@ public class PhotoManager implements Serializable {
 	@Inject
 	CategoryRepository categoryRepository;
 
+	@Inject
+	private JsfMessage<I18n> messages;
+
+	UploadedFile file;
 	Boolean newRecord = false;
 	Integer id = null;
-	InputStream newFile;
-	String newFileName = null;
 	Photo photo;
 	List<Photo> list;
 	Integer filterCatId = null;
@@ -92,16 +98,18 @@ public class PhotoManager implements Serializable {
 			em.merge(photo);
 		}
 
-		if (newFile != null) {
+		if (file != null) {
 			uploadPhoto();
 		}
 
-		return "success";
+		messages.addInfo().photoSaved();
+		return Constants.ACTION_SUCCESS;
 	}
 
 	public void uploadPhoto() {
 
 		Photo photo = getPhoto();
+		String newFileName = file.getFileName();
 		photo.setFileName(newFileName.replace(" ", "_"));
 
 		StringBuilder fileUri = new StringBuilder(200);
@@ -133,11 +141,13 @@ public class PhotoManager implements Serializable {
 			}
 
 			LOGGER.debug("saving image at:#0", fileUploadUri);
+
+			InputStream fileInputStream = file.getInputstream();
 			File file = new File(fileUploadUri);
 			fos = new FileOutputStream(file);
 			byte[] b=new byte[102400];
 			int readCnt=0;
-			while((readCnt= this.newFile.read(b))!= -1){
+			while((readCnt= fileInputStream.read(b))!= -1){
 				fos.write(b, 0, readCnt);
 				fos.flush();
 			}
@@ -183,20 +193,12 @@ public class PhotoManager implements Serializable {
 		return new GenericEntityConverter<>(Photo.class, em);
 	}
 
-	public InputStream getNewFile() {
-		return newFile;
+	public UploadedFile getFile() {
+		return file;
 	}
 
-	public void setNewFile(InputStream newFile) {
-		this.newFile = newFile;
-	}
-
-	public String getNewFileName() {
-		return newFileName;
-	}
-
-	public void setNewFileName(String newFileName) {
-		this.newFileName = newFileName;
+	public void setFile(UploadedFile file) {
+		this.file = file;
 	}
 
 	public Integer getId() {

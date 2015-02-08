@@ -62,5 +62,9 @@
 		<pattern value="/admin/photos/#{/\\d+/ id}/edit" />
 		<view-id value="/admin/photo-edit.xhtml" />
 	</url-mapping>
+	<url-mapping id="admin_photo_new">
+		<pattern value="/admin/photos/new" />
+		<view-id value="/admin/photo-edit.xhtml" />
+	</url-mapping>
 
 </pretty-config>
