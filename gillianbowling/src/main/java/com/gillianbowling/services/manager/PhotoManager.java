@@ -90,12 +90,13 @@ public class PhotoManager implements Serializable {
 		return list;
 	}
 
+	@Transactional
 	public String save() {
 		LOGGER.debug("Saving photo");
 
 		if (photo != null) {
 			photo.setDateModified(new Date());
-			em.merge(photo);
+			photo = em.merge(photo);
 		}
 
 		if (file != null) {
@@ -103,9 +104,11 @@ public class PhotoManager implements Serializable {
 		}
 
 		messages.addInfo().photoSaved();
-		return Constants.ACTION_SUCCESS;
+
+		return "photo-edit.xhtml?faces-redirect=true&id=" + photo.getId();
 	}
 
+	@Transactional
 	public void uploadPhoto() {
 
 		Photo photo = getPhoto();
@@ -168,7 +171,7 @@ public class PhotoManager implements Serializable {
 				}
 			}
 
-			em.merge(photo);
+			this.photo = em.merge(photo);
 			em.flush();
 		} catch (Exception ex) {
 			//java.util.logging.Logger.getLogger(UploadFile.class.getName()).log(Level.SEVERE, null, ex);

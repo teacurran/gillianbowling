@@ -24,7 +24,7 @@
 
 	<ui:define name="body">
 
-		<h:form id="mainForm" styleClass="edit">
+		<h:form id="mainForm" styleClass="edit" enctype="multipart/form-data">
 
 			<p:panel id="mainFormPanel">
 				<h:panelGrid columns="2" columnClasses="label, value" styleClass="detail-grid">
@@ -65,7 +65,7 @@
 
 					<h:outputLabel for="fieldNewFile" value="#{I18n['ui.photos.upload']}"/>
 					<p:fileUpload id="fieldNewFile" value="#{photoManager.file}"
-								  mode="simple" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+								  mode="simple" allowTypes="/(\.|\/)(gif|jpg|jpeg|png)$/"
 								  skinSimple="true"/>
 
 					<h:outputLabel for="fieldPhoto" value="#{I18n['ui.photos.photo']}"/>
@@ -90,6 +90,7 @@
 								 value="Save"
 								 update=":headerForm, :mainForm"
 								 action="#{photoManager.save}"
+								 ajax="false"
 						/>
 			</div>
 

@@ -44,11 +44,6 @@
 	</context-param>
 
 	<context-param>
-		<param-name>primefaces.UPLOADER</param-name>
-		<param-value>commons</param-value>
-	</context-param>
-
-	<context-param>
 		<param-name>resteasy.media.type.mappings</param-name>
 		<param-value>html : text/html, json : application/json, xml : application/xml</param-value>
 	</context-param>
@@ -64,10 +59,10 @@
 	</filter>
 	<filter-mapping>
 		<filter-name>PrimeFaces FileUpload Filter</filter-name>
-		<url-pattern>/admin/*</url-pattern>
+		<servlet-name>Faces Servlet</servlet-name>
 	</filter-mapping>
-	<!-- Shiro -->
 
+	<!-- Shiro -->
 	<listener>
 		<listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
 	</listener>

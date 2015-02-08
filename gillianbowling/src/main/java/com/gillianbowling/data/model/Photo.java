@@ -13,7 +13,6 @@ import javax.persistence.NamedNativeQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.Max;
 
 @Entity
 @Table(name = "photos")
@@ -43,11 +42,9 @@ public class Photo extends GeneratedIdEntity implements java.io.Serializable {
 	private String description;
 
 	@Column(name = "file_name", length = 100)
-	@Max(100)
 	private String fileName;
 
 	@Column(name = "file_extension", length = 5)
-	@Max(5)
 	private String fileExtension;
 
 	@Column(name = "height")
