@@ -82,8 +82,7 @@
 							value="#{empty from ? 'View' : 'Select'}"
 							propagation="#{empty from ? 'none' : 'default'}"
 							id="photoViewId">
-						<f:param name="photoId"
-								 value="#{_photo.id}"/>
+						<f:param name="id" value="#{_photo.id}"/>
 					</p:link>
 					#{' '}
 					<p:link view="/admin/PhotoEdit.xhtml"
@@ -91,8 +90,7 @@
 							propagation="none"
 							id="photoEdit"
 							rendered="#{empty from}">
-						<f:param name="photoId"
-								 value="#{_photo.id}"/>
+						<f:param name="id" value="#{_photo.id}"/>
 					</p:link>
 				</p:column>
 			</p:dataTable>

@@ -25,12 +25,24 @@
 			<ui:param name="projectName" value="gbowlingportfolio"/>
 		</ui:include>
 
-		<div class="body">
-			<h:messages id="messages" globalOnly="true" styleClass="message"
-						errorClass="errormsg" infoClass="infomsg" warnClass="warnmsg"
-						rendered="#{showGlobalMessages != 'false'}"/>
-			<ui:insert name="body"/>
+		<div id="wrapper" class="wrapper clear">
+			<div id="content" class="content">
+				<h:form id="headerForm">
+					<p:breadCrumb>
+						<p:menuitem value="#{I18n['ui.navigation.home']}" outcome="/admin/index.xhtml"/>
+
+						<ui:insert name="breadcrumbs"/>
+					</p:breadCrumb>
+
+					<h1>#{title}</h1>
+
+					<ui:insert name="title"/>
+					<p:messages id="messages" showDetail="false" globalOnly="true"/>
+				</h:form>
+				<ui:insert name="body"/>
+			</div>
 		</div>
+
 		<div class="footer">
 		</div>
 	</h:body>

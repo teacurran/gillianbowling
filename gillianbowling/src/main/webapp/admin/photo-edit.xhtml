@@ -1,101 +1,81 @@
-<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-				xmlns:s="http://jboss.com/products/seam/taglib"
-				xmlns:ui="http://java.sun.com/jsf/facelets"
-				xmlns:f="http://java.sun.com/jsf/core"
-				xmlns:h="http://java.sun.com/jsf/html"
-				xmlns:a4j="http://richfaces.org/a4j"
-				xmlns:rich="http://richfaces.org/rich"
-				template="layout/template.xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
+
+<ui:define name="metadata">
+	<f:metadata>
+		<f:viewParam name="id" value="#{photoManager.id}"/>
+	</f:metadata>
+</ui:define>
+
+<ui:composition template="layout/template.xhtml">
+
+	<ui:param name="title" value="#{categoryManager.category.name}"/>
+
+	<ui:define name="breadcrumbs">
+		<p:menuitem value="Photos" outcome="/admin/photo-list.xhtml"/>
+		<p:menuitem value="#{photoManager.photo.id}" rendered="#{not empty photoManager.id}"/>
+		<p:menuitem value="#{I18n['ui.photos.new']}" rendered="#{empty photoManager.id}"/>
+	</ui:define>
 
 	<ui:define name="body">
 
-		<s:div styleClass="breadcrumbs">
-			<ul>
-				<li>
-					<p:link value="Photo List" view="/admin/PhotoList.xhtml" />
-				</li>
-				<h:outputText rendered="#{photoHome.managed}">
-					<li>
-						<p:link  value="#{photoHome.instance.id}" view="/admin/Photo.xhtml">
-							<f:param name="photoId" value="#{photoHome.instance.id}"/>
-						</p:link>
-					</li>
-					<li class="last">
-						Editing
-					</li>
-				</h:outputText>
-				<h:outputText rendered="#{not photoHome.managed}">
-					<li class="last">
-						Add
-					</li>
-				</h:outputText>
-			</ul>
-		</s:div>
+		<h:form id="mainForm" styleClass="edit">
 
-		<h:form id="photos" styleClass="edit" enctype="multipart/form-data">
 
-			<p:panel>
-				<f:facet name="header">#{photoHome.managed ? 'Edit' : 'Add'} Photo</f:facet>
+			<p:panel id="mainFormPanel">
+				<h:panelGrid columns="2" columnClasses="label, value" styleClass="detail-grid">
 
-				<ui:decorate id="idField" template="layout/display.xhtml">
-					<ui:define name="label">Id</ui:define>
-					<h:outputText value="#{photoHome.instance.id}" rendered="#{photoHome.managed}"/>
-					<h:outputText value="New" rendered="#{!photoHome.managed}"/>
-				</ui:decorate>
+					<h:outputLabel for="fieldId" value="#{I18n['ui.photos.id']}"/>
+					<h:panelGroup id="fieldId">
+						<h:outputText value="#{photoManager.photo.id}" rendered="#{not empty photoManager.id}"/>
+						<h:outputText value="#{I18n['ui.new']}" rendered="#{empty photoManager.id}"/>
+					</h:panelGroup>
 
-				<ui:decorate id="categoryIdField" template="layout/edit.xhtml">
-					<ui:define name="label">Category</ui:define>
-					<h:selectOneListbox id="category" value="#{photoHome.instance.category}" styleClass="clientSelectBox" size="1" required="true" immediate="true">
-						<s:selectItems value="#{categoryList.resultList}" var="_cat" label="#{_cat.nameWithParent}" noSelectionLabel="please choose..."/>
-						<s:convertEntity />
-					</h:selectOneListbox>
-				</ui:decorate>
+					<h:outputLabel for="fieldCategory" value="#{I18n['ui.photos.category']}"/>
+					<h:panelGroup id="fieldCategory">
+						<h:selectOneListbox id="category" value="#{photoManager.photo.category}"
+											styleClass="clientSelectBox" size="1" required="true" immediate="true">
+							<f:selectItems value="#{categoryManager.list}" var="_cat" itemLabel="#{_cat.nameWithParent}"
+										   noSelectionLabel="please choose..."/>
+							<f:converter binding="#{categoryManager.converter}"/>
+						</h:selectOneListbox>
+					</h:panelGroup>
 
-				<ui:decorate id="featuredField" template="layout/edit.xhtml">
-					<ui:define name="label">Homepage</ui:define>
-					<h:selectBooleanCheckbox id="featured" value="#{photoHome.instance.featured}" />
-				</ui:decorate>
+					<h:outputLabel for="fieldFeatured" value="#{I18n['ui.photos.homepage']}"/>
+					<h:selectBooleanCheckbox id="fieldFeatured" value="#{photoManager.photo.featured}"/>
 
-				<ui:decorate id="orientationField" template="layout/edit.xhtml">
-					<ui:define name="label">Orientation</ui:define>
-					<h:selectOneListbox id="orientation" value="#{photoHome.instance.orientation}" styleClass="clientSelectBox" size="1" required="true" immediate="true">
+					<h:outputLabel for="fieldOrientation" value="#{I18n['ui.photos.orientation']}"/>
+					<p:selectOneMenu id="fieldOrientation" value="#{photoManager.photo.orientation}"
+									 styleClass="clientSelectBox" size="1" required="true" immediate="true">
 						<f:selectItem itemValue="1" itemLabel="Horizontal"/>
 						<f:selectItem itemValue="2" itemLabel="Vertical"/>
-					</h:selectOneListbox>
-				</ui:decorate>
+					</p:selectOneMenu>
 
-				<ui:decorate id="descriptionField" template="layout/edit.xhtml">
-					<ui:define name="label">Description</ui:define>
-					<rich:editor configuration="richtext"
-						id="editor" width="400" height="300"
-						value="#{photoHome.instance.description}">
-					</rich:editor>
+					<h:outputLabel for="fieldDescription" value="#{I18n['ui.photos.description']}"/>
+					<p:editor id="fieldDescription" width="400" height="300"
+							  value="#{photoManager.photo.description}">
+					</p:editor>
 
-				</ui:decorate>
+					<h:outputLabel for="fieldRank" value="#{I18n['ui.photos.rank']}"/>
+					<h:inputText id="fieldRank" value="#{photoManager.photo.rank}"/>
 
-				<ui:decorate id="rankField" template="layout/edit.xhtml">
-					<ui:define name="label">Rank</ui:define>
-					<h:inputText id="rank"
-								 value="#{photoHome.instance.rank}">
-						<a4j:support event="onblur" reRender="rankField" bypassUpdates="true" ajaxSingle="true"/>
-					</h:inputText>
-				</ui:decorate>
+					<h:outputLabel for="fieldNewFile" value="#{I18n['ui.photos.upload']}"/>
+					<p:fileUpload id="fieldNewFile"/>
 
-				<ui:decorate id="newFileField" template="layout/edit.xhtml">
-					<ui:define name="label">File Upload</ui:define>
-
-					<s:fileUpload data="#{photoHome.newFile}" fileName="#{photoHome.newFileName}"
-								  accept="images/png,images/jpg,images/gif,application/pdf" rendered="true"/>
-				</ui:decorate>
-
-				<a4j:outputPanel id="imageContainer" rendered="#{not empty photoHome.instance.fileName}">
-					<ui:decorate id="image" template="layout/display.xhtml">
-						<ui:define name="label">Image</ui:define>
-						<img src="#{request.contextPath}/media/150x/#{photoHome.instance.fileName}" class="image" alt="#{photoHome.instance.description}"/>
-					</ui:decorate>
-				</a4j:outputPanel>
+					<h:outputLabel for="fieldPhoto" value="#{I18n['ui.photos.photo']}"/>
+					<p:outputPanel id="fieldPhoto" rendered="#{not empty photoManager.photo.fileName}">
+						<ui:decorate id="image" template="layout/display.xhtml">
+							<ui:define name="label">Image</ui:define>
+							<img src="#{request.contextPath}/media/150x/#{photoHome.instance.fileName}" class="image"
+								 alt="#{photoHome.instance.description}"/>
+						</ui:decorate>
+					</p:outputPanel>
+				</h:panelGrid>
 
 				<div style="clear:both">
 					<span class="required">*</span>
@@ -105,58 +85,35 @@
 			</p:panel>
 
 			<div class="actionButtons">
-
-				<h:commandButton id="save"
-						value="Save"
-						action="#{photoHome.save}"/>
-
-				<a4j:commandButton id="delete"
-						value="Delete"
-						rendered="#{photoHome.managed}"
-						onclick="#{rich:component('deleteModal')}.show()"
-					/>
-
-				<s:button id="cancelEdit"
-						value="Cancel"
-						propagation="end"
-						view="/admin/Photos.xhtml"
-						rendered="#{photoHome.managed}"/>
-
-				<s:button id="cancelAdd"
-						value="Cancel"
-						propagation="end"
-						view="/admin/#{empty photoFrom ? 'PhotoList' : photoFrom}.xhtml"
-						rendered="#{!photoHome.managed}"/>
-
+				<p:commandButton id="buttonSave"
+								 value="Save"
+								 action="#{photoManager.save}"
+						/>
 			</div>
+
+			<!-- Modal Dialogs -->
+			<p:dialog modal="true" widgetVar="modalDelete"
+					  header="Delete Photo" draggable="true" closable="true" closeOnEscape="true"
+					  hideEffect="explode" showEffect="fade" width="620" position="top" resizable="false">
+				<p:outputPanel id="modalDeleteContent">
+					<h2>Delete Photo</h2>
+
+					<div style="clear:both">
+						<b>Are you sure you wish to delete this Photo?</b>
+					</div>
+
+
+					<div class="actionButtons">
+						<p:commandButton id="delete" value="yes, delete" action="#{photoManager.remove}"
+										 immediate="true"/>
+					</div>
+				</p:outputPanel>
+			</p:dialog>
+
 		</h:form>
-
-		<rich:modalPanel id="deleteModal" minHeight="300" minWidth="455" height="300" width="500" zindex="2000">
-			<f:facet name="header">
-				<h:outputText value="Delete Photo"/>
-			</f:facet>
-			<f:facet name="controls">
-				<h:panelGroup>
-					<h:graphicImage value="/admin/img/modal_close.png" styleClass="hidelink" id="hideDeleteModal"/>
-					<rich:componentControl for="deleteModal" attachTo="hideDeleteModal" operation="hide" event="onclick"/>
-				</h:panelGroup>
-			</f:facet>
-			<h:form id="deleteForm" styleClass="edit">
-				<div style="clear:both">
-					<b>Are you sure you wish to delete this Photo?</b>
-				</div>
-
-				<div style="clear:both">
-				</div>
-
-				<rich:spacer height="20"/>
-
-				<div class="actionButtons">
-					<h:commandButton id="delete" value="yes, delete" action="#{photoHome.remove}" immediate="true"/>
-				</div>
-			</h:form>
-		</rich:modalPanel>
 
 	</ui:define>
 
 </ui:composition>
+
+</html>

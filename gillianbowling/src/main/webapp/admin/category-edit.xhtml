@@ -14,16 +14,15 @@
 
 <ui:composition template="layout/template.xhtml">
 
-<ui:param name="title" value="#{categoryManager.category.name}"/>
+	<ui:param name="title" value="#{categoryManager.category.name}"/>
 
-<ui:define name="breadcrumbs">
-	<p:menuitem value="Categories" outcome="/admin/category-list.xhtml"/>
-
-</ui:define>
+	<ui:define name="breadcrumbs">
+		<p:menuitem value="Categories" outcome="/admin/category-list.xhtml"/>
+	</ui:define>
 
 	<ui:define name="body">
 
-		<h:form id="category" styleClass="edit">
+		<h:form id="mainForm" styleClass="edit">
 
 			<p:panel>
 
@@ -35,11 +34,11 @@
 
 					<h:outputLabel for="fieldParent" value="Parent"/>
 					<p:selectOneMenu id="fieldParent"
-										  value="#{categoryManager.category.parent}"
-										  required="false"
-										  immediate="true"
-										  hideNoSelectionOption="false"
-										  >
+									 value="#{categoryManager.category.parent}"
+									 required="false"
+									 immediate="true"
+									 hideNoSelectionOption="false"
+							>
 						<f:selectItem itemLabel="please choose..." noSelectionOption="true"/>
 						<f:selectItems value="#{categoryManager.availableParents}"
 									   var="_cat"
@@ -103,9 +102,7 @@
 				<p:commandButton id="save"
 								 value="Save"
 								 action="#{categoryManager.save}"
-								 />
-
-
+						/>
 			</div>
 		</h:form>
 
