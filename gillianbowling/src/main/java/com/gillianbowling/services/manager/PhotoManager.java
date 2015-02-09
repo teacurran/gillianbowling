@@ -13,6 +13,7 @@ import javax.imageio.ImageIO;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 
 import com.gillianbowling.Constants;
 import com.gillianbowling.data.model.Category;
@@ -22,7 +23,6 @@ import com.gillianbowling.data.repositories.ConfigurationRepository;
 import com.gillianbowling.data.repositories.PhotoRepository;
 import com.gillianbowling.locales.I18n;
 import com.gillianbowling.web.coverters.GenericEntityConverter;
-import org.apache.deltaspike.jpa.api.transaction.Transactional;
 import org.apache.deltaspike.jsf.api.message.JsfMessage;
 import org.primefaces.model.UploadedFile;
 import org.slf4j.Logger;
