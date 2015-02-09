@@ -70,11 +70,8 @@
 
 					<h:outputLabel for="fieldPhoto" value="#{I18n['ui.photos.photo']}"/>
 					<p:outputPanel id="fieldPhoto" rendered="#{not empty photoManager.photo.fileName}">
-						<ui:decorate id="image" template="layout/display.xhtml">
-							<ui:define name="label">Image</ui:define>
-							<img src="#{request.contextPath}/media/150x/#{photoManager.photo.fileName}" class="image"
-								 alt="#{photoManager.photo.description}"/>
-						</ui:decorate>
+						<img src="#{request.contextPath}/media/150x/#{photoManager.photo.fileName}" class="image"
+							 alt="#{photoManager.photo.description}"/>
 					</p:outputPanel>
 				</h:panelGrid>
 

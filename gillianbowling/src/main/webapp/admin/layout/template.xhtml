@@ -21,6 +21,8 @@
 	</h:head>
 
 	<h:body>
+		<ui:include src="header.xhtml"/>
+
 		<ui:include src="menu.xhtml">
 			<ui:param name="projectName" value="gbowlingportfolio"/>
 		</ui:include>
@@ -29,7 +31,7 @@
 			<div id="content" class="content">
 				<h:form id="headerForm">
 					<p:breadCrumb>
-						<p:menuitem value="#{I18n['ui.navigation.home']}" outcome="/admin/index.xhtml"/>
+						<p:menuitem value="#{I18n['ui.navigation.home']}" outcome="/admin/home.xhtml"/>
 
 						<ui:insert name="breadcrumbs"/>
 					</p:breadCrumb>

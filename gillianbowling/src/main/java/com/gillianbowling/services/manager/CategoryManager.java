@@ -26,6 +26,7 @@ import com.gillianbowling.locales.I18n;
 import com.gillianbowling.web.coverters.GenericEntityConverter;
 import org.apache.deltaspike.jpa.api.transaction.Transactional;
 import org.apache.deltaspike.jsf.api.message.JsfMessage;
+import org.hibernate.Hibernate;
 import org.primefaces.event.SelectEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -88,6 +89,7 @@ public class CategoryManager implements Serializable {
 		return topLevelCategories;
 	}
 
+	@Transactional
 	public Category getCategory() {
 		if (category == null) {
 			if (code != null) {
@@ -107,6 +109,11 @@ public class CategoryManager implements Serializable {
 				category = new Category();
 				newRecord = true;
 			}
+		}
+
+		if (category != null && !newRecord) {
+			Hibernate.initialize(category.getChildren());
+			Hibernate.initialize(category.getPhotos());
 		}
 
 		return category;

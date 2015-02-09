@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition>
+	<div id="header" class="header ui-widget ui-widget-header">
+		<div class="title">
+			<div id="mainheader" class="mainHeader">
+				<h1><h:link value="#{I18n['application.name']}"/></h1>
+
+				<div id="logoutheader" class="logoutHeader">
+					<h:form id="currentUserForm">
+						<h:commandLink value="#{I18n['ui.login.logout']}" action="#{authentication.logout}"
+									   rendered="#{currentUser.subject.isAuthenticated() and (currentUser.hasRole('admin') or currentUser.hasRole('editor'))}"/>
+						<p:menuButton value="#{authentication.getUserFirstLastName()}"
+									  rendered="#{currentUser.subject.isAuthenticated() and currentUser.hasRole('quiz_writer')}">
+							<p:menuitem value="#{I18n['ui.manage.user.change.password.label']}"
+										outcome="/pages/secure/change-password.xhtml"/>
+							<p:menuitem value="#{I18n['ui.logion.label.logout']}" action="#{authentication.logout}"/>
+						</p:menuButton>
+					</h:form>
+				</div>
+			</div>
+		</div>
+	</div>
+</ui:composition>
+
+</html>

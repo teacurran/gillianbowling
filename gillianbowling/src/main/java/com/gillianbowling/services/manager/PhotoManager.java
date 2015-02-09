@@ -99,9 +99,7 @@ public class PhotoManager implements Serializable {
 			photo = em.merge(photo);
 		}
 
-		if (file != null) {
-			uploadPhoto();
-		}
+		uploadPhoto();
 
 		messages.addInfo().photoSaved();
 
@@ -110,6 +108,9 @@ public class PhotoManager implements Serializable {
 
 	@Transactional
 	public void uploadPhoto() {
+		if (file == null || file.getFileName() == null || file.getFileName().isEmpty()) {
+			return;
+		}
 
 		Photo photo = getPhoto();
 		String newFileName = file.getFileName();

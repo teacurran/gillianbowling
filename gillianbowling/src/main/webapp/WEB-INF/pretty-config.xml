@@ -11,8 +11,8 @@
 
 	<!-- Admin -->
 	<url-mapping id="admin_index">
-		<pattern value="/admin" />
-		<view-id value="/admin/index.xhtml" />
+		<pattern value="/admin/" />
+		<view-id value="/admin/home.xhtml" />
 	</url-mapping>
 
 	<!-- Categories -->

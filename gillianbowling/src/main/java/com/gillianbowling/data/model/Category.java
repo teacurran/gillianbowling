@@ -40,11 +40,11 @@ public class Category extends GeneratedIdEntity implements Serializable {
 	@Column(length=100)
 	String code;
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "category")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
 	@OrderBy("rank")
 	List<Photo> photos;
 
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.LAZY)
 	Category parent;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "parent")

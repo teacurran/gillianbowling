@@ -213,3 +213,25 @@ select {
 .ui-panel {
 	margin-bottom: 20px;
 }
+
+.ui-menu.ui-menubar.toolbar  {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	border-left: none;
+	border-right: none;
+	padding-left: 33px;
+	background-color: #ccc;
+	height: 30px;
+	width: 96%;
+}
+
+.ui-menu.ui-widget li > .ui-menuitem-link {
+	padding: 3px 5px 5px;
+}
+
+.toolbar ul li > ul {
+	height: auto !important;
+    overflow: hidden;
+}
+
