@@ -16,6 +16,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 
 import com.gillianbowling.Constants;
 import com.gillianbowling.data.repositories.CategoryRepository;
@@ -24,7 +25,6 @@ import com.gillianbowling.data.model.Photo;
 import com.gillianbowling.data.repositories.ConfigurationRepository;
 import com.gillianbowling.locales.I18n;
 import com.gillianbowling.web.coverters.GenericEntityConverter;
-import org.apache.deltaspike.jpa.api.transaction.Transactional;
 import org.apache.deltaspike.jsf.api.message.JsfMessage;
 import org.hibernate.Hibernate;
 import org.primefaces.event.SelectEvent;
@@ -93,7 +93,7 @@ public class CategoryManager implements Serializable {
 	public Category getCategory() {
 		if (category == null) {
 			if (code != null) {
-				category = categoryRepository.findAnyByCode(code);
+				category = categoryRepository.findAnyByCodeWithPhotos(code);
 
 				if (category == null) {
 					id = null;
@@ -112,8 +112,6 @@ public class CategoryManager implements Serializable {
 		}
 
 		if (category != null && !newRecord) {
-			Hibernate.initialize(category.getChildren());
-			Hibernate.initialize(category.getPhotos());
 		}
 
 		return category;

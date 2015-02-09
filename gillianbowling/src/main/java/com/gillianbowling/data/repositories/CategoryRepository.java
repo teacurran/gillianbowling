@@ -1,15 +1,13 @@
 package com.gillianbowling.data.repositories;
 
-import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.TypedQuery;
 
 import com.gillianbowling.data.model.Category;
-import com.gillianbowling.data.model.Photo;
 import org.apache.deltaspike.data.api.AbstractEntityRepository;
 import org.apache.deltaspike.data.api.Query;
 import org.apache.deltaspike.data.api.QueryParam;
 import org.apache.deltaspike.data.api.Repository;
+import org.apache.deltaspike.data.api.SingleResultType;
 
 /**
  * @author T. Curran
@@ -23,4 +21,6 @@ public abstract class CategoryRepository extends AbstractEntityRepository<Catego
 	@Query(named = Category.NAMED_QUERY_TOP_LEVEL)
 	public abstract List<Category> findTopLevel();
 
+	@Query(named = Category.NAMED_QUERY_BY_CODE_WITH_PHOTOS, singleResult = SingleResultType.ANY)
+	public abstract Category findAnyByCodeWithPhotos(@QueryParam("code") String code);
 }
