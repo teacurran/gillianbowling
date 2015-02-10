@@ -29,20 +29,28 @@ import static javax.persistence.GenerationType.AUTO;
 					"ORDER BY a.rank, c.rank"
 	),
 
-		@NamedQuery(name = Category.NAMED_QUERY_BY_CODE_WITH_PHOTOS,
-				query = "SELECT distinct(a) " +
-						"FROM Category a " +
-						"LEFT JOIN FETCH a.photos p " +
-						"WHERE a.code = :code " +
-						"ORDER BY a.rank, p.rank"
-		)
+	@NamedQuery(name = Category.NAMED_QUERY_BY_CODE_WITH_PHOTOS,
+			query = "SELECT distinct(a) " +
+					"FROM Category a " +
+					"LEFT JOIN FETCH a.photos p " +
+					"WHERE a.code = :code " +
+					"ORDER BY a.rank, p.rank"
+	),
 
+	@NamedQuery(name = Category.NAMED_QUERY_BY_ID_WITH_PHOTOS,
+			query = "SELECT distinct(a) " +
+					"FROM Category a " +
+					"LEFT JOIN FETCH a.photos p " +
+					"WHERE a.id = :id " +
+					"ORDER BY p.rank"
+	)
 })
 public class Category extends GeneratedIdEntity implements Serializable {
 
 	public static final String NAMED_QUERY_ALL = "Category.all";
 	public static final String NAMED_QUERY_TOP_LEVEL = "Category.getTopLevel";
 	public static final String NAMED_QUERY_BY_CODE_WITH_PHOTOS = "Category.getByCodeWithPhotos";
+	public static final String NAMED_QUERY_BY_ID_WITH_PHOTOS = "Category.getByIdWithPhotos";
 
 	@Column(length=100)
 	String name;

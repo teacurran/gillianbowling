@@ -11,8 +11,9 @@ a img {
 }
 
 body {
+	font-family: helvetica, sans-serif;
 	font-size: 12px;
-	margin: 0px;
+	margin: 0;
 }
 
 .action-row {
@@ -98,6 +99,10 @@ body {
 	margin-bottom: 10px;
 }
 
+.header h1 {
+	margin: 5px 0 5px 10px;
+}
+
 h1 {
 	font-size: 1.6em;
 	margin-top: 0;
@@ -123,7 +128,6 @@ input[type=text], input[type=password], textarea {
 }
 
 .message {
-	padding: 5px;
 	list-style: none;
 	border: 0;
 	background: none;
@@ -196,7 +200,7 @@ select {
 	padding: 5px;
 }
 
-.photoSorter  .ui-orderlist-list{
+.photoSorter .ui-orderlist-list{
 	width: 200px;
 	height: 400px;
 }

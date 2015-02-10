@@ -6,6 +6,13 @@
 	  xmlns:p="http://primefaces.org/ui"
 	  xmlns:fn="http://java.sun.com/jsp/jstl/functions">
 <ui:composition template="layout/template.xhtml">
+
+	<ui:param name="title" value="Categories"/>
+
+	<ui:define name="breadcrumbs">
+		<p:menuitem value="#{I18n['ui.categories.title']}" outcome="/admin/category-list.xhtml"/>
+	</ui:define>
+
 	<ui:define name="body">
 
 		<h:form id="mainForm">
@@ -56,17 +63,26 @@
 						<f:param name="id" value="#{_category.id}"/>
 					</h:link>
 				</p:column>
-			</p:dataTable>
 
+				<p:column styleClass="action">
+					<f:facet name="header">#{I18n['ui.action']}</f:facet>
+					<p:link outcome="/admin/category-view.xhtml" value="#{I18n['ui.view']}">
+						<f:param name="id" value="#{_category.id}"/>
+					</p:link>
+					#{' '}
+					<p:link outcome="/admin/category-edit.xhtml" value="#{I18n['ui.edit']}">
+						<f:param name="id" value="#{_category.id}"/>
+					</p:link>
+				</p:column>
+
+			</p:dataTable>
 
 			<div class="action-row">
 				<p:button outcome="/admin/category-edit.xhtml"
 						  value="#{I18n['ui.categories.create']}" styleClass="button-detail-edit">
 				</p:button>
 			</div>
-
 		</h:form>
-
 
 	</ui:define>
 

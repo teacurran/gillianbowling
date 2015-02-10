@@ -100,7 +100,7 @@ public class CategoryManager implements Serializable {
 				}
 
 			} else if (id != null) {
-				category = categoryRepository.findBy(id);
+				category = categoryRepository.findByIdWithPhotos(id);
 
 				if (category == null) {
 					id = null;
@@ -109,9 +109,6 @@ public class CategoryManager implements Serializable {
 				category = new Category();
 				newRecord = true;
 			}
-		}
-
-		if (category != null && !newRecord) {
 		}
 
 		return category;
