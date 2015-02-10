@@ -38,20 +38,26 @@ public class Home implements Serializable {
 		if (photos == null) {
 			photos = new ArrayList<>();
 
-			// flip a coin. show a horizontal image 25% of the time.
+			// flip a coin. show horizontal image 50% of the time.
 			boolean hasHoriz = false;
-			if (((int) (Math.random() * 4)) == 0) {
-				List<Photo> horizPhotos = photoRepository.find3RandomFeatured(Photo.ORIENTATION_HORIZONTAL, 1);
+			if (((int) (Math.random() * 2)) == 0) {
+				List<Photo> horizPhotos = photoRepository.findRandomFeatured(Photo.ORIENTATION_HORIZONTAL, 2);
 				if (horizPhotos != null && !horizPhotos.isEmpty()) {
-					photos.add(horizPhotos.get(0));
+					for (Photo photo : horizPhotos) {
+						Hibernate.initialize(photo.getCategory());
+						photos.add(photo);
+					}
 					hasHoriz = true;
 				}
 			}
 
-			List<Photo> vertPhotos = photoRepository.find3RandomFeatured(Photo.ORIENTATION_VERTICAL, (hasHoriz) ? 1: 3);
-			for (Photo photo : vertPhotos) {
-				Hibernate.initialize(photo.getCategory());
-				photos.add(photo);
+			if (photos.size() < 2) {
+				List<Photo> vertPhotos = photoRepository.findRandomFeatured(Photo.ORIENTATION_VERTICAL,
+						(hasHoriz) ? 1 : 4);
+				for (Photo photo : vertPhotos) {
+					Hibernate.initialize(photo.getCategory());
+					photos.add(photo);
+				}
 			}
 		}
 

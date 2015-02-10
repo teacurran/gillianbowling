@@ -17,7 +17,7 @@ import org.apache.deltaspike.data.api.Repository;
 public abstract class PhotoRepository extends AbstractEntityRepository<Photo, Integer> {
 
 	@Query(named = Photo.NATIVE_QUERY_RAND_FEATURED, isNative = true)
-	public abstract List<Photo> find3RandomFeatured(
+	public abstract List<Photo> findRandomFeatured(
 			@QueryParam("orientation") int orientation,
 			@QueryParam("limit") int limit);
 
