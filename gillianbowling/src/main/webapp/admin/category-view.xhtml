@@ -1,50 +1,83 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	  xmlns:ui="http://java.sun.com/jsf/facelets"
 	  xmlns:h="http://java.sun.com/jsf/html"
 	  xmlns:f="http://java.sun.com/jsf/core"
-	  xmlns:p="http://primefaces.org/ui">
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:g="http://gillianbowling.com/functions">
+
+<ui:define name="metadata">
+	<f:metadata>
+		<f:viewParam name="id" value="#{categoryManager.id}"/>
+	</f:metadata>
+</ui:define>
+
 <ui:composition template="layout/template.xhtml">
+
+	<ui:param name="title" value="#{categoryManager.category.name}"/>
+
+	<ui:define name="breadcrumbs">
+		<p:menuitem value="#{I18n['ui.categories.title']}" outcome="/admin/category-list.xhtml"/>
+		<p:menuitem value="#{categoryManager.category.name}" rendered="#{not empty categoryManager.id}"/>
+		<p:menuitem value="#{I18n['ui.categories.new']}" rendered="#{empty categoryManager.id}"/>
+	</ui:define>
+
 	<ui:define name="body">
 
-		<p:panel>
-			<f:facet name="header">Categories Details</f:facet>
 
-			<ui:decorate id="id" template="layout/display.xhtml">
-				<ui:define name="label">Id</ui:define>
-				<h:outputText value="#{categoryManager.instance.id}"/>
-			</ui:decorate>
+		<h:form id="mainForm" styleClass="edit">
 
-			<ui:decorate id="id" template="layout/display.xhtml" rendered="#{not empty categoryManager.instance.code}">
-				<ui:define name="label"> </ui:define>
-				<p:link view="/view.xhtml" value="preview on site" target="_blank">
-					<f:param name="c" value="#{categoryManager.instance.code}"/>
-				</p:link>
-			</ui:decorate>
+			<p:panel>
 
-			<ui:decorate id="name" template="layout/display.xhtml">
-				<ui:define name="label">Name</ui:define>
-				<h:outputText value="#{categoryManager.instance.name}"/>
-			</ui:decorate>
+				<h:panelGrid columns="2" columnClasses="label, value, message" styleClass="detail-grid">
 
-			<div style="clear:both"/>
+					<h:outputLabel for="fieldId" value="Id"/>
+					<h:panelGroup id="fieldId">
+						<h:outputText value="#{categoryManager.category.id}" rendered="#{not empty categoryManager.id}"/>
+						<h:outputText value="#{I18n['ui.new']}" rendered="#{empty categoryManager.id}"/>
 
-		</p:panel>
+						<br/>
+						<p:link outcome="/view.xhtml" value="preview on site" target="_blank">
+							<f:param name="c" value="#{categoryManager.category.code}"/>
+						</p:link>
+					</h:panelGroup>
 
-		<div class="actionButtons">
+					<h:outputLabel for="fieldParent" value="Parent"/>
+					<h:outputText id="fieldParent" value="#{categoryManager.category.parent.name}" />
 
-			<s:button view="/admin/CategoryEdit.xhtml"
-					  id="edit"
-					  value="Edit"/>
+					<h:outputLabel for="fieldName" value="Name"/>
+					<h:outputText id="fieldName" value="#{categoryManager.category.name}" />
 
-			<s:button view="/admin/#{empty categoryFrom ? 'CategoryList' : categoryFrom}.xhtml"
-					  id="done"
-					  value="Done"/>
+					<h:outputLabel for="fieldCode" value="Code"/>
+					<h:outputText id="fieldCode" value="#{categoryManager.category.code}" />
 
-		</div>
+					<h:outputLabel for="fieldRank" value="Rank"/>
+					<h:outputText id="fieldRank" value="#{categoryManager.category.rank}" />
+
+					<h:outputLabel for="fieldPhotos" value="Photos"/>
+					<p:outputPanel id="fieldPhotos">
+						<p:dataGrid columns="1" value="#{categoryManager.category.photos}" var="_photo">
+							<h:graphicImage value="#{request.contextPath}/media/300x/#{g:urlEncode(_photo.fileName)}"
+											class="image" alt="#{_photo.description}"
+											rendered="#{not empty _photo.fileName}"/>
+						</p:dataGrid>
+					</p:outputPanel>
+
+				</h:panelGrid>
+			</p:panel>
+
+			<div class="actionButtons">
+
+				<p:button value="#{I18n['ui.edit']}" outcome="/admin/category-edit.xhtml">
+					<f:param name="id" value="#{categoryManager.id}"/>
+				</p:button>
+			</div>
+		</h:form>
 
 	</ui:define>
 
 </ui:composition>
 
 </html>
+

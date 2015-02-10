@@ -4,7 +4,8 @@
 	  xmlns:ui="http://java.sun.com/jsf/facelets"
 	  xmlns:h="http://java.sun.com/jsf/html"
 	  xmlns:f="http://java.sun.com/jsf/core"
-	  xmlns:p="http://primefaces.org/ui">
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:g="http://gillianbowling.com/functions">
 
 <ui:define name="metadata">
 	<f:metadata>
@@ -17,7 +18,9 @@
 	<ui:param name="title" value="#{categoryManager.category.name}"/>
 
 	<ui:define name="breadcrumbs">
-		<p:menuitem value="Categories" outcome="/admin/category-list.xhtml"/>
+		<p:menuitem value="#{I18n['ui.categories.title']}" outcome="/admin/category-list.xhtml"/>
+		<p:menuitem value="#{categoryManager.category.name}" rendered="#{not empty categoryManager.id}"/>
+		<p:menuitem value="#{I18n['ui.categories.new']}" rendered="#{empty categoryManager.id}"/>
 	</ui:define>
 
 	<ui:define name="body">
@@ -83,7 +86,7 @@
 								<img src="#{request.contextPath}/media/50x/#{_photo.fileName}" class="image"
 									 alt="#{_photo.description}"/>
 							</p:panel>
-							<h:outputText rendered="#{empty _photo.fileName}" value="#{_photo.description}"/>
+							<h:outputText rendered="#{empty _photo.fileName}" value="Text Block"/>
 						</p:column>
 
 					</p:orderList>
