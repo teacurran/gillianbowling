@@ -55,6 +55,7 @@ public class PhotoManager implements Serializable {
 	Photo photo;
 	List<Photo> list;
 	Integer filterCatId = null;
+	Category filterCategory = null;
 
 	@Transactional
 	public Photo getPhoto() {
@@ -76,11 +77,6 @@ public class PhotoManager implements Serializable {
 
 	public List<Photo> getList() {
 		if (list == null) {
-			Category filterCategory = null;
-			if (filterCatId != null) {
-				filterCategory = categoryRepository.findBy(filterCatId);
-			}
-
 			if (filterCategory != null) {
 				list = photoRepository.findByCategory(filterCategory);
 			} else {
@@ -219,5 +215,17 @@ public class PhotoManager implements Serializable {
 
 	public void setFilterCatId(Integer filterCatId) {
 		this.filterCatId = filterCatId;
+	}
+
+	public Category getFilterCategory() {
+		if (filterCatId != null && filterCategory == null) {
+			filterCategory = categoryRepository.findBy(filterCatId);
+		}
+
+		return filterCategory;
+	}
+
+	public void setFilterCategory(Category filterCategory) {
+		this.filterCategory = filterCategory;
 	}
 }

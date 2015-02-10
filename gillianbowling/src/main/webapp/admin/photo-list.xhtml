@@ -13,12 +13,21 @@
 </ui:define>
 
 <ui:composition template="layout/template.xhtml">
+
+	<ui:param name="title" value="Photos"/>
+
+	<ui:define name="breadcrumbs">
+		<p:menuitem value="Photos" outcome="/admin/photo-list.xhtml"/>
+
+		<p:menuitem value="#{photoManager.filterCategory.name}" rendered="#{not empty photoManager.filterCategory}"/>
+	</ui:define>
+
 	<ui:define name="body">
 
 		<h:form id="mainForm">
 
 			<p:panel header="#{I18n['ui.filter']}" styleClass="search-criteria">
-				<p:panelGrid columns="2" layout="grid">
+				<p:panelGrid columns="2" layout="grid" styleClass="filter-grid">
 					<p:selectOneMenu id="filterCategory" value="#{photoManager.filterCatId}">
 						<f:selectItem itemLabel="[Category]" noSelectionOption="true"/>
 						<f:selectItems value="#{categoryManager.listWithOrderedChildren}" var="_cat"
@@ -54,7 +63,9 @@
 					<f:facet name="header">
 						<h:outputText value="Category"/>
 					</f:facet>
-					<h:outputText value="#{_photo.category.name}"/>
+					<h:link value="#{_photo.category.name}" outcome="/admin/photo-list.xhtml">
+						<f:param name="cat" value="#{_photo.category.id}"/>
+					</h:link>
 				</p:column>
 
 				<p:column sortBy="#{_photo.description}">
@@ -67,7 +78,7 @@
 
 				<p:column sortBy="#{_photo.fileName}">
 					<f:facet name="header">
-						<h:outputText value="File name"/>
+						<h:outputText value="Photo"/>
 					</f:facet>
 					<p:outputPanel rendered="#{not empty _photo.fileName}">
 						<img src="#{request.contextPath}/media/100x/#{_photo.fileName}" class="image"
@@ -80,20 +91,6 @@
 						<h:outputText value="Rank"/>
 					</f:facet>
 					<h:outputText value="#{_photo.rank}"/>
-				</p:column>
-
-				<p:column sortBy="#{_photo.width}">
-					<f:facet name="header">
-						<h:outputText value="Width"/>
-					</f:facet>
-					<h:outputText value="#{_photo.width}"/>
-				</p:column>
-
-				<p:column sortBy="#{_photo.height}">
-					<f:facet name="header">
-						<h:outputText value="Height"/>
-					</f:facet>
-					<h:outputText value="#{_photo.height}"/>
 				</p:column>
 
 				<p:column styleClass="action">

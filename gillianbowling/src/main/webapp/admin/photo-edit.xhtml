@@ -83,8 +83,12 @@
 			</p:panel>
 
 			<div class="actionButtons">
+				<p:button value="#{I18n['ui.done']}"
+						  outcome="/admin/photo-view.xhtml">
+					<f:param name="id" value="#{photoManager.id}"/>
+				</p:button>
 				<p:commandButton id="buttonSave"
-								 value="Save"
+								 value="#{I18n['ui.save']}"
 								 update=":headerForm, :mainForm"
 								 action="#{photoManager.save}"
 								 ajax="false"
