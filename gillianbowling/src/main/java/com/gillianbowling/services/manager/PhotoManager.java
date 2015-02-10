@@ -103,7 +103,7 @@ public class PhotoManager implements Serializable {
 
 		messages.addInfo().photoSaved();
 
-		return "photo-edit.xhtml?faces-redirect=true&id=" + photo.getId();
+		return "photo-view.xhtml?faces-redirect=true&id=" + photo.getId();
 	}
 
 	@Transactional

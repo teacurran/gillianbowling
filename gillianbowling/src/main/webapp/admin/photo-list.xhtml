@@ -98,11 +98,11 @@
 
 				<p:column styleClass="action">
 					<f:facet name="header">Action</f:facet>
-					<p:link outcome="/admin/photo-edit.xhtml" value="View" id="photoViewId">
+					<p:link outcome="/admin/photo-view.xhtml" value="#{I18n['ui.view']}">
 						<f:param name="id" value="#{_photo.id}"/>
 					</p:link>
 					#{' '}
-					<p:link outcome="/admin/photo-edit.xhtml" value="Edit" propagation="none" id="photoEdit">
+					<p:link outcome="/admin/photo-edit.xhtml" value="#{I18n['ui.edit']}" propagation="none">
 						<f:param name="id" value="#{_photo.id}"/>
 					</p:link>
 				</p:column>

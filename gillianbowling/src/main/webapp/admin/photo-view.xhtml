@@ -1,69 +1,73 @@
-<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-				xmlns:s="http://jboss.com/products/seam/taglib"
-				xmlns:ui="http://java.sun.com/jsf/facelets"
-				xmlns:f="http://java.sun.com/jsf/core"
-				xmlns:h="http://java.sun.com/jsf/html"
-				xmlns:rich="http://richfaces.org/rich"
-				template="layout/template.xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:s="http://jboss.com/products/seam/taglib"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
+
+<ui:define name="metadata">
+	<f:metadata>
+		<f:viewParam name="id" value="#{photoManager.id}"/>
+	</f:metadata>
+</ui:define>
+
+<ui:composition template="layout/template.xhtml">
+
+	<ui:param name="title" value="#{categoryManager.category.name}"/>
+
+	<ui:define name="breadcrumbs">
+		<p:menuitem value="Photos" outcome="/admin/photo-list.xhtml"/>
+		<p:menuitem value="#{photoManager.photo.id}" rendered="#{not empty photoManager.id}"/>
+		<p:menuitem value="#{I18n['ui.photos.new']}" rendered="#{empty photoManager.id}"/>
+	</ui:define>
 
 	<ui:define name="body">
 
-		<p:panel>
-			<f:facet name="header">Photo Details</f:facet>
+		<p:panel id="mainFormPanel">
+			<h:panelGrid columns="2" columnClasses="label, value" styleClass="detail-grid">
 
-			<ui:decorate id="id" template="layout/display.xhtml">
-				<ui:define name="label">Id</ui:define>
-				<h:outputText value="#{photoHome.instance.id}"/>
-			</ui:decorate>
+				<h:outputLabel for="fieldId" value="#{I18n['ui.photos.id']}"/>
+				<h:panelGroup id="fieldId">
+					<h:outputText value="#{photoManager.photo.id}" rendered="#{not empty photoManager.id}"/>
+					<h:outputText value="#{I18n['ui.new']}" rendered="#{empty photoManager.id}"/>
+				</h:panelGroup>
 
-			<ui:decorate id="categoryId" template="layout/display.xhtml">
-				<ui:define name="label">Category</ui:define>
-				<h:outputText value="#{photoHome.instance.category.nameWithParent}"/>
-			</ui:decorate>
+				<h:outputLabel for="fieldCategory" value="#{I18n['ui.photos.category']}"/>
+				<h:outputText id="fieldCategory" value="#{photoManager.photo.category.name}"/>
 
-			<ui:decorate id="description" template="layout/display.xhtml">
-				<ui:define name="label">Description</ui:define>
-				<h:outputText value="#{photoHome.instance.description}"/>
-			</ui:decorate>
+				<h:outputLabel for="fieldFeatured" value="#{I18n['ui.photos.homepage']}"/>
+				<h:outputText id="fieldFeatured" value="#{photoManager.photo.featured ? 'yes' : 'no'}"/>
 
-			<ui:decorate id="fileName" template="layout/display.xhtml">
-				<ui:define name="label">File name</ui:define>
-				<h:outputText value="#{photoHome.instance.fileName}"/>
-			</ui:decorate>
+				<h:outputLabel for="fieldOrientation" value="#{I18n['ui.photos.orientation']}"/>
+				<h:outputText id="fieldOrientation"
+							  value="#{photoManager.photo.orientation == 2 ? 'vertical' : 'horizontal'}"/>
 
-			<ui:decorate id="height" template="layout/display.xhtml">
-				<ui:define name="label">Height</ui:define>
-				<h:outputText value="#{photoHome.instance.height}"/>
-			</ui:decorate>
+				<h:outputLabel for="fieldDescription" value="#{I18n['ui.photos.description']}"/>
+				<h:outputText id="fieldDescription" value="#{photoManager.photo.description}"/>
 
-			<ui:decorate id="rank" template="layout/display.xhtml">
-				<ui:define name="label">Rank</ui:define>
-				<h:outputText value="#{photoHome.instance.rank}"/>
-			</ui:decorate>
+				<h:outputLabel for="fieldRank" value="#{I18n['ui.photos.rank']}"/>
+				<h:outputText id="fieldRank" value="#{photoManager.photo.rank}"/>
 
-			<ui:decorate id="width" template="layout/display.xhtml">
-				<ui:define name="label">Width</ui:define>
-				<h:outputText value="#{photoHome.instance.width}"/>
-			</ui:decorate>
-
-			<div style="clear:both"/>
-
+				<h:outputLabel for="fieldPhoto" value="#{I18n['ui.photos.photo']}"/>
+				<p:outputPanel id="fieldPhoto" rendered="#{not empty photoManager.photo.fileName}">
+					<img src="#{request.contextPath}/media/300x/#{photoManager.photo.fileName}" class="image"
+						 alt="#{photoManager.photo.description}"/>
+				</p:outputPanel>
+			</h:panelGrid>
 		</p:panel>
 
 		<div class="actionButtons">
-
-			<s:button view="/admin/PhotoEdit.xhtml"
-					  id="edit"
-					  value="Edit"/>
-
-			<s:button view="/admin/#{empty photoFrom ? 'PhotoList' : photoFrom}.xhtml"
-					  id="done"
-					  value="Done"/>
-
+			<p:button id="buttonEdit"
+					  value="Edit"
+					  outcome="/admin/photo-edit.xhtml">
+				<f:param name="id" value="#{photoManager.id}"/>
+			</p:button>
 		</div>
 
 	</ui:define>
 
 </ui:composition>
+
+</html>
