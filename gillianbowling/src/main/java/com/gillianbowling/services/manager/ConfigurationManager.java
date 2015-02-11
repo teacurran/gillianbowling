@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 
-import com.gillianbowling.data.model.configuration;
+import com.gillianbowling.data.model.Configuration;
 import com.gillianbowling.data.repositories.ConfigurationRepository;
 import org.apache.deltaspike.jpa.api.transaction.Transactional;
 
@@ -23,10 +23,10 @@ public class ConfigurationManager implements Serializable {
 
 	Integer id = null;
 	boolean newRecord = false;
-	private com.gillianbowling.data.model.configuration configuration;
-	private List<com.gillianbowling.data.model.configuration> list;
+	private Configuration configuration;
+	private List<Configuration> list;
 
-	public List<com.gillianbowling.data.model.configuration> getList() {
+	public List<Configuration> getList() {
 		if (list == null) {
 			list = configurationPropertyRepository.findAll();
 		}
@@ -34,13 +34,13 @@ public class ConfigurationManager implements Serializable {
 	}
 
 	@Transactional
-	public com.gillianbowling.data.model.configuration getConfigurationProperty() {
+	public Configuration getConfigurationProperty() {
 		if (configuration == null) {
 			if (id == null) {
-				configuration = new configuration();
+				configuration = new Configuration();
 				newRecord = true;
 			} else {
-				configuration = em.find(com.gillianbowling.data.model.configuration.class, id);
+				configuration = em.find(Configuration.class, id);
 
 				if (configuration == null) {
 					id = null;
