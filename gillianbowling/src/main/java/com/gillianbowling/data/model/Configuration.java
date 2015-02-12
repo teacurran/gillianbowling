@@ -18,7 +18,7 @@ import javax.validation.constraints.NotNull;
 @Cacheable
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "code"))
 @NamedQueries({
-		@NamedQuery(name = Xonfiguration.NAMED_QUERY_GET_ALL,
+		@NamedQuery(name = Configuration.NAMED_QUERY_GET_ALL,
 			query = "SELECT c " +
 					"FROM configuration c",
 			hints = {
@@ -27,7 +27,7 @@ import javax.validation.constraints.NotNull;
 			}
 		),
 
-		@NamedQuery(name = Xonfiguration.NAMED_QUERY_GET_BY_ID,
+		@NamedQuery(name = Configuration.NAMED_QUERY_GET_BY_ID,
 			query = "SELECT c " +
 					"FROM configuration c " +
 					"WHERE id  = :id",
@@ -37,7 +37,7 @@ import javax.validation.constraints.NotNull;
 			}
 		),
 
-		@NamedQuery(name = Xonfiguration.NAMED_QUERY_GET_BY_CODE,
+		@NamedQuery(name = Configuration.NAMED_QUERY_GET_BY_CODE,
 			query = "SELECT c " +
 					"FROM configuration c " +
 					"WHERE code  = :code",
@@ -47,7 +47,7 @@ import javax.validation.constraints.NotNull;
 			}
 		)
 })
-public class Xonfiguration extends GeneratedIdEntity implements Serializable {
+public class Configuration extends GeneratedIdEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	public static final String NAMED_QUERY_GET_ALL = "configurationProperty.getAll";
@@ -60,7 +60,7 @@ public class Xonfiguration extends GeneratedIdEntity implements Serializable {
 	private String defaultValue;
 	private Long version; // for optimistic locking
 
-	public Xonfiguration() {
+	public Configuration() {
 	}
 
 	@Transient
@@ -158,7 +158,7 @@ public class Xonfiguration extends GeneratedIdEntity implements Serializable {
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
-		final Xonfiguration other = (Xonfiguration) obj;
+		final Configuration other = (Configuration) obj;
 		if (id == null) {
 			if (other.id != null) {
 				return false;
