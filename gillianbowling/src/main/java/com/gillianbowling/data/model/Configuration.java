@@ -20,7 +20,7 @@ import javax.validation.constraints.NotNull;
 @NamedQueries({
 		@NamedQuery(name = Configuration.NAMED_QUERY_GET_ALL,
 			query = "SELECT c " +
-					"FROM configuration c",
+					"FROM Configuration c",
 			hints = {
 					@QueryHint(name = "org.hibernate.cacheable", value = "true"),
 					@QueryHint(name = "org.hibernate.cacheRegion", value = "configurationPropertyQueries")
@@ -29,7 +29,7 @@ import javax.validation.constraints.NotNull;
 
 		@NamedQuery(name = Configuration.NAMED_QUERY_GET_BY_ID,
 			query = "SELECT c " +
-					"FROM configuration c " +
+					"FROM Configuration c " +
 					"WHERE id  = :id",
 			hints = {
 					@QueryHint(name = "org.hibernate.cacheable", value = "true"),
@@ -39,7 +39,7 @@ import javax.validation.constraints.NotNull;
 
 		@NamedQuery(name = Configuration.NAMED_QUERY_GET_BY_CODE,
 			query = "SELECT c " +
-					"FROM configuration c " +
+					"FROM Configuration c " +
 					"WHERE code  = :code",
 			hints = {
 					@QueryHint(name = "org.hibernate.cacheable", value = "true"),
