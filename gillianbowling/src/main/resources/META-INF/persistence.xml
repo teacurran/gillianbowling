@@ -4,6 +4,7 @@
 	<persistence-unit name="gbowlingportfolio" transaction-type="JTA">
 		<jta-data-source>gbowlingportfolio-ds</jta-data-source>
 
+		<class>com.gillianbowling.data.model.Account</class>
 		<class>com.gillianbowling.data.model.Category</class>
 		<class>com.gillianbowling.data.model.Configuration</class>
 		<class>com.gillianbowling.data.model.GeneratedIdEntity</class>

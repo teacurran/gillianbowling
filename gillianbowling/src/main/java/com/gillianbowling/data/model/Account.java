@@ -1,5 +1,6 @@
 package com.gillianbowling.data.model;
 
+import javax.persistence.Entity;
 import java.io.Serializable;
 
 /**
@@ -7,6 +8,7 @@ import java.io.Serializable;
  *
  * @author T. Curran
  */
+@Entity
 public class Account extends GeneratedIdEntity implements Serializable {
 
 	String username;
