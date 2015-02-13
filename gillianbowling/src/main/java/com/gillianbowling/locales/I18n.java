@@ -19,4 +19,8 @@ public interface I18n {
 
 	@MessageTemplate("{ui.photos.saved}")
 	String photoSaved();
+
+	@MessageTemplate("{ui.error.unexpected}")
+	String unexpectedError(String message);
+
 }
