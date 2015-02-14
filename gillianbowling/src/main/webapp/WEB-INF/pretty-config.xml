@@ -15,6 +15,11 @@
 		<view-id value="/admin/home.xhtml" />
 	</url-mapping>
 
+	<url-mapping id="admin_bootstrap">
+		<pattern value="/admin/bootstrap" />
+		<view-id value="/admin/bootstrap.xhtml" />
+	</url-mapping>
+
 	<!-- Categories -->
 	<url-mapping id="admin_category_list">
 		<pattern value="/admin/categories" />

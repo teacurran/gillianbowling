@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
+<ui:composition template="layout/template.xhtml">
+	<ui:define name="body">
+
+		<h:form id="loginForm" rendered="#{!accountManager.initialized}">
+
+			<p:panel>
+				<f:facet name="header">Login</f:facet>
+
+				<p>Please login here</p>
+
+				<div class="dialog">
+					<h:panelGrid columns="2" rowClasses="prop" columnClasses="name,value">
+						<h:outputLabel for="username">Username</h:outputLabel>
+						<h:inputText id="username"
+									 value="#{accountManager.initUsername}"/>
+
+						<h:outputLabel for="password">Password</h:outputLabel>
+						<h:inputSecret id="password"
+									   value="#{accountManager.initPassword}"/>
+
+						<h:outputLabel for="password2">Password Again</h:outputLabel>
+						<h:inputSecret id="password2"
+									   value="#{accountManager.initPassword2}"/>
+
+					</h:panelGrid>
+				</div>
+
+			</p:panel>
+
+			<div class="actionButtons">
+				<h:commandButton id="submit" value="Login" action="#{accountManager.bootstrap}"/>
+			</div>
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>
+</html>

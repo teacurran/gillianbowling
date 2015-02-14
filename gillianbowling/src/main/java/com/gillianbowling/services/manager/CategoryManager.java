@@ -26,7 +26,6 @@ import com.gillianbowling.data.repositories.ConfigurationRepository;
 import com.gillianbowling.locales.I18n;
 import com.gillianbowling.web.coverters.GenericEntityConverter;
 import org.apache.deltaspike.jsf.api.message.JsfMessage;
-import org.hibernate.Hibernate;
 import org.primefaces.event.SelectEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

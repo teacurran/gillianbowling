@@ -1,5 +1,6 @@
 package com.gillianbowling.data.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.io.Serializable;
 
@@ -11,8 +12,14 @@ import java.io.Serializable;
 @Entity
 public class Account extends GeneratedIdEntity implements Serializable {
 
+	@Column(length=200)
 	String username;
+
+	@Column(length=200)
 	String password;
+
+	@Column(length=200)
+	String salt;
 
 	public String getUsername() {
 		return username;
@@ -28,5 +35,13 @@ public class Account extends GeneratedIdEntity implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getSalt() {
+		return salt;
+	}
+
+	public void setSalt(String salt) {
+		this.salt = salt;
 	}
 }
