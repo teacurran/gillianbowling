@@ -1,5 +1,6 @@
 package com.gillianbowling.services.manager;
 
+import java.io.Serializable;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -18,7 +19,7 @@ import org.slf4j.LoggerFactory;
  */
 @Named
 @ViewScoped
-public class AccountManager {
+public class AccountManager implements Serializable {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(AccountManager.class);
 

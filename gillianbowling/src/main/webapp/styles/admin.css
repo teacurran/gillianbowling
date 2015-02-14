@@ -59,7 +59,7 @@ body {
 }
 
 .breadcrumbs li a {
-	background: url(../img/breadcrumb_background_white.png) no-repeat right center;
+	background: url(../images/admin/breadcrumb_background_white.png) no-repeat right center;
 	display: block;
 	padding:0 15px 0 0;
 }
@@ -145,15 +145,15 @@ input[type=text], input[type=password], textarea {
 }
 
 .message li.infomsg {
-	background-image: url(../img/msginfo.png);
+	background-image: url(../images/admin/msginfo.png);
 }
 
 .message li.errormsg {
-	background-image: url(../img/msgerror.png);
+	background-image: url(../images/admin/msgerror.png);
 }
 
 .message li.warnmsg {
-	background-image: url(../img/msgwarn.png);
+	background-image: url(../images/admin/msgwarn.png);
 }
 
 .name {
