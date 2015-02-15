@@ -43,6 +43,24 @@
 		</navigation-case>
 	</navigation-rule>
 
+	<!-- Login -->
+	<navigation-rule>
+		<from-view-id>/admin/login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/admin/home.xhtml</to-view-id>
+			<redirect include-view-params="true" />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/admin/login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>failure</from-outcome>
+			<to-view-id>/admin/login.xhtml</to-view-id>
+			<redirect include-view-params="true" />
+		</navigation-case>
+	</navigation-rule>
+
 	<navigation-rule>
 		<from-view-id>/admin/photo-edit.xhtml</from-view-id>
 		<navigation-case>

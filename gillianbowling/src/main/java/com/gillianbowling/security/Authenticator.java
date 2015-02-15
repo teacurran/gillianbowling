@@ -1,11 +1,13 @@
 package com.gillianbowling.security;
 
+import com.gillianbowling.Constants;
 import com.gillianbowling.data.model.Account;
 import com.gillianbowling.data.repositories.AccountRepository;
 import com.gillianbowling.locales.I18n;
 import org.apache.deltaspike.jsf.api.message.JsfMessage;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.slf4j.Logger;
@@ -52,18 +54,18 @@ public class Authenticator {
 			final String urlEncoded = FacesContext.getCurrentInstance().getExternalContext().encodeResourceURL(url);
 			FacesContext.getCurrentInstance().getExternalContext().redirect(urlEncoded);
 			FacesContext.getCurrentInstance().responseComplete();
-			return "success";
-		} catch (UnknownAccountException uae) {
+			return Constants.ACTION_SUCCESS;
+		} catch (UnknownAccountException | IncorrectCredentialsException uae) {
+			FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 			LOGGER.info("Authentication failed for user: {}", username);
 			messages.addError().unexpectedError("Authentication Failed");
-			FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
-			return "failure";
+			return Constants.ACTION_FAILURE;
 
 		} catch (AuthenticationException e) {
+			FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 			LOGGER.error("Authentication failed ", e);
 			messages.addError().unexpectedError("Authentication Failed");
-			FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
-			return "failure";
+			return Constants.ACTION_FAILURE;
 		}
 	}
 

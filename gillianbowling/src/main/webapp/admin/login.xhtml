@@ -19,23 +19,22 @@
 						<h:outputLabel for="username">Username</h:outputLabel>
 						<h:inputText id="username"
 									 value="#{authenticator.username}"/>
+
 						<h:outputLabel for="password">Password</h:outputLabel>
 						<h:inputSecret id="password"
 									   value="#{authenticator.password}"/>
+
 						<h:outputLabel for="rememberMe">Remember me</h:outputLabel>
 						<h:selectBooleanCheckbox id="rememberMe"
 												 value="#{authenticator.rememberMe}"/>
+
+						<span></span>
+						<p:commandButton id="submit" value="Login" action="#{authenticator.login}"/>
+
 					</h:panelGrid>
 				</div>
-
 			</p:panel>
-
-			<div class="actionButtons">
-				<h:commandButton id="submit" value="Login" action="#{authenticator.login}"/>
-			</div>
-
 		</h:form>
-
 	</ui:define>
 </ui:composition>
 </html>
