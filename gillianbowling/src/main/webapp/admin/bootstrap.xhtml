@@ -14,9 +14,9 @@
 		<h:form id="loginForm" rendered="#{!accountManager.initialized}">
 
 			<p:panel>
-				<f:facet name="header">Login</f:facet>
+				<f:facet name="header">Bootstrap</f:facet>
 
-				<p>Please login here</p>
+				<p>User this page to create the initial admin account for the site</p>
 
 				<div class="dialog">
 					<h:panelGrid columns="2" rowClasses="prop" columnClasses="name,value">
@@ -32,14 +32,13 @@
 						<h:inputSecret id="password2"
 									   value="#{accountManager.initPassword2}"/>
 
+						<span></span>
+						<p:commandButton id="submit" value="Create New Account" action="#{accountManager.bootstrap}"/>
+
 					</h:panelGrid>
 				</div>
 
 			</p:panel>
-
-			<div class="actionButtons">
-				<h:commandButton id="submit" value="Login" action="#{accountManager.bootstrap}"/>
-			</div>
 
 		</h:form>
 

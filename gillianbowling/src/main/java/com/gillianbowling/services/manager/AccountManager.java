@@ -6,6 +6,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import com.gillianbowling.Constants;
+import com.gillianbowling.data.model.Account;
 import com.gillianbowling.data.repositories.AccountRepository;
 import com.gillianbowling.locales.I18n;
 import org.apache.deltaspike.jsf.api.message.JsfMessage;
@@ -39,10 +40,16 @@ public class AccountManager implements Serializable {
 		} else {
 
 			// TODO: do some validation here
-			accountRepository.createNew(initUsername, initPassword);
+			Account account = accountRepository.createNew(initUsername, initPassword);
+			if (account == null) {
+				messages.addError().unexpectedError("Error creating account");
+				return Constants.ACTION_FAILURE;
+			} else {
+				messages.addInfo().bootstrapSuccess();
+			}
 		}
 
-		return Constants.ACTION_REDIRECT_LOGIN;
+		return Constants.ACTION_SUCCESS;
 	}
 
 	public boolean isInitialized() {

@@ -14,6 +14,9 @@ import org.apache.deltaspike.jsf.impl.message.JsfMessageResolver;
 @MessageContextConfig(messageResolver = JsfMessageResolver.class)
 public interface I18n {
 
+	@MessageTemplate("{ui.bootstrap.success}")
+	String bootstrapSuccess();
+
 	@MessageTemplate("{ui.categories.saved}")
 	String categorySaved();
 

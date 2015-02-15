@@ -20,10 +20,13 @@ public abstract class AccountRepository extends AbstractEntityRepository<Account
 
 	public abstract Account findAnyByUsername(String username);
 
-	public Account createNew(String username, String password) {
+	public Account createNew(final String inUsername, final String inPassword) {
 		Account account = new Account();
-		account.setPassword(password);
-		setPassword(account, password);
+		account.setUsername(inUsername);
+		account.setPassword(inPassword);
+		if (!setPassword(account, inPassword)) {
+			return null;
+		}
 		this.save(account);
 		return account;
 	}

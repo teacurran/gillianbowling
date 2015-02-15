@@ -12,5 +12,4 @@ public class Constants {
 	public static final String ACTION_SUCCESS = "success";
 	public static final String ACTION_SUCCESS_NEW = "success_new";
 	public static final String ACTION_FAILURE = "failure";
-	public static final String ACTION_REDIRECT_LOGIN = "redirect_login";
 }

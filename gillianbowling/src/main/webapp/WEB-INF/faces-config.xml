@@ -6,6 +6,24 @@
       http://java.sun.com/xml/ns/javaee
       http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
 
+	<!-- Bootstrap -->
+	<navigation-rule>
+		<from-view-id>/admin/bootstrap.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/admin/login.xhtml</to-view-id>
+			<redirect include-view-params="true" />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/admin/bootstrap.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>failure</from-outcome>
+			<to-view-id>/admin/bootstrap.xhtml</to-view-id>
+			<redirect include-view-params="true" />
+		</navigation-case>
+	</navigation-rule>
+
 	<!-- Categories -->
 	<navigation-rule>
 		<from-view-id>/admin/category-edit.xhtml</from-view-id>
