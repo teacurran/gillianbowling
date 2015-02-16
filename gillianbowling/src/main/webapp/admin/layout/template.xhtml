@@ -30,7 +30,7 @@
 		<div id="wrapper" class="wrapper clear">
 			<div id="content" class="content">
 				<h:form id="headerForm">
-					<p:breadCrumb>
+					<p:breadCrumb rendered="#{identity.subject.authenticated}">
 						<p:menuitem value="#{I18n['ui.navigation.home']}" outcome="/admin/home.xhtml"/>
 
 						<ui:insert name="breadcrumbs"/>

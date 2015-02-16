@@ -7,7 +7,7 @@
 	  xmlns:p="http://primefaces.org/ui">
 
 <ui:composition>
-	<h:form id="toolbarForm">
+	<h:form id="toolbarForm" rendered="#{identity.subject.authenticated}">
 
 		<p:menubar id="toolbar" autoSubmenuDisplay="true" styleClass="toolbar">
 

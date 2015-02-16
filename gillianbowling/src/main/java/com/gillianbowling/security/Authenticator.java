@@ -15,9 +15,11 @@ import org.slf4j.LoggerFactory;
 
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * Date: 2/13/15
@@ -25,8 +27,8 @@ import java.io.IOException;
  * @author T. Curran
  */
 @Named
-@RequestScoped
-public class Authenticator {
+@ViewScoped
+public class Authenticator implements Serializable {
 
 	public static final String HOME_URL = "pages/secure/index.xhtml";
 	public static final String LOGIN_URL = "home/login.xhtml";
@@ -49,16 +51,12 @@ public class Authenticator {
 			setLogoutFlag(Boolean.TRUE);
 			Account account = accountRepository.findAnyByUsername(SecurityUtils.getSubject().getPrincipal().toString());
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("user", account.getId());
-
-			//final String url = "/pages/secure/index.xhtml" + "?faces-redirect=true";
-			//final String urlEncoded = FacesContext.getCurrentInstance().getExternalContext().encodeResourceURL(url);
-			//FacesContext.getCurrentInstance().getExternalContext().redirect(urlEncoded);
-			//FacesContext.getCurrentInstance().responseComplete();
 			return Constants.ACTION_SUCCESS;
-		//} catch (UnknownAccountException | IncorrectCredentialsException uae) {
-		//	LOGGER.info("Authentication failed for user: {}", username);
-	//		messages.addError().unexpectedError("Authentication Failed");
-//			return Constants.ACTION_FAILURE;
+
+		} catch (UnknownAccountException | IncorrectCredentialsException uae) {
+			LOGGER.info("Authentication failed for user: {}", username);
+			messages.addError().unexpectedError("Authentication Failed");
+			return Constants.ACTION_FAILURE;
 
 		} catch (AuthenticationException e) {
 			LOGGER.error("Authentication failed ", e);

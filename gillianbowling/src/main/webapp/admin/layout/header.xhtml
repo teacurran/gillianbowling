@@ -14,13 +14,11 @@
 
 				<div id="logoutheader" class="logoutHeader">
 					<h:form id="currentUserForm">
-						<h:commandLink value="#{I18n['ui.login.logout']}" action="#{authentication.logout}"
-									   rendered="#{currentUser.subject.isAuthenticated() and (currentUser.hasRole('admin') or currentUser.hasRole('editor'))}"/>
-						<p:menuButton value="#{authentication.getUserFirstLastName()}"
-									  rendered="#{currentUser.subject.isAuthenticated() and currentUser.hasRole('quiz_writer')}">
-							<p:menuitem value="#{I18n['ui.manage.user.change.password.label']}"
-										outcome="/pages/secure/change-password.xhtml"/>
-							<p:menuitem value="#{I18n['ui.logion.label.logout']}" action="#{authentication.logout}"/>
+						<h:commandLink value="#{I18n['ui.auth.logout']}" action="#{authenticator.logout}"
+									   rendered="#{identity.subject.authenticated}"/>
+						<p:menuButton value="#{identity.subject.principal}"
+									  rendered="#{identity.subject.authenticated}">
+							<p:menuitem value="#{I18n['ui.auth.logout']}" action="#{authenticator.logout}"/>
 						</p:menuButton>
 					</h:form>
 				</div>
