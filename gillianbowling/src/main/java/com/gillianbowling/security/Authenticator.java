@@ -50,19 +50,17 @@ public class Authenticator {
 			Account account = accountRepository.findAnyByUsername(SecurityUtils.getSubject().getPrincipal().toString());
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("user", account.getId());
 
-			final String url = "/pages/secure/index.xhtml" + "?faces-redirect=true";
-			final String urlEncoded = FacesContext.getCurrentInstance().getExternalContext().encodeResourceURL(url);
-			FacesContext.getCurrentInstance().getExternalContext().redirect(urlEncoded);
-			FacesContext.getCurrentInstance().responseComplete();
+			//final String url = "/pages/secure/index.xhtml" + "?faces-redirect=true";
+			//final String urlEncoded = FacesContext.getCurrentInstance().getExternalContext().encodeResourceURL(url);
+			//FacesContext.getCurrentInstance().getExternalContext().redirect(urlEncoded);
+			//FacesContext.getCurrentInstance().responseComplete();
 			return Constants.ACTION_SUCCESS;
-		} catch (UnknownAccountException | IncorrectCredentialsException uae) {
-			FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
-			LOGGER.info("Authentication failed for user: {}", username);
-			messages.addError().unexpectedError("Authentication Failed");
-			return Constants.ACTION_FAILURE;
+		//} catch (UnknownAccountException | IncorrectCredentialsException uae) {
+		//	LOGGER.info("Authentication failed for user: {}", username);
+	//		messages.addError().unexpectedError("Authentication Failed");
+//			return Constants.ACTION_FAILURE;
 
 		} catch (AuthenticationException e) {
-			FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 			LOGGER.error("Authentication failed ", e);
 			messages.addError().unexpectedError("Authentication Failed");
 			return Constants.ACTION_FAILURE;
