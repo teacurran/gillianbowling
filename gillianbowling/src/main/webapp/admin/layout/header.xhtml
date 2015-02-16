@@ -8,21 +8,15 @@
 
 <ui:composition>
 	<div id="header" class="header ui-widget ui-widget-header">
-		<div class="title">
-			<div id="mainheader" class="mainHeader">
-				<h1><h:link value="#{I18n['application.name']}"/></h1>
+		<h1><h:link value="#{I18n['application.name']}"/></h1>
 
-				<div id="logoutheader" class="logoutHeader">
-					<h:form id="currentUserForm">
-						<h:commandLink value="#{I18n['ui.auth.logout']}" action="#{authenticator.logout}"
-									   rendered="#{identity.subject.authenticated}"/>
-						<p:menuButton value="#{identity.subject.principal}"
-									  rendered="#{identity.subject.authenticated}">
-							<p:menuitem value="#{I18n['ui.auth.logout']}" action="#{authenticator.logout}"/>
-						</p:menuButton>
-					</h:form>
-				</div>
-			</div>
+		<div class="menu">
+			<h:form id="headerMenu">
+				<p:menuButton value="#{identity.subject.principal}"
+							  rendered="#{identity.subject.authenticated}">
+					<p:menuitem value="#{I18n['ui.auth.logout']}" action="#{authenticator.logout}"/>
+				</p:menuButton>
+			</h:form>
 		</div>
 	</div>
 </ui:composition>

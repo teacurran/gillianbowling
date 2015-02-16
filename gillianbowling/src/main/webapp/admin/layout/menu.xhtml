@@ -29,11 +29,6 @@
 					includePageParams="false"
 					propagation="none"/>
 
-			<p:menuitem id="menuLoginId" outcome="/admin/login.xhtml" value="Login" rendered="#{not identity.loggedIn}"
-					propagation="none"/>
-			<p:menuitem id="menuLogoutId" outcome="/admin/home.xhtml" action="#{identity.logout}" value="Logout"
-					rendered="#{identity.loggedIn}" propagation="none"/>
-
 		</p:menubar>
 
 	</h:form>
