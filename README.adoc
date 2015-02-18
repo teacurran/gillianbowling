@@ -1,2 +1,27 @@
 # gillianbowling
+
 source for gillianbowling.com
+
+Tested on wildfly 8.2
+
+To run:
+-------
+
+. run "mvn package" from root directory
+. create schema in mysql
+. customize gillianbowling-db/src/main/resources/db/environments/development.properties
+for the mysql schema you created
+. run "mvn migration:up" from gillianbowling-db module
+. place mysql-connector-java-5.1.28-bin.jar (point version not signifigant) into
+wildfly standalone/deployments directory
+. customize conf/data_descriptor_wildfly8.2-ds.xml
+. copy conf/data_descriptor_wildfly8.2-ds.xml into wildfly standalone/deployments
+directory
+. copy gillianbowling/target/gillianbowling-1.0-SNAPSHOT.war into wildfly
+standalone/deployments directory
+. update wildfly standalone/conf/standalone.xml, remove <location name="/" handler="welcome-content"/>
+from the default-host
+. start wildfly in standalone mode
+. run wildfly
+
+
