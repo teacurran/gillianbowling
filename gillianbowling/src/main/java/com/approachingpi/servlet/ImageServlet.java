@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.imageio.ImageIO;
 import javax.inject.Inject;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
@@ -33,6 +34,23 @@ public class ImageServlet extends HttpServlet {
 	public ImageServlet() {
 
 	}
+
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+		// this was an attempt to fix an image loading issue on linux
+		//		try {
+		//			Class.forName("java.awt.color.ICC_ColorSpace");
+		//		} catch (ClassNotFoundException e) {
+		//			LOGGER.error("error loading colorspace", e);
+		//		}
+		//		try {
+		//			Class.forName("sun.java2d.cmm.lcms.LCMS");
+		//		} catch (ClassNotFoundException e) {
+		//			LOGGER.error("error loading colorspace", e);
+		//		}
+		super.init(config);
+	}
+
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {

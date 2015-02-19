@@ -25,3 +25,7 @@ from the default-host
 . run wildfly
 
 
+Currently on Linux you must run Wildfly with the following in standalone.conf:
+JAVA_OPTS="$JAVA_OPTS -Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider"
+
+
