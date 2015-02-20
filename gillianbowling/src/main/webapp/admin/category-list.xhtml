@@ -32,7 +32,7 @@
 					<f:facet name="header">
 						<h:outputText value="Id"/>
 					</f:facet>
-					<h:link value="#{_category.id}" outcome="/admin/category-edit.xhtml">
+					<h:link value="#{_category.id}" outcome="/admin/category-view.xhtml">
 						<f:param name="id" value="#{_category.id}"/>
 					</h:link>
 				</p:column>
@@ -41,7 +41,7 @@
 					<f:facet name="header">
 						<h:outputText value="Parent"/>
 					</f:facet>
-					<h:link value="#{_category.parent.name}" outcome="/admin/category-edit.xhtml">
+					<h:link value="#{_category.parent.name}" outcome="/admin/category-view.xhtml">
 						<f:param name="id" value="#{_category.id}"/>
 					</h:link>
 				</p:column>
@@ -50,7 +50,7 @@
 					<f:facet name="header">
 						<h:outputText value="Name"/>
 					</f:facet>
-					<h:link value="#{_category.name}" outcome="/admin/category-edit.xhtml">
+					<h:link value="#{_category.name}" outcome="/admin/category-view.xhtml">
 						<f:param name="id" value="#{_category.id}"/>
 					</h:link>
 				</p:column>
@@ -59,20 +59,9 @@
 					<f:facet name="header">
 						<h:outputText value="Code"/>
 					</f:facet>
-					<h:link value="#{_category.code}" outcome="/admin/category-edit.xhtml">
+					<h:link value="#{_category.code}" outcome="/admin/category-view.xhtml">
 						<f:param name="id" value="#{_category.id}"/>
 					</h:link>
-				</p:column>
-
-				<p:column styleClass="action">
-					<f:facet name="header">#{I18n['ui.action']}</f:facet>
-					<p:link outcome="/admin/category-view.xhtml" value="#{I18n['ui.view']}">
-						<f:param name="id" value="#{_category.id}"/>
-					</p:link>
-					#{' '}
-					<p:link outcome="/admin/category-edit.xhtml" value="#{I18n['ui.edit']}">
-						<f:param name="id" value="#{_category.id}"/>
-					</p:link>
 				</p:column>
 
 			</p:dataTable>

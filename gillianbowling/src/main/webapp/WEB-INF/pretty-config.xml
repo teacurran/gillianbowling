@@ -25,6 +25,10 @@
 		<pattern value="/admin/categories" />
 		<view-id value="/admin/category-list.xhtml" />
 	</url-mapping>
+	<url-mapping id="admin_category_view">
+		<pattern value="/admin/categories/#{/\\d+/ id}" />
+		<view-id value="/admin/category-view.xhtml" />
+	</url-mapping>
 	<url-mapping id="admin_category_edit">
 		<pattern value="/admin/categories/#{/\\d+/ id}/edit" />
 		<view-id value="/admin/category-edit.xhtml" />

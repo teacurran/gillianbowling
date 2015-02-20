@@ -19,7 +19,10 @@
 
 	<ui:define name="breadcrumbs">
 		<p:menuitem value="#{I18n['ui.categories.title']}" outcome="/admin/category-list.xhtml"/>
-		<p:menuitem value="#{categoryManager.category.name}" rendered="#{not empty categoryManager.id}"/>
+		<p:menuitem value="#{categoryManager.category.name}" rendered="#{not empty categoryManager.id}"
+					outcome="/admin/category-view.xhtml">
+			<f:param name="id" value="#{categoryManager.id}"/>
+		</p:menuitem>
 		<p:menuitem value="#{I18n['ui.categories.new']}" rendered="#{empty categoryManager.id}"/>
 	</ui:define>
 
