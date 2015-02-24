@@ -52,7 +52,7 @@
 			<a href="#{request.contextPath}/"><h:graphicImage value="/images/logo.png" height="55" width="376" alt="Gillian Bowling"/></a>
 		</div>
 		<div class="nav">
-			<h:panelGroup rendered="#{not home.underConstruction}">
+			<h:panelGroup rendered="#{not home.underConstruction or identity.subject.authenticated}">
 				<ul>
 					<ui:repeat value="#{categoryManager.topLevelCats}" var="_cat">
 						<h:panelGroup rendered="#{not empty _cat.children}">
