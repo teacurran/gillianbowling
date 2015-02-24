@@ -1,5 +1,6 @@
 package com.gillianbowling.services;
 
+import com.gillianbowling.data.repositories.ConfigurationRepository;
 import com.gillianbowling.data.repositories.PhotoRepository;
 import com.gillianbowling.data.model.*;
 import org.hibernate.Hibernate;
@@ -22,8 +23,12 @@ public class Home implements Serializable {
 	@Inject
 	transient PhotoRepository photoRepository;
 
+	@Inject
+	ConfigurationRepository configuration;
+
 	int randomNumber	= 0;
 	List<Photo> photos = null;
+	Boolean underConstruction = null;
 
 	public void chooseRandom() {
 		randomNumber = (int)(Math.round(Math.random()*3));
@@ -79,4 +84,20 @@ public class Home implements Serializable {
 		return totalWidth;
 	}
 
+	public boolean isUnderConstruction() {
+
+		if (underConstruction == null) {
+			underConstruction = configuration.getBool("site.under-construction");
+		}
+		return underConstruction;
+	}
+
+	public String getView() {
+
+		if (isUnderConstruction()) {
+			return "/under-construction.xhtml";
+		}
+
+		return "/home.xhtml";
+	}
 }

@@ -32,6 +32,12 @@ public abstract class ConfigurationRepository extends AbstractEntityRepository<C
 		return result;
 	}
 
+	public boolean getBool(String code) {
+		String value = getString(code);
+
+		return Boolean.parseBoolean(value);
+	}
+
 	public Object get(String key) {
 		Object result = "";
 

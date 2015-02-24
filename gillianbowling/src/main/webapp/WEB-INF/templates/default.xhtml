@@ -52,26 +52,28 @@
 			<p:link outcome="/home.xhtml"><h:graphicImage value="/images/logo.png" height="55" width="376" alt="Gillian Bowling"/></p:link>
 		</div>
 		<div class="nav">
-			<ul>
-				<ui:repeat value="#{categoryManager.topLevelCats}" var="_cat">
-					<h:panelGroup rendered="#{not empty _cat.children}">
-						<li><a href="javascript:openNav('#{_cat.code}')">#{_cat.name}</a>
-							<ul id="nav_#{_cat.code}">
-								<ui:repeat value="#{_cat.children}" var="_child">
-									<li><p:link outcome="/view.xhtml" value="#{_child.name}" propagation="none">
-										<f:param name="c" value="#{_child.code}"/>
-									</p:link></li>
-								</ui:repeat>
-							</ul>
-						</li>
-					</h:panelGroup>
-					<h:panelGroup rendered="#{empty _cat.children}">
-						<li><p:link outcome="/view.xhtml" value="#{_cat.name}" propagation="none"><f:param name="c" value="#{_cat.code}"/></p:link></li>
-					</h:panelGroup>
-				</ui:repeat>
-				<li><p:link view="/blog.xhtml" value="blog"/>
-				</li>
-			</ul>
+			<h:panelGroup rendered="#{not home.underConstruction}">
+				<ul>
+					<ui:repeat value="#{categoryManager.topLevelCats}" var="_cat">
+						<h:panelGroup rendered="#{not empty _cat.children}">
+							<li><a href="javascript:openNav('#{_cat.code}')">#{_cat.name}</a>
+								<ul id="nav_#{_cat.code}">
+									<ui:repeat value="#{_cat.children}" var="_child">
+										<li><p:link outcome="/view.xhtml" value="#{_child.name}" propagation="none">
+											<f:param name="c" value="#{_child.code}"/>
+										</p:link></li>
+									</ui:repeat>
+								</ul>
+							</li>
+						</h:panelGroup>
+						<h:panelGroup rendered="#{empty _cat.children}">
+							<li><p:link outcome="/view.xhtml" value="#{_cat.name}" propagation="none"><f:param name="c" value="#{_cat.code}"/></p:link></li>
+						</h:panelGroup>
+					</ui:repeat>
+					<li><p:link view="/blog.xhtml" value="blog"/>
+					</li>
+				</ul>
+			</h:panelGroup>
 		</div>
 		<div class="separater"></div>
 		<h:graphicImage value="/images/bird.png" alt="bird" id="bird" styleClass="navBird"/>
