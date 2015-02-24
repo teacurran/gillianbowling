@@ -56,6 +56,14 @@ body {
 
 .content img {
 	margin-right: 10px;
+	float: left;
+}
+
+.content .banner {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	float: none;
 }
 
 .content .horiz {
@@ -69,10 +77,6 @@ body {
 
 .content .horiz p {
 	margin: 0;
-}
-
-.content img {
-	float: left;
 }
 
 .content .vert {
