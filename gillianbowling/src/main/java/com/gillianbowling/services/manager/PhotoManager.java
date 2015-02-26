@@ -106,6 +106,7 @@ public class PhotoManager implements Serializable {
 	public String remove() {
 		LOGGER.debug("Deleting photo");
 
+		photo = getPhoto();
 		if (photo != null) {
 			photo = em.merge(photo);
 			em.remove(photo);

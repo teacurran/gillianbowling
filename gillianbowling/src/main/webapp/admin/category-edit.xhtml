@@ -109,11 +109,33 @@
 					<f:param name="id" value="#{categoryManager.id}"/>
 				</p:button>
 
+				<p:commandButton oncomplete="PF('modalDelete').show()" value="delete" styleClass="buttonDelete"/>
+
 				<p:commandButton id="save"
 								 value="Save"
 								 action="#{categoryManager.save}"
 						/>
 			</div>
+
+			<!-- Modal Dialogs -->
+			<p:dialog modal="true" widgetVar="modalDelete"
+					  header="Delete Category" draggable="true" closable="true" closeOnEscape="true"
+					  hideEffect="explode" showEffect="fade" width="620" position="top" resizable="false">
+				<p:outputPanel id="modalDeleteContent">
+					<h2>Delete Category</h2>
+
+					<div style="clear:both">
+						<b>Are you sure you wish to delete this Category?</b>
+					</div>
+
+
+					<div class="actionButtons">
+						<p:commandButton id="delete" value="yes, delete" action="#{categoryManager.remove}"
+										 immediate="true"/>
+					</div>
+				</p:outputPanel>
+			</p:dialog>
+
 		</h:form>
 
 	</ui:define>

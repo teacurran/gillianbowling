@@ -29,7 +29,7 @@
 		<from-view-id>/admin/category-edit.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>success</from-outcome>
-			<to-view-id>/admin/category-edit.xhtml.xhtml</to-view-id>
+			<to-view-id>/admin/category-edit.xhtml</to-view-id>
 			<redirect include-view-params="true" />
 		</navigation-case>
 	</navigation-rule>
@@ -38,7 +38,16 @@
 		<navigation-case>
 			<from-action>#{categoryManager.save}</from-action>
 			<from-outcome>failure</from-outcome>
-			<to-view-id>/admin/category-edit.xhtml.xhtml</to-view-id>
+			<to-view-id>/admin/category-edit.xhtml</to-view-id>
+			<redirect include-view-params="true" />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/admin/category-edit.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{categoryManager.remove}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/admin/category-list.xhtml</to-view-id>
 			<redirect include-view-params="true" />
 		</navigation-case>
 	</navigation-rule>

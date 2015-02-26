@@ -265,6 +265,27 @@ public class CategoryManager implements Serializable {
 		return Constants.ACTION_SUCCESS;
 	}
 
+	@Transactional
+	public String remove() {
+		LOGGER.debug("Deleting category");
+
+		category = getCategory();
+		if (category != null) {
+			category = em.merge(category);
+			for (Photo photo : category.getPhotos()) {
+				em.remove(photo);
+			}
+			category.setPhotos(null);
+			em.remove(category);
+			category = null;
+			id=null;
+		}
+
+		messages.addInfo().categoryDeleted();
+
+		return Constants.ACTION_SUCCESS;
+	}
+
 
 	public Integer getId() {
 		return id;

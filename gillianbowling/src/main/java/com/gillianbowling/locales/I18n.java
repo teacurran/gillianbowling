@@ -17,6 +17,9 @@ public interface I18n {
 	@MessageTemplate("{ui.bootstrap.success}")
 	String bootstrapSuccess();
 
+	@MessageTemplate("{ui.categories.deleted}")
+	String categoryDeleted();
+
 	@MessageTemplate("{ui.categories.saved}")
 	String categorySaved();
 
