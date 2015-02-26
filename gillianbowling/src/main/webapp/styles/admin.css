@@ -192,6 +192,10 @@ select {
 	font-size: 13px;
 }
 
+.buttonDelete {
+	border: solid 1px red;
+}
+
 .tableControl, .actionButtons {
 	width: 100%;
 }
