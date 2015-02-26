@@ -103,6 +103,21 @@ public class PhotoManager implements Serializable {
 	}
 
 	@Transactional
+	public String remove() {
+		LOGGER.debug("Deleting photo");
+
+		if (photo != null) {
+			photo = em.merge(photo);
+			em.remove(photo);
+			photo = null;
+		}
+
+		messages.addInfo().photoDeleted();
+
+		return Constants.ACTION_SUCCESS;
+	}
+
+	@Transactional
 	public void uploadPhoto() {
 		if (file == null || file.getFileName() == null || file.getFileName().isEmpty()) {
 			return;

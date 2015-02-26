@@ -20,6 +20,9 @@ public interface I18n {
 	@MessageTemplate("{ui.categories.saved}")
 	String categorySaved();
 
+	@MessageTemplate("{ui.photos.deleted}")
+	String photoDeleted();
+
 	@MessageTemplate("{ui.photos.saved}")
 	String photoSaved();
 

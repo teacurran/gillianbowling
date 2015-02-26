@@ -87,6 +87,9 @@
 						  outcome="/admin/photo-view.xhtml">
 					<f:param name="id" value="#{photoManager.id}"/>
 				</p:button>
+
+				<p:commandButton oncomplete="PF('modalDelete').show()" value="delete" styleClass="buttonDelete"/>
+
 				<p:commandButton id="buttonSave"
 								 value="#{I18n['ui.save']}"
 								 update=":headerForm, :mainForm"
