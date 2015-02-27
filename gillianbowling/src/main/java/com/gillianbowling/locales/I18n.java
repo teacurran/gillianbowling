@@ -29,6 +29,12 @@ public interface I18n {
 	@MessageTemplate("{ui.photos.saved}")
 	String photoSaved();
 
+	@MessageTemplate("{ui.edit.row.success}")
+	String rowEditSuccess(String object);
+
+	@MessageTemplate("{ui.edit.row.cancelled}")
+	String rowEditCancelled(String object);
+
 	@MessageTemplate("{ui.error.unexpected}")
 	String unexpectedError(String message);
 

@@ -26,6 +26,7 @@ import com.gillianbowling.data.repositories.ConfigurationRepository;
 import com.gillianbowling.locales.I18n;
 import com.gillianbowling.web.coverters.GenericEntityConverter;
 import org.apache.deltaspike.jsf.api.message.JsfMessage;
+import org.primefaces.event.RowEditEvent;
 import org.primefaces.event.SelectEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -284,6 +285,26 @@ public class CategoryManager implements Serializable {
 		messages.addInfo().categoryDeleted();
 
 		return Constants.ACTION_SUCCESS;
+	}
+
+	/**
+	 * @param event RowEditEvent instance.
+	 */
+	@Transactional
+	public void onMappingEdit(RowEditEvent event) {
+		Category editedCategory = (Category) event.getObject();
+		if (editedCategory != null) {
+			em.merge(editedCategory);
+			em.flush();
+			messages.addInfo().rowEditSuccess("Category");
+		}
+	}
+
+	/**
+	 * @param event RowEditEvent instance.
+	 */
+	public void onMappingCancel(RowEditEvent event) {
+		messages.addInfo().rowEditCancelled("Category Mapping");
 	}
 
 

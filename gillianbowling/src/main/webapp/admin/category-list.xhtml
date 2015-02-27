@@ -26,44 +26,55 @@
 						 rows="20"
 						 sortBy="#{_category.name}"
 						 sortOrder="ASCENDING"
+						 editable="true"
 					>
 
-				<p:column sortBy="#{_category.id}">
-					<f:facet name="header">
-						<h:outputText value="Id"/>
-					</f:facet>
+				<p:ajax event="rowEdit" listener="#{categoryManager.onMappingEdit}" update=":headerForm" />
+				<p:ajax event="rowEditCancel" listener="#{categoryManager.onMappingCancel}" update=":headerForm" />
+
+				<p:column sortBy="#{_category.id}" headerText="Id" style="width:50px">
 					<h:link value="#{_category.id}" outcome="/admin/category-view.xhtml">
 						<f:param name="id" value="#{_category.id}"/>
 					</h:link>
 				</p:column>
 
-				<p:column sortBy="#{_category.parent.name}">
-					<f:facet name="header">
-						<h:outputText value="Parent"/>
-					</f:facet>
+				<p:column sortBy="#{_category.parent.name}" headerText="Parent">
 					<h:link value="#{_category.parent.name}" outcome="/admin/category-view.xhtml">
 						<f:param name="id" value="#{_category.id}"/>
 					</h:link>
 				</p:column>
 
-				<p:column sortBy="#{_category.name}">
-					<f:facet name="header">
-						<h:outputText value="Name"/>
-					</f:facet>
+				<p:column sortBy="#{_category.name}" headerText="Name">
 					<h:link value="#{_category.name}" outcome="/admin/category-view.xhtml">
 						<f:param name="id" value="#{_category.id}"/>
 					</h:link>
 				</p:column>
 
-				<p:column sortBy="#{_category.code}">
-					<f:facet name="header">
-						<h:outputText value="Code"/>
-					</f:facet>
-					<h:link value="#{_category.code}" outcome="/admin/category-view.xhtml">
-						<f:param name="id" value="#{_category.id}"/>
-					</h:link>
+				<p:column sortBy="#{_category.code}" headerText="Code">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:link value="#{_category.code}" outcome="/admin/category-view.xhtml">
+								<f:param name="id" value="#{_category.id}"/>
+							</h:link>
+						</f:facet>
+						<f:facet name="input"><p:inputText value="#{_category.code}" style="width:100%"/></f:facet>
+					</p:cellEditor>
 				</p:column>
 
+				<p:column sortBy="#{_category.code}" headerText="Rank" style="width:50px">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:link value="#{_category.rank}" outcome="/admin/category-view.xhtml">
+								<f:param name="id" value="#{_category.id}"/>
+							</h:link>
+						</f:facet>
+						<f:facet name="input"><p:inputText value="#{_category.rank}" style="width:100%"/></f:facet>
+					</p:cellEditor>
+				</p:column>
+
+				<p:column style="width:32px">
+					<p:rowEditor/>
+				</p:column>
 			</p:dataTable>
 
 			<div class="action-row">
