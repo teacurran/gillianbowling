@@ -1,7 +1,7 @@
 <FindBugsFilter>
 	<Match>
 		<!-- Hibernate Generated metamodel classes end in "_"
-		 ie: com.scholastic.intl.bookmanager.data.model.Book_
+		 ie: com.whatever.data.model.Book_
 		 -->
 		<Class name="~.*_"/>
 	</Match>
