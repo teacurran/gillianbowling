@@ -42,3 +42,4 @@ projectFilesBackup/*
 .metadata/
 
 /*.psd
+.terraform/
