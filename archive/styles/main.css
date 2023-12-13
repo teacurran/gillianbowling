@@ -1,0 +1,216 @@
+
+a {
+	text-decoration: none;
+	color: #777777;
+}
+
+a img {
+	border: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+a:focus {
+	outline: none;
+}
+
+#blogFrame {
+	border: 0;
+	display: block;
+	width: 100%;
+	height: 450px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+body {
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 1em;
+}
+
+.navBird {
+	position: relative;
+	top: -75px;
+	left: 1000px;
+}
+
+.bubbleStem {
+	position: relative;
+	top: -3px;
+	left: 32px;
+}
+
+.content {
+	line-height: 1.4;
+	overflow: auto;
+	position: relative;
+	z-index: 1;
+	clear: both;
+}
+
+.content img {
+	width: 100vw;
+	height: auto;
+}
+
+
+.content .banner {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	float: none;
+}
+
+.content .horiz {
+	height: 430px;
+	width: 580px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	font-family: Snell Roundhand, cursive;
+	padding: 0 0 0 15px;
+}
+
+.content .horiz p {
+	margin: 0;
+}
+
+.content .vert {
+	height: 430px;
+	width: 320px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	font-family: Snell Roundhand, cursive;
+	padding: 0 0 0 15px;
+	margin-left: 10px;	
+}
+
+.content .vert p {
+	margin: 0;
+}
+
+.navigation {
+	height: 85px;
+}
+
+.separater {
+	margin-left: 60px;
+	margin-bottom: 30px;
+	height: 15px;
+	border-bottom: solid 1px black;
+}
+
+.logoBox {
+	width: 376px;
+	float: left;
+}
+
+.nav {
+	margin-left: 400px;
+	text-transform: lowercase;
+	height: 58px;
+}
+
+.nav ul {
+	list-style: none;
+	margin: 0;
+	font-size: 13px;
+	background: rgba(255, 255, 255, 0.75);
+	z-index: 100;
+	padding: 10px;
+}
+
+.nav ul li {
+	float: left;
+	margin: 0;
+	display: block;
+	padding-right: 30px;
+}
+
+.nav ul li ul {
+	position: absolute;
+	display: none;
+}
+
+.nav ul li ul li {
+	clear: both;
+	font-size: 12px;
+	margin: 0;
+	display: block;
+	float: none;
+	padding: 10px 0 0 0 ;
+}
+
+.nav ul li ul li a {
+	display: block;
+}
+
+#scroller ul {
+	list-style: none;
+}
+
+#scroller ul li {
+	float: left;
+}
+
+.twitter {
+	/* border: solid 1px red; */
+	width: 220px;
+	height: 100px;
+	position: relative;
+	top: 17px;
+	left: 650px;
+	z-index: 1000;
+}
+
+.twitterBubble {
+	border: solid 1px black;
+	height: 30px;
+	width: 300px;
+	font-size: 9px;
+	font-weight: normal;
+	padding: 5px;
+	background-color: white;
+	overflow: hidden;
+	filter: alpha(opacity=90);
+	-moz-opacity:0.9;
+	-khtml-opacity: 0.9;
+	opacity: 0.9;
+}
+
+.twitterContent {
+}
+
+.twitterContent ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 285px;
+	overflow: hidden;
+}
+
+.twitterContent ul li {
+	margin: 0;
+	font-size: 12px;
+	border-bottom: solid 1px #DDDDDD;
+	padding-bottom: 4px;
+	margin-bottom: 4px;
+}
+
+.twitterContent ul li .time {
+	padding: 0 0 0 10px;
+	font-size: 10px;
+}
+
+.twitterExpand {
+	position: relative;
+	top: -20px;
+	left: 295px;
+}
+
+.twitterHeadline {
+	font-size: 14px;
+	height: 40px;
+}
