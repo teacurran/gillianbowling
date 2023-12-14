@@ -53,7 +53,9 @@ body {
 
 .content img {
 	width: 100vw;
-	height: auto;
+	height: 100vh;
+	object-fit: cover;
+	object-position: center;
 }
 
 
